@@ -1,12 +1,10 @@
 package Team1.Eggeul.controller;
 
-
-import com.swime.domain.ChatAttendVO;
-import com.swime.domain.ChatMessageVO;
-import com.swime.domain.ChatRoomVO;
-import com.swime.service.ChatMessageService;
-import com.swime.service.ChatRoomService;
-import com.swime.service.MemberService;
+import Team1.Eggeul.domain.ChatAttendVO;
+import Team1.Eggeul.domain.ChatMessageVO;
+import Team1.Eggeul.service.ChatMessageService;
+import Team1.Eggeul.service.ChatRoomService;
+import Team1.Eggeul.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
