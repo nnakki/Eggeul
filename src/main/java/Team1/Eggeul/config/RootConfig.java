@@ -44,11 +44,11 @@ public class RootConfig {
         System.setProperty("java.security.egd", "file:///dev/urandom");
 
         if(checkOS().isWindows())
-            System.setProperty("oracle.net.tns_admin","C:/Wallet_swime");
+            System.setProperty("oracle.net.tns_admin","C:/Oracle/Wallet_eggeuldb");
         else if(checkOS().isMac())
-            System.setProperty("oracle.net.tns_admin","/Users/sinseonggwon/Wallet_swime");
+            System.setProperty("oracle.net.tns_admin","/Oracle/Wallet_eggeuldb");
         else if(checkOS().isLinux()){
-            String walletPath = (this.getClass().getResource("").getPath()) + "../../../Wallet_swime";
+            String walletPath = (this.getClass().getResource("").getPath()) + "../../Wallet_eggeuldb";
             System.out.println(walletPath);
             System.setProperty("oracle.net.tns_admin", walletPath);
             TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
@@ -59,9 +59,10 @@ public class RootConfig {
 
 
         if(true) {
-            hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@swime_tp");
+            //hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@swime_tp");
+            hikariConfig.setJdbcUrl("jdbc:oracle:thin:@eggeuldb_high?TNS_ADMIN=/Oracle/Wallet_eggeuldb");
             hikariConfig.setUsername("ADMIN");
-            hikariConfig.setPassword("1q2w3e4r5t6Y");
+            hikariConfig.setPassword("Eggeul123456789");
             if(checkOS().isLinux()){
                 hikariConfig.setMaximumPoolSize(5);
             }else{
@@ -69,13 +70,13 @@ public class RootConfig {
             }
 
         }
-        else {
+ /*       else {
             hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:XE");
             hikariConfig.setUsername("book_ex");
             hikariConfig.setPassword("book_ex");
 //            hikariConfig.setUsername("swime1");
 //            hikariConfig.setPassword("1234");
-        }
+        }*/
 
         return new HikariDataSource(hikariConfig);
     }
