@@ -7,19 +7,21 @@
     <select id="get" resultType="Team1.Eggeul.domain.StudyAnswerVO">
         select sn, std_sn, user_id, question_sn, question, answer
         from tstd_answer
-        where std_sn = #{stdSn} and user_id = #{userId}
+        where std_sn = #{stdSn}
+          and user_id = #{userId}
         order by question_sn
     </select>
 
     <insert id="insert">
         insert into tstd_answer (sn, std_sn, user_id, question_sn, question, answer)
-        values(seq_std_answer.nextval, #{stdSn}, #{userId}, #{questionSn}, #{question}, #{answer})
+        values (seq_std_answer.nextval, #{stdSn}, #{userId}, #{questionSn}, #{question}, #{answer})
     </insert>
 
     <delete id="delete">
         delete
         from tstd_answer
-        where std_sn = #{stdSn} and user_id = #{userId}
+        where std_sn = #{stdSn}
+          and user_id = #{userId}
     </delete>
 
 </mapper>

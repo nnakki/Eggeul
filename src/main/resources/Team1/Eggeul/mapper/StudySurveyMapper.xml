@@ -13,7 +13,7 @@
 
     <insert id="insert">
         insert into tstd_survey (sn, std_sn, question_sn, question)
-        values(seq_std_survey.nextval, #{stdSn}, #{questionSn}, #{question})
+        values (seq_std_survey.nextval, #{stdSn}, #{questionSn}, #{question})
     </insert>
 
     <delete id="delete">
