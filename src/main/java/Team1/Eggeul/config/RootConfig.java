@@ -1,9 +1,9 @@
 package Team1.Eggeul.config;
 
-import com.swime.util.CheckOS;
-import com.swime.util.CookieUtils;
-import com.swime.util.GmailSend;
-import com.swime.util.MakeRandomValue;
+import Team1.Eggeul.util.CheckOS;
+import Team1.Eggeul.util.CookieUtils;
+import Team1.Eggeul.util.GmailSend;
+import Team1.Eggeul.util.MakeRandomValue;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -14,17 +14,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.http.HttpMethod;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.sql.DataSource;
-import java.io.File;
-import java.net.URL;
-import java.util.Locale;
 import java.util.TimeZone;
 
 @Configuration
