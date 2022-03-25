@@ -87,8 +87,10 @@ public class RootConfig {
     @Bean
     public MakeRandomValue makeRandomValue(){ return new MakeRandomValue(); }
 
+/*
     @Bean
     public PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder(); }
+*/
 
     @Bean
     public CookieUtils cookieUtils() { return new CookieUtils(); }
