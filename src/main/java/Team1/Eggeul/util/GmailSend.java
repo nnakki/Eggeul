@@ -13,8 +13,8 @@ import java.util.Properties;
 
 @Log4j
 public class GmailSend {
-    private final String user = "studywithmeauth@gmail.com"; // 네이버일 경우 네이버 계정, gmail경우 gmail 계정
-    private final String password = "djakujgpexvxtlre"; //"1q2w3e4r5t6Y";   // 패스워드
+    private final String user = "wsr0922@gmail.com"; // 네이버일 경우 네이버 계정, gmail경우 gmail 계정
+    private final String password = "dpfflid1818!@!";
 
     // SMTP 서버 정보를 설정한다.
     private Properties prop = new Properties();

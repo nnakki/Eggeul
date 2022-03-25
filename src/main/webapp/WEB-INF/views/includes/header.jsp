@@ -20,7 +20,7 @@
     <meta name="author" content="">
 
 
-    <title>SWIME</title>
+    <title>Eggeul</title>
 
 
     <!-- Bootstrap core CSS -->

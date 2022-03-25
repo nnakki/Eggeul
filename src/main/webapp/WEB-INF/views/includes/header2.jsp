@@ -18,7 +18,7 @@
     <meta name="author" content="">
 
 
-    <title>SWIME</title>
+    <title>Eggeul</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -96,7 +96,7 @@
 <header class="header-block">
     <h1>
         <a href="">
-            <img src="assets/SwimeLogo.png" alt="Swime" class="logo">
+            <img src="assets/logo.png" alt="Eggeul" class="logo">
         </a>
     </h1>
     <nav>
