@@ -1,10 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.AuthVO;
-import com.swime.domain.MemberHistoryVO;
-import com.swime.domain.MemberVO;
-import com.swime.mapper.AuthMapper;
-import com.swime.mapper.MemberMapper;
+import Team1.Eggeul.domain.AuthVO;
+import Team1.Eggeul.mapper.AuthMapper;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

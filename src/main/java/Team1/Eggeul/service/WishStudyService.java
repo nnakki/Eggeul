@@ -1,6 +1,8 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
+import Team1.Eggeul.domain.StudyCriteria;
+import Team1.Eggeul.domain.StudyVO;
+import Team1.Eggeul.domain.WishStudyVO;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.GroupAttachMapper;
-import com.swime.mapper.GroupAttendMapper;
-import com.swime.mapper.GroupMapper;
-import com.swime.mapper.GroupTagMapper;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.mapper.GroupAttachMapper;
+import Team1.Eggeul.mapper.GroupAttendMapper;
+import Team1.Eggeul.mapper.GroupMapper;
+import Team1.Eggeul.mapper.GroupTagMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

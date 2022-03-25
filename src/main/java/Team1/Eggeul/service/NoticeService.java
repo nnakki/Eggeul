@@ -1,9 +1,6 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.NoticeVO;
-import com.swime.domain.StudyCriteria;
-import com.swime.domain.StudyVO;
-import com.swime.domain.WishStudyVO;
+import Team1.Eggeul.domain.NoticeVO;
 
 import java.util.List;
 

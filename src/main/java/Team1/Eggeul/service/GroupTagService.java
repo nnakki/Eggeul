@@ -1,6 +1,6 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupTagVO;
+import Team1.Eggeul.domain.GroupTagVO;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.AdminStudyCriteria;
-import com.swime.domain.AdminStudyPageDTO;
-import com.swime.domain.AdminStudyVO;
+import Team1.Eggeul.domain.AdminStudyCriteria;
+import Team1.Eggeul.domain.AdminStudyPageDTO;
+import Team1.Eggeul.domain.AdminStudyVO;
 
 import java.util.List;
 

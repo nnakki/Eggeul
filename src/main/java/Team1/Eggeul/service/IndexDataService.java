@@ -1,8 +1,8 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupVO;
-import com.swime.domain.StudyVO;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupVO;
+import Team1.Eggeul.domain.StudyVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

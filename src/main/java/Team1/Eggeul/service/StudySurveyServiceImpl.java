@@ -1,7 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.*;
+import Team1.Eggeul.domain.StudySurveyVO;
+import Team1.Eggeul.mapper.StudySurveyMapper;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

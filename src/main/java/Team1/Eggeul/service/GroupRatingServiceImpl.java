@@ -1,11 +1,11 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupRatingPageDTO;
-import com.swime.domain.GroupRatingVO;
-import com.swime.domain.GroupVO;
-import com.swime.mapper.GroupMapper;
-import com.swime.mapper.GroupRatingMapper;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupRatingPageDTO;
+import Team1.Eggeul.domain.GroupRatingVO;
+import Team1.Eggeul.domain.GroupVO;
+import Team1.Eggeul.mapper.GroupMapper;
+import Team1.Eggeul.mapper.GroupRatingMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

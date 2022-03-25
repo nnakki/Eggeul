@@ -1,6 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.StudySurveyVO;
+import Team1.Eggeul.domain.StudySurveyVO;
 
 import java.util.List;
 

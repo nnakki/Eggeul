@@ -1,7 +1,6 @@
 package Team1.Eggeul.service;
 
-
-import com.swime.domain.AuthVO;
+import Team1.Eggeul.domain.AuthVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

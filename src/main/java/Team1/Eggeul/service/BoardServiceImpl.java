@@ -1,8 +1,11 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.BoardAttachMapper;
-import com.swime.mapper.BoardMapper;
+import Team1.Eggeul.domain.BoardAttachVO;
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.BoardVO;
+import Team1.Eggeul.domain.GroupBoardPageDTO;
+import Team1.Eggeul.mapper.BoardAttachMapper;
+import Team1.Eggeul.mapper.BoardMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

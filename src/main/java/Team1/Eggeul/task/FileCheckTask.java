@@ -1,8 +1,8 @@
 package Team1.Eggeul.task;
 
-import com.swime.domain.GroupAttachVO;
-import com.swime.mapper.GroupAttachMapper;
-import com.swime.util.CheckOS;
+import Team1.Eggeul.domain.GroupAttachVO;
+import Team1.Eggeul.mapper.GroupAttachMapper;
+import Team1.Eggeul.util.CheckOS;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

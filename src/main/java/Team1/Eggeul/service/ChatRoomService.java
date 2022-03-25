@@ -1,6 +1,8 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
+import Team1.Eggeul.domain.ChatAttendVO;
+import Team1.Eggeul.domain.ChatMessageVO;
+import Team1.Eggeul.domain.ChatRoomVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

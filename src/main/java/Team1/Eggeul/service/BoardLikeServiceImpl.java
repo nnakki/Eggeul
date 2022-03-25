@@ -1,10 +1,9 @@
 package Team1.Eggeul.service;
 
-
-import com.swime.domain.BoardLikeVO;
-import com.swime.domain.BoardVO;
-import com.swime.mapper.BoardLikeMapper;
-import com.swime.mapper.BoardMapper;
+import Team1.Eggeul.domain.BoardLikeVO;
+import Team1.Eggeul.domain.BoardVO;
+import Team1.Eggeul.mapper.BoardLikeMapper;
+import Team1.Eggeul.mapper.BoardMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

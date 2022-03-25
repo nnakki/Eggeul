@@ -1,8 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.ChatMessageVO;
-import com.swime.mapper.ChatMessageMapper;
-import com.swime.mapper.ChatRoomMapper;
+import Team1.Eggeul.domain.ChatMessageVO;
+import Team1.Eggeul.mapper.ChatMessageMapper;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

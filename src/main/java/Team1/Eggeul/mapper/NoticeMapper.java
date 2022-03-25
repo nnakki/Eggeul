@@ -1,9 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.NoticeVO;
-import com.swime.domain.StudyCriteria;
-import com.swime.domain.StudyVO;
-import com.swime.domain.WishStudyVO;
+import Team1.Eggeul.domain.NoticeVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

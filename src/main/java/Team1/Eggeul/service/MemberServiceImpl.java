@@ -1,10 +1,10 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.AdminUserCriteria;
-import com.swime.domain.MemberDTO;
-import com.swime.domain.MemberHistoryVO;
-import com.swime.domain.MemberVO;
-import com.swime.mapper.MemberMapper;
+import Team1.Eggeul.domain.AdminUserCriteria;
+import Team1.Eggeul.domain.MemberDTO;
+import Team1.Eggeul.domain.MemberHistoryVO;
+import Team1.Eggeul.domain.MemberVO;
+import Team1.Eggeul.mapper.MemberMapper;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;

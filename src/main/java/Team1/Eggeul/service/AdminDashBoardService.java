@@ -1,7 +1,8 @@
 package Team1.Eggeul.service;
 
-
-import com.swime.domain.*;
+import Team1.Eggeul.domain.DashBoardLangVO;
+import Team1.Eggeul.domain.DashBoardLocaleVO;
+import Team1.Eggeul.domain.DashBoardModalDataDTO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;

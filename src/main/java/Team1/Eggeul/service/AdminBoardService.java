@@ -1,7 +1,9 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.BoardMapper;
+import Team1.Eggeul.domain.AdminBoardCriteria;
+import Team1.Eggeul.domain.AdminBoardPageDTO;
+import Team1.Eggeul.domain.AdminReplyCriteria;
+import Team1.Eggeul.domain.ReplyPageDTO;
 import org.apache.ibatis.annotations.Param;
 
 public interface AdminBoardService {

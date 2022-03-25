@@ -1,6 +1,6 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.BoardLikeVO;
+import Team1.Eggeul.domain.BoardLikeVO;
 import org.apache.ibatis.annotations.Param;
 
 public interface BoardLikeService {

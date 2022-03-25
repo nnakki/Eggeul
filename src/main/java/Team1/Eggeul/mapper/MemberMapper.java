@@ -1,9 +1,8 @@
 package Team1.Eggeul.mapper;
 
-
-import com.swime.domain.AdminUserCriteria;
-import com.swime.domain.MemberHistoryVO;
-import com.swime.domain.MemberVO;
+import Team1.Eggeul.domain.AdminUserCriteria;
+import Team1.Eggeul.domain.MemberHistoryVO;
+import Team1.Eggeul.domain.MemberVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

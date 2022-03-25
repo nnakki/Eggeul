@@ -1,7 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.ChatMessageVO;
-import com.swime.domain.ChatRoomVO;
+import Team1.Eggeul.domain.ChatMessageVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

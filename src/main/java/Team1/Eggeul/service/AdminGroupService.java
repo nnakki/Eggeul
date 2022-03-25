@@ -1,7 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.AdminGroupCriteria;
-import com.swime.domain.AdminGroupPageDTO;
+import Team1.Eggeul.domain.AdminGroupCriteria;
+import Team1.Eggeul.domain.AdminGroupPageDTO;
 
 public interface AdminGroupService {
 

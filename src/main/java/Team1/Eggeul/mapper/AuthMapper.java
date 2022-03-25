@@ -1,6 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.AuthVO;
+import Team1.Eggeul.domain.AuthVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

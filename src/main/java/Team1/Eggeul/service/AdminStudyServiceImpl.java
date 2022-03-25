@@ -1,8 +1,9 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.AdminBoardMapper;
-import com.swime.mapper.AdminStudyMapper;
+import Team1.Eggeul.domain.AdminStudyCriteria;
+import Team1.Eggeul.domain.AdminStudyPageDTO;
+import Team1.Eggeul.domain.AdminStudyVO;
+import Team1.Eggeul.mapper.AdminStudyMapper;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;

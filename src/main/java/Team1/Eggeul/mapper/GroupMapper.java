@@ -1,7 +1,7 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupVO;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupVO;
 
 import java.util.List;
 

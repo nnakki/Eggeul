@@ -1,7 +1,6 @@
 package Team1.Eggeul.listener;
 
-import com.swime.service.AdminDashBoardService;
-import com.swime.util.VisitCountDao;
+import Team1.Eggeul.util.VisitCountDao;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

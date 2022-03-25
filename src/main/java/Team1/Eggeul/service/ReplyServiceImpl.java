@@ -1,8 +1,10 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.BoardMapper;
-import com.swime.mapper.ReplyMapper;
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.ReplyPageDTO;
+import Team1.Eggeul.domain.ReplyVO;
+import Team1.Eggeul.mapper.BoardMapper;
+import Team1.Eggeul.mapper.ReplyMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

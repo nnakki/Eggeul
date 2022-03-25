@@ -1,10 +1,9 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.DashBoardLangVO;
-import com.swime.domain.DashBoardLocaleVO;
-import com.swime.domain.DashBoardModalDataDTO;
-import com.swime.domain.DashBoardModalDataVO;
-import com.swime.mapper.AdminDashBoardMapper;
+import Team1.Eggeul.domain.DashBoardLangVO;
+import Team1.Eggeul.domain.DashBoardLocaleVO;
+import Team1.Eggeul.domain.DashBoardModalDataDTO;
+import Team1.Eggeul.mapper.AdminDashBoardMapper;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

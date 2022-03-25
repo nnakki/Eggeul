@@ -1,8 +1,7 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.BoardCriteria;
-import com.swime.domain.BoardLikeVO;
-import com.swime.domain.BoardVO;
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.BoardVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

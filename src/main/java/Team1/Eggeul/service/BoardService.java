@@ -1,6 +1,9 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
+import Team1.Eggeul.domain.BoardAttachVO;
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.BoardVO;
+import Team1.Eggeul.domain.GroupBoardPageDTO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

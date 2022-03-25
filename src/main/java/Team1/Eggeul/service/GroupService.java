@@ -1,8 +1,8 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupAttachVO;
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupVO;
+import Team1.Eggeul.domain.GroupAttachVO;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupVO;
 
 import java.util.List;
 

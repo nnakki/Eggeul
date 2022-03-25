@@ -1,7 +1,6 @@
 package Team1.Eggeul.mapper;
 
-
-import com.swime.domain.*;
+import Team1.Eggeul.domain.*;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

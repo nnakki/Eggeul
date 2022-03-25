@@ -1,6 +1,6 @@
 package Team1.Eggeul.security;
 
-import com.swime.domain.MemberVO;
+import Team1.Eggeul.domain.MemberVO;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.security.core.GrantedAuthority;

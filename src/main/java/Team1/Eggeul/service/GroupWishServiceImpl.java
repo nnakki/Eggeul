@@ -1,10 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupWishVO;
-import com.swime.domain.MemberHistoryVO;
-import com.swime.domain.MemberVO;
-import com.swime.mapper.GroupWishMapper;
-import com.swime.mapper.MemberMapper;
+import Team1.Eggeul.domain.GroupWishVO;
+import Team1.Eggeul.mapper.GroupWishMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

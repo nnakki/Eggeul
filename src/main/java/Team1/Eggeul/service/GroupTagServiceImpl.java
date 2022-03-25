@@ -1,7 +1,7 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.GroupTagVO;
-import com.swime.mapper.GroupTagMapper;
+import Team1.Eggeul.domain.GroupTagVO;
+import Team1.Eggeul.mapper.GroupTagMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

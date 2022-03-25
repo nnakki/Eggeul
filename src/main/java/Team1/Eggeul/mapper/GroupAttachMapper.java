@@ -1,6 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.GroupAttachVO;
+import Team1.Eggeul.domain.GroupAttachVO;
 
 import java.util.List;
 

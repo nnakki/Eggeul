@@ -1,6 +1,6 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.BoardAttachVO;
+import Team1.Eggeul.domain.BoardAttachVO;
 
 import java.util.List;
 

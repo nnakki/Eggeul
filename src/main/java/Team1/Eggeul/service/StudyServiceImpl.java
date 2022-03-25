@@ -1,14 +1,15 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
-import com.swime.mapper.*;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.mapper.StudyListMapper;
+import Team1.Eggeul.mapper.StudyMapper;
+import Team1.Eggeul.mapper.StudySurveyMapper;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.security.acl.Group;
 import java.util.List;
 
 @Log4j

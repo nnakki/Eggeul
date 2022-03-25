@@ -1,8 +1,6 @@
 package Team1.Eggeul.mapper;
 
-
-
-import com.swime.domain.GroupWishVO;
+import Team1.Eggeul.domain.GroupWishVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.AdminGroupCriteria;
-import com.swime.domain.AdminGroupPageDTO;
-import com.swime.mapper.AdminGroupMapper;
+import Team1.Eggeul.domain.AdminGroupCriteria;
+import Team1.Eggeul.domain.AdminGroupPageDTO;
+import Team1.Eggeul.mapper.AdminGroupMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,9 @@
 package Team1.Eggeul.service;
 
-import com.swime.domain.*;
+import Team1.Eggeul.domain.GroupStudyListDTO;
+import Team1.Eggeul.domain.StudyCriteria;
+import Team1.Eggeul.domain.StudyParamVO;
+import Team1.Eggeul.domain.StudyVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
