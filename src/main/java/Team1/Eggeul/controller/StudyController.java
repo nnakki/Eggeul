@@ -1,10 +1,10 @@
 package Team1.Eggeul.controller;
 
 
-import com.swime.domain.*;
-import com.swime.service.StudyListService;
-import com.swime.service.StudyService;
-import com.swime.service.StudySurveyService;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.service.StudyListService;
+import Team1.Eggeul.service.StudyService;
+import Team1.Eggeul.service.StudySurveyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,10 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.*;
-import com.swime.service.*;
+
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.service.AdminBoardService;
+import Team1.Eggeul.service.AdminGroupService;
+import Team1.Eggeul.service.AdminStudyService;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;

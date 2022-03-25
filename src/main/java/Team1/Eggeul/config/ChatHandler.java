@@ -1,23 +1,22 @@
 package Team1.Eggeul.config;
 
+import Team1.Eggeul.domain.ChatMessageVO;
+import Team1.Eggeul.domain.ChatRoomVO;
+import Team1.Eggeul.domain.MessageType;
+import Team1.Eggeul.service.ChatMessageService;
+import Team1.Eggeul.service.ChatRoomService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.swime.domain.ChatMessageVO;
-import com.swime.domain.ChatRoomVO;
-import com.swime.domain.MessageType;
-import com.swime.service.ChatMessageService;
-import com.swime.service.ChatRoomService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
-import org.apache.ibatis.annotations.Mapper;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
-//import sun.plugin2.message.Message;
 
-import java.util.*;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Log4j

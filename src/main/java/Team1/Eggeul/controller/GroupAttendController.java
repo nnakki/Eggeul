@@ -1,20 +1,16 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.GroupAttendVO;
-import com.swime.domain.GroupRatingVO;
-import com.swime.domain.StudyParamVO;
-import com.swime.service.GroupAttendService;
-import com.swime.service.StudyListService;
-import com.swime.service.StudyService;
+import Team1.Eggeul.domain.GroupAttendVO;
+import Team1.Eggeul.domain.StudyParamVO;
+import Team1.Eggeul.service.GroupAttendService;
+import Team1.Eggeul.service.StudyListService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.util.List;
 
 @RequestMapping("/groupAttend/")

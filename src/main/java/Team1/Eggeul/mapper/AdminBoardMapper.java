@@ -1,6 +1,9 @@
 package Team1.Eggeul.mapper;
 
-import com.swime.domain.*;
+import Team1.Eggeul.domain.AdminBoardCriteria;
+import Team1.Eggeul.domain.AdminReplyCriteria;
+import Team1.Eggeul.domain.BoardVO;
+import Team1.Eggeul.domain.ReplyVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

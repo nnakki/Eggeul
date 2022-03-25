@@ -1,7 +1,7 @@
 package Team1.Eggeul.config;
 
-import com.swime.security.CustomLoginSuccessHandler;
-import com.swime.security.CustomUserDetailsService;
+import Team1.Eggeul.security.CustomLoginSuccessHandler;
+import Team1.Eggeul.security.CustomUserDetailsService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;

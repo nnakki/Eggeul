@@ -1,8 +1,7 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.StudySurveyVO;
-import com.swime.service.StudyService;
-import com.swime.service.StudySurveyService;
+import Team1.Eggeul.domain.StudySurveyVO;
+import Team1.Eggeul.service.StudySurveyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

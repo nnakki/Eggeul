@@ -1,7 +1,6 @@
 package Team1.Eggeul.config;
 
 import lombok.extern.log4j.Log4j;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;

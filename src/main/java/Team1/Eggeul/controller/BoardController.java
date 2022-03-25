@@ -1,10 +1,10 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.*;
-import com.swime.service.BoardLikeService;
-import com.swime.service.BoardService;
-import com.swime.service.GroupAttendService;
-import com.swime.service.ReplyService;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.service.BoardLikeService;
+import Team1.Eggeul.service.BoardService;
+import Team1.Eggeul.service.GroupAttendService;
+import Team1.Eggeul.service.ReplyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

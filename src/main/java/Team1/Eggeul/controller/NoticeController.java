@@ -1,8 +1,7 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.MemberVO;
-import com.swime.domain.NoticeVO;
-import com.swime.service.NoticeService;
+import Team1.Eggeul.domain.NoticeVO;
+import Team1.Eggeul.service.NoticeService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
