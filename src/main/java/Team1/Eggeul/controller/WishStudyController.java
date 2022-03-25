@@ -1,10 +1,10 @@
 package Team1.Eggeul.controller;
 
 
-import Team1.domain.StudyParamVO;
-import Team1.domain.WishStudyVO;
-import Team1.service.StudyService;
-import Team1.service.WishStudyService;
+import Team1.Eggeul.domain.StudyParamVO;
+import Team1.Eggeul.domain.WishStudyVO;
+import Team1.Eggeul.service.StudyService;
+import Team1.Eggeul.service.WishStudyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

@@ -1,14 +1,14 @@
 package Team1.Eggeul.controller;
 
-import Team1.domain.*;
-import Team1.mapper.GroupTagMapper;
-import Team1.service.AuthService;
-import Team1.service.MemberService;
-import Team1.service.ProfileService;
-import Team1.util.CheckOS;
-import Team1.util.GmailSend;
-import Team1.util.HttpRequest;
-import Team1.util.MakeRandomValue;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.mapper.GroupTagMapper;
+import Team1.Eggeul.service.AuthService;
+import Team1.Eggeul.service.MemberService;
+import Team1.Eggeul.service.ProfileService;
+import Team1.Eggeul.util.CheckOS;
+import Team1.Eggeul.util.GmailSend;
+import Team1.Eggeul.util.HttpRequest;
+import Team1.Eggeul.util.MakeRandomValue;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.kohsuke.github.GHPerson;
