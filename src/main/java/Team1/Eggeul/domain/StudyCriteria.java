@@ -1,10 +1,6 @@
 package Team1.Eggeul.domain;
 
-import com.swime.mapper.StudyMapper;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 @Data
 public class StudyCriteria {

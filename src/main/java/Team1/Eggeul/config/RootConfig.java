@@ -10,7 +10,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -22,10 +21,10 @@ import javax.sql.DataSource;
 import java.util.TimeZone;
 
 @Configuration
-@ComponentScan(basePackages = {//"com.swime.task",
-        "com.swime.service", "com.swime.aop", "com.swime.util"})
+//@ComponentScan(basePackages = {//"com.swime.task",
+//        "com.swime.service", "com.swime.aop", "com.swime.util"})
 @EnableScheduling
-@MapperScan(basePackages = {"com.swime.mapper"})
+@MapperScan(basePackages = {"Team1.Eggeul.mapper"})
 public class RootConfig {
 
     @Bean
