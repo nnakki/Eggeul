@@ -1,14 +1,14 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.*;
-import com.swime.mapper.GroupTagMapper;
-import com.swime.service.AuthService;
-import com.swime.service.MemberService;
-import com.swime.service.ProfileService;
-import com.swime.util.CheckOS;
-import com.swime.util.GmailSend;
-import com.swime.util.HttpRequest;
-import com.swime.util.MakeRandomValue;
+import Team1.domain.*;
+import Team1.mapper.GroupTagMapper;
+import Team1.service.AuthService;
+import Team1.service.MemberService;
+import Team1.service.ProfileService;
+import Team1.util.CheckOS;
+import Team1.util.GmailSend;
+import Team1.util.HttpRequest;
+import Team1.util.MakeRandomValue;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.kohsuke.github.GHPerson;

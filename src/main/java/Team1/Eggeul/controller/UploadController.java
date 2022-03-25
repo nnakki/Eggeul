@@ -1,7 +1,7 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.AttachFileDTO;
-import com.swime.util.CheckOS;
+import Team1.AttachFileDTO;
+import Team1.CheckOS;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
