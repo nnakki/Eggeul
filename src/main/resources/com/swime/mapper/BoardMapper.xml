@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swime.mapper.BoardMapper">
+
+    <!--모든 게시판을 출력 (현재 사용x, 관리자 게시판 만들때 사용 예정..?)-->
+    <select id="getList" parameterType="com.swime.domain.BoardVO" resultType="com.swime.domain.BoardVO">
+    <![CDATA[
+
+    select
+        b.sn,
+        b.grp_sn,
+        b.user_id,
+        u.name,
+        u.picture,
+        b.title,
+        d.content,
+        b.like_cnt,
+        b.reply_cnt,
+        b.top_fix,
+        b.status,
+        b.reg_date,
+        b.upd_date
+    from
+        tuser u, tbrd b, tbrd_det d
+    where
+        b.status != 'BOST02'
+    and
+        b.sn = d.brd_sn
+    and
+        u.id = b.user_id
+    and
+        b.grp_sn = #{grpSn}
+    and
+        b.sn > 0
+    order by top_fix desc,
+        reg_date desc
+
+    --         select b.sn,
+--                b.grp_sn,
+--                b.user_id,
+--                u.name,
+--                u.picture,
+--                b.title,
+--                d.content,
+--                b.like_cnt,
+--                gl.grp_role,
+--                b.reply_cnt,
+--                b.top_fix,
+--                b.status,
+--                b.reg_date,
+--                b.upd_date
+--         from
+--              tgrp_list gl, tgrp g,
+--              tuser u, tbrd b, tbrd_det d
+--         where
+--             b.status != 'BOST02'
+--         and
+--             b.sn = d.brd_sn
+--         and
+--             u.id = b.user_id
+--         and
+--             b.grp_sn = g.sn
+--         and
+--             g.sn = gl.grp_sn
+--         and
+--             b.sn > 0
+--         order by top_fix desc,
+--                  reg_date desc
+
+        ]]>
+    </select>
+
+    <!--게시판 페이징-->
+    <select id="getListWithPaging" parameterType="com.swime.domain.BoardVO" resultType="com.swime.domain.BoardVO">
+    <![CDATA[
+        select *
+        from
+            (
+            select rownum rn,sn,grp_sn,user_id,name,grp_role,picture,title,content,
+                   like_cnt,reply_cnt, top_fix,status,reg_date,upd_date
+                from
+                    (
+                    select b.sn,b.grp_sn,b.user_id,u.name,gl.grp_role
+                           ,u.picture,b.title,d.content,
+                           b.like_cnt,b.reply_cnt,b.status,b.reg_date,b.upd_date,b.top_fix
+                    from
+                        tuser u,
+                        tbrd b,
+                        tbrd_det d,
+                         tgrp_list gl
+                    where
+                        b.status in ('BOST01','BOST03')
+                    and
+                        b.sn = d.brd_sn
+                    and
+                        u.id = b.user_id
+                    and
+                        b.grp_sn = gl.grp_sn
+                    and
+                        b.user_id = gl.user_id
+                    and
+                        b.grp_sn = #{grpSn}
+                    order by
+                        top_fix desc,
+                        reg_date desc
+                    )
+                where rownum <= #{cri.pageNum} * #{cri.amount}
+            )
+        where rn > (#{cri.pageNum} - 1) * #{cri.amount}
+    ]]>
+    </select>
+
+    <!--게시판 등록 (현재 사용x)-->
+    <insert id="insert">
+        insert ALL
+        into
+        tbrd
+            (
+            sn,
+            grp_sn,
+            user_id,
+            title,
+            status,
+            top_fix
+            )
+        values
+        (seq_tbrd.nextval, #{grpSn}, #{userId}, #{title}, #{status}, #{topFix})
+        into
+        tbrd_det(brd_sn, content)
+        values
+        (seq_tbrd.nextval, #{content})
+        select * from dual
+    </insert>
+
+    <!--게시판 등록-->
+    <insert id="insertSelectKey">
+
+        <selectKey resultType="long" order="BEFORE" keyProperty="sn">
+            select seq_tbrd.nextval from dual
+        </selectKey>
+        insert ALL
+        into
+        tbrd(
+        sn,
+        grp_sn,
+        user_id,
+        title,
+        top_fix
+        )
+        values
+        (#{sn}, #{grpSn}, #{userId}, #{title}, #{topFix})
+        into
+        tbrd_det(brd_sn, content)
+        values
+        (#{sn}, #{content})
+        select * from dual
+    </insert>
+
+    <!--게시판 상세 정보 읽기-->
+    <select id="read" resultType="com.swime.domain.BoardVO">
+        <![CDATA[
+        select b.sn,
+               b.grp_sn,
+               b.user_id,
+               u.name,
+               u.picture,
+               gl.grp_role,
+               b.title,
+               d.content,
+               b.like_cnt,
+               b.reply_cnt,
+               b.top_fix,
+               b.status,
+               b.reg_date,
+               b.upd_date
+        from
+            tuser u, tbrd b, tbrd_det d, tgrp_list gl
+        where
+            b.sn = d.brd_sn
+        and
+            u.id = b.user_id
+        and
+            b.grp_sn = gl.grp_sn
+        and
+            b.user_id = gl.user_id
+        and
+            b.sn = #{sn}
+        ]]>
+    </select>
+
+    <!--게시판 삭제(게시판 상태를 업데이트한다. BOST02는 '삭제상태' BOST01은 '정상상태')-->
+    <update id="delete">
+        update tbrd set status = 'BOST02' where sn = #{sn}
+    </update>
+
+    <!--게시판 업데이트-->
+    <update id="update">
+        update tbrd
+        set
+            title = #{title},
+            like_cnt = #{likeCnt},
+            reply_cnt = #{replyCnt},
+            status = #{status},
+            top_fix = #{topFix},
+            upd_date = current_date
+        where sn = #{sn}
+    </update>
+
+    <!--게시판 내용을 업데이트-->
+    <update id="updateContent">
+        update tbrd_det
+        set content = #{content}
+        where brd_sn = #{sn}
+    </update>
+
+    <!--게시판 댓글 수를 증가 감소 업데이트-->
+    <update id="updateReplyCnt">
+        update tbrd
+        set reply_cnt = reply_cnt + #{amount}
+        where sn = #{sn}
+    </update>
+
+    <!--모임의 게시판 수를 알려준다. 페이징 할 때 필요해서 사용 했음.-->
+    <select id="getCountBySn" resultType="int">
+        <![CDATA[
+            select count(sn)
+            from tbrd
+            where
+                  grp_sn = #{grpSn}
+            and
+                  status in('BOST01','BOST03')
+        ]]>
+    </select>
+
+    <!--게시판 총 개수인데 현재 사용x (관리자 게시판 만들 때 사용 예정?)-->
+    <select id="getTotalCount" resultType="int">
+        select count(*) from tbrd where sn > 0
+    </select>
+
+
+<!--    <select id="getCountByBrdSn" resultType="int">-->
+<!--        select like_cnt from tbrd where sn = #{sn}-->
+<!--    </select>-->
+
+
+
+</mapper>

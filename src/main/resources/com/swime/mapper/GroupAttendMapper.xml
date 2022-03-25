@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swime.mapper.GroupAttendMapper">
+
+    <insert id="insertSelectKey">
+        <selectKey keyProperty="sn" order="BEFORE" resultType="long">
+            select seq_tgrp_list.nextval from dual
+        </selectKey>
+        insert into tgrp_list(sn, grp_sn, user_id, grp_role, status)
+        values(#{sn}, #{grpSn}, #{userId}, #{grpRole}, #{status})
+    </insert>
+
+    <select id="getList" resultType="com.swime.domain.GroupAttendVO">
+        select l.sn, l.grp_sn, l.user_id, u.name, u.picture, l.grp_role, l.status, to_char(l.reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date, to_char(l.upd_date, 'yyyy-mm-dd hh24:mi:ss') as upd_date, l.upd_user_id
+        from tgrp_list l, tuser u
+        where l.user_id = u.id
+        and l.grp_sn = #{grpSn}
+        and l.status = 'GRUS01'
+        order by l.grp_role asc, l.sn asc
+    </select>
+
+    <select id="getListWithBan" resultType="com.swime.domain.GroupAttendVO">
+        select l.sn, l.grp_sn, l.user_id, u.name, u.picture, l.grp_role, l.status, to_char(l.reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date, to_char(l.upd_date, 'yyyy-mm-dd hh24:mi:ss') as upd_date, l.upd_user_id
+        from tgrp_list l, tuser u
+        where l.user_id = u.id
+          and l.grp_sn = #{grpSn}
+          and l.status != 'GRUS02'
+        order by l.status asc, l.grp_role asc, l.sn asc
+    </select>
+
+    <update id="update">
+        update tgrp_list
+        set grp_role = #{grpRole},
+        status = #{status},
+        upd_date = current_date,
+        upd_user_id = #{userId}
+        where sn = #{sn}
+    </update>
+
+    <select id="getAttendCountByGroupSn" resultType="long">
+        select count(*)
+        from tgrp_list
+        where grp_sn = #{grpSn}
+        and status = 'GRUS01'
+    </select>
+
+    <select id="read" resultType="com.swime.domain.GroupAttendVO">
+        select sn, grp_sn, user_id, grp_role, status
+        from tgrp_list
+        where sn = #{sn}
+    </select>
+
+    <delete id="delete">
+        delete tgrp_list
+        where sn=#{sn}
+    </delete>
+
+    <select id="readByGrpSnUserId" resultType="com.swime.domain.GroupAttendVO">
+        select sn, grp_sn, user_id, grp_role, status
+        from tgrp_list
+        where grp_sn = #{grpSn}
+        and user_id = #{userId}
+    </select>
+
+</mapper>

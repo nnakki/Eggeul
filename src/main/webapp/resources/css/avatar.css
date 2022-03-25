@@ -1,0 +1,580 @@
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding:5px;
+}
+
+.listChatBtn {
+    padding: 5px;
+}
+
+footer {
+    margin-top : 3rem;
+}
+
+* {
+    box-sizing: border-box;
+    /*font-family: 'Roboto', sans-serif*/
+
+    font-family : 'Noto Sans KR', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 0px;
+}
+
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.header a {
+    float: left;
+    text-align: center;
+    padding: 7px 12px 3px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    border-radius: 4px;
+    color: gray;
+}
+
+.header a.logo {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 3px 12px;
+}
+
+.logo img {
+    width : 100px;
+}
+
+.header a:hover {
+    color: black;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+    padding: 3px 12px 3px 12px;
+    margin-top : 4px;
+
+}
+
+.header-right {
+    float: right;
+    padding-right: 10px;
+
+}
+
+.header-left {
+    float: left;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+}
+
+.head-image {
+    width : 100%;
+    height : 300px;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('../img/groupList2.jpg');
+    opacity: 80%;
+}
+
+.head-image .head-content {
+    color : white;
+    /*padding-right: %;*/
+    padding-left: 17%;
+    padding-top : 12%;
+    /*margin-left : auto;*/
+    /*margin-right : auto;*/
+    cursor : pointer;
+    font-size: 1rem;
+
+}
+
+.head-content p {
+    font-size : 2rem;
+}
+
+
+
+.caption .flex-container {
+    display: flex;
+    margin-top : 1rem;
+    margin-bottom : 1rem;
+    justify-content: space-around;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 0.5rem;
+}
+
+.pagination {
+    isplay: flex;
+    justify-content: center;
+    /*margin-bottom: 60px;*/
+    float: right;
+}
+
+/* Pagination links */
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border-radius: .2rem;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 첨부파일 */
+
+.uploadResult {
+    display : block;
+}
+
+.uploadResult button {
+    display : inline;
+    margin-left : 1rem;
+}
+
+.uploadResult image{
+    width: 200px;
+    height: 200px;
+}
+
+
+.uploadResult ul{
+    display:block;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadResult ul li {
+    list-style: one;
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+
+.uploadResult ul li img {
+
+}
+
+/*
+.uploadResult ul li span {
+    color: white;
+}
+*/
+
+
+
+.bigPictureWrapper {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 100;
+    background:rgba(255,255,255,0.5);
+}
+
+.bigPicture {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigPicture img {
+    width: 600px;
+}
+
+.main-contents {
+    margin: 20px 10px 10px 5px;
+}
+
+.centerHr {
+    width : 100%;
+    margin-top : 60px;
+    margin-bottom : 60px;
+}
+
+/* star */
+.star_score span {
+    display: inline-block;
+    height: 14px;
+    width: 80px;
+    background: url(https://ssl.pstatic.net/static/movie/2019/09/sp_ico3.png) no-repeat -9999px -9999px;
+}
+
+.star_score span.st_off {
+    position: relative;
+
+    margin-right: 2px;
+    background-position: 0 -706px;
+}
+
+span.st_on {
+    position: absolute;
+    z-index: 1;
+    background-position: 0 -690px;
+}
+
+.attendCard {
+    display : inline-block;
+}
+
+.attendBtn {
+    display : inline-block;
+    float : right;
+    /*margin-top : 12px;*/
+}
+
+.attendBtn a {
+    margin: 5px;
+    color: red;
+    text-decoration: underline;
+}
+
+/*↓↓↓board↓↓↓*/
+
+.boardHeader {
+    height: 20%;
+    /*background-color: #efefef;*/
+    padding: 1rem;
+    border : 1px solid rgba(0,0,0,.125);
+    cursor : pointer;
+    border-radius: 0.5rem;
+    background-color : white;
+    margin-bottom : 2px;
+}
+
+.boardHeader:hover {
+    left:-1px;
+    top:-1px;
+    width:calc(100% - 1px);
+    height:calc(100% - 1px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:5px;
+
+}
+
+.board-body {
+    border-radius: 0.5rem;
+    border : 1px solid #f1f1f1;
+
+}
+
+.board-body img {
+    /*width : 21px;*/
+    /*height : 21px;*/
+
+}
+
+
+
+#boardNotice{
+    color : red;
+    margin-bottom: 10px;
+}
+
+#boardName{
+    margin-left: 10px;
+}
+
+#grpBrdRole{
+    margin-left: 1px;
+}
+
+#boardRegDate{
+    float: right;
+    margin-right : 50px;
+}
+
+#boardDivBox {
+    margin-bottom : 1rem;
+}
+
+#board-title {
+    font-weight : bold;
+    font-size : 1.3rem;
+    color : black;
+}
+
+.boardPageFooter .pagination {
+    margin-top : 1rem;
+}
+
+.card-body {
+    /*margin-bottom: 20px;*/
+
+}
+
+.card-body p {
+    text-align : center;
+}
+
+.card-body .card-title {
+    text-align : center;
+    font-size : 25px;
+}
+
+.move:hover .caption{
+    opacity:1;
+}
+.move .caption {
+    position : absolute;
+    top: 0px;
+    left : 0px;
+    width:100%;
+    height:100%;
+    padding-top:57px;
+    background : rgba(0,0,0,0.6);
+    opacity:0;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index:10;
+    border-radius: 1rem;
+}
+
+.move .caption p {
+    color: #fff;
+    taxt-align:center;
+}
+
+#card-text-sigungu {
+    color : #a0a0a0;
+    font-size : 12px;
+}
+
+.card-text-rating {
+    display : flex;
+}
+
+.ratingPlace {
+    margin : auto;
+}
+
+#card-title-name {
+    font-size: 20px;
+
+}
+
+.gray-background {
+    background-color: #f1f1f1;
+
+}
+
+
+.get-header .row {
+    margin : 20px;
+}
+
+.get-header .uploadResult {
+    width : 500px;
+    height : 350px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+
+}
+
+.get-header img {
+    /*width:100%;*/
+    height:100%;
+
+}
+
+.get-header p {
+    margin : 0px;
+}
+
+.get-header div {
+    margin : 5px 0px;
+}
+
+.get-header .info {
+    margin : 40px 0px;
+}
+
+.get-body #groupAttend .header{
+    background-color: #f1f1f1;
+    padding : 4px;
+}
+
+.get-body h4 {
+    margin-bottom : 30px;
+    clear: right;
+}
+
+.get-body #info pre{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-all
+
+}
+
+.get-body h4 .btn {
+    float : right;
+}
+
+.card{
+    border-radius: 1rem;
+}
+
+.studyList .card{
+    cursor : pointer;
+    border-radius: 1rem;
+    margin-right : auto;
+}
+
+.studyList .card-body p{
+    text-align: center;
+    color : #212529;
+}
+
+.studyList .card-body h2{
+    text-align: center;
+    font-weight: bold;
+    font-size : 1.9em;
+}
+
+.studyList .blue-text {
+    color : white !important;
+    text-align: center;
+    margin-bottom : 5px;
+}
+
+.studyList .btn {
+    float : right;
+}
+
+.studyList .card-footer {
+    background-color: rgba(0, 123, 255, 0.5);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.pastStudyList .card-footer {
+    text-align: center;
+}
+
+.studyList .card:hover {
+    left:-1px;
+    top:-1px;
+    width:calc(100% - 1px);
+    height:calc(100% - 1px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*border-radius:5px;*/
+
+}
+
+/* group/get rating */
+.group-rating {
+    background-color: white;
+    border-radius: 0.5rem;
+    border : 1px solid rgba(0,0,0,.125);
+    margin-bottom : 1rem;
+}
+
+.group-rating .header {
+    border-radius: 0.5rem;
+    padding : 0px;
+    margin-bottom : 0.5rem;
+    margin-top : 0.5rem;
+
+}
+
+.group-rating .group-rating-content{
+    padding : 0.5rem 1.5rem;
+    border-bottom : 1px solid rgba(0,0,0,.125);
+}
+
+.group-rating .group-rating-content p {
+    cursor : pointer;
+}
+
+/* 모임만들기 */
+.group-register {
+    margin-top : 1rem;
+}
+
+/* 스터디 상세 */
+#map {
+    width : 100%;
+    height: 400px;
+}
+
+#member li {
+    padding : 4px;
+}
+
+.get-body #study-place {
+    margin-bottom : 1rem;
+}
+
+.study-buttons {
+    margin-bottom : 3rem;
+    display : flex;
+    justify-content: flex-end;
+    padding-right : 11rem;
+}
+
+#study-get-header {
+    padding-top : 3rem;
+    padding-bottom : 3rem;
+}
+
+.study-buttons a {
+    margin :  0px 3px;
+}

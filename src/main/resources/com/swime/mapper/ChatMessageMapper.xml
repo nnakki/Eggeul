@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swime.mapper.ChatMessageMapper">
+
+    <insert id="insertMsg">
+        insert into tchat_msg (sn, chat_room_id, sender_id, receiver_id, contents, status, send_date)
+        values (seq_tchat_msg.nextval, #{chatRoomId}, #{senderId}, #{receiverId}, #{contents}, #{status}, current_date)
+    </insert>
+
+    <select id="getMsg" resultType="com.swime.domain.ChatMessageVO">
+        select * from tchat_msg
+        where chat_room_id = #{chatRoomId}
+        order by send_date
+    </select>
+
+    <select id="getUnreadMsg" resultType="com.swime.domain.ChatMessageVO">
+        select *
+        from tchat_msg
+        where sender_id = #{senderId} and receiver_id = #{receiverId} and status='MSST02'
+        order by send_date
+    </select>
+
+    <update id="readMsg">
+        update tchat_msg
+        set status = 'MSST01'
+        where sn = #{sn}
+    </update>
+
+    <select id="getTotalUnreadMsg" resultType="com.swime.domain.ChatMessageVO">
+        select count(*) as unread_msg
+        from tchat_msg
+        where receiver_id = #{userId} and status = 'MSST02'
+    </select>
+</mapper>
