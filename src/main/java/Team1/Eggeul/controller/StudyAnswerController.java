@@ -1,13 +1,12 @@
 package Team1.Eggeul.controller;
 
+import Team1.Eggeul.domain.StudyAnswerVO;
+import Team1.Eggeul.domain.StudyParamVO;
+import Team1.Eggeul.service.StudyAnswerService;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.swime.domain.StudyAnswerVO;
-import com.swime.domain.StudyParamVO;
-import com.swime.domain.StudySurveyVO;
-import com.swime.service.StudyAnswerService;
-import com.swime.service.StudyService;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

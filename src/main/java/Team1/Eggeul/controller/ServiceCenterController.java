@@ -1,9 +1,10 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.BoardCriteria;
-import com.swime.domain.BoardVO;
-import com.swime.domain.GroupBoardPageDTO;
-import com.swime.service.BoardService;
+
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.BoardVO;
+import Team1.Eggeul.domain.GroupBoardPageDTO;
+import Team1.Eggeul.service.BoardService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

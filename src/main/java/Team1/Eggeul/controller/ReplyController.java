@@ -1,9 +1,8 @@
 package Team1.Eggeul.controller;
 
-
-import com.swime.domain.BoardCriteria;
-import com.swime.domain.ReplyVO;
-import com.swime.service.ReplyService;
+import Team1.Eggeul.domain.BoardCriteria;
+import Team1.Eggeul.domain.ReplyVO;
+import Team1.Eggeul.service.ReplyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
