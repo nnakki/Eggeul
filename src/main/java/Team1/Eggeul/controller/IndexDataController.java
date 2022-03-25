@@ -1,11 +1,11 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.CodeTable;
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupVO;
-import com.swime.domain.StudyVO;
-import com.swime.mapper.IndexDataMapper;
-import com.swime.service.IndexDataService;
+import Team1.Eggeul.domain.CodeTable;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupVO;
+import Team1.Eggeul.domain.StudyVO;
+import Team1.Eggeul.mapper.IndexDataMapper;
+import Team1.Eggeul.service.IndexDataService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;

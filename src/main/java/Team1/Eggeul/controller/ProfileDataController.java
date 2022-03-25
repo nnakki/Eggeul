@@ -1,8 +1,8 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.*;
-import com.swime.mapper.GroupTagMapper;
-import com.swime.service.ProfileService;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.mapper.GroupTagMapper;
+import Team1.Eggeul.service.ProfileService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
@@ -139,14 +139,6 @@ public class ProfileDataController {
     public ResponseEntity<ReplyPageDTO> getWriteReplyList(String id, ProfileCriteria cri){
         return new ResponseEntity<>(service.ReplyBoth(id, cri), HttpStatus.OK);
     }
-
-
-
-
-
-
-
-
 
     // 스터디 리스트 페이징처리
     @GetMapping(value = "/list/{grpSn}/{page}", produces = {MediaType.APPLICATION_JSON_VALUE})
