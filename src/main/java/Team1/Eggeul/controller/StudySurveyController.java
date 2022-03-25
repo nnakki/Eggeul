@@ -26,6 +26,6 @@ public class StudySurveyController {
     public ResponseEntity<List<StudySurveyVO>> get(@PathVariable("stdSn") long stdSn) {
         // 1. stdsn 필요
 
-        return new ResponseEntity<>(service.getSurveyList(stdSn), HttpStatus.OK);
+        return new ResponseEntity(service.getSurveyList(stdSn), HttpStatus.OK);
     }
 }

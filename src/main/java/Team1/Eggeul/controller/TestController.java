@@ -1,5 +1,6 @@
 package Team1.Eggeul.controller;
 
+import Team1.Eggeul.service.AdminDashBoardService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Controller;
