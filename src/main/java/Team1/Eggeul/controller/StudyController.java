@@ -27,7 +27,7 @@ import java.util.List;
 @RequestMapping("/study")
 @Log4j
 @AllArgsConstructor
-@PropertySource("classpath:/map_key.properties")
+//@PropertySource("classpath:/map_key.properties")
 public class StudyController {
 
     @Autowired
