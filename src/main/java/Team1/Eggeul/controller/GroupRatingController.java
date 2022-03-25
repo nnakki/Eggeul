@@ -1,9 +1,9 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.GroupCriteria;
-import com.swime.domain.GroupRatingPageDTO;
-import com.swime.domain.GroupRatingVO;
-import com.swime.service.GroupRatingService;
+import Team1.Eggeul.domain.GroupCriteria;
+import Team1.Eggeul.domain.GroupRatingPageDTO;
+import Team1.Eggeul.domain.GroupRatingVO;
+import Team1.Eggeul.service.GroupRatingService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
