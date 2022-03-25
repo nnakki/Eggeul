@@ -1,9 +1,9 @@
 package Team1.Eggeul.controller;
 
-import com.swime.domain.*;
-import com.swime.service.AdminDashBoardService;
-import com.swime.service.MemberService;
-import com.swime.util.CookieUtils;
+import Team1.Eggeul.domain.*;
+import Team1.Eggeul.service.AdminDashBoardService;
+import Team1.Eggeul.service.MemberService;
+import Team1.Eggeul.util.CookieUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
