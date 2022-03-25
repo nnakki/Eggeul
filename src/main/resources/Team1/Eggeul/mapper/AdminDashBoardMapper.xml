@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.AdminDashBoardMapper">
+<mapper namespace="Team1.Eggeul.mapper.AdminDashBoardMapper">
 
     <select id="countTodayUserRegister" resultType="int">
         <![CDATA[
@@ -16,7 +16,7 @@
         ]]>
     </select>
 
-    <select id="todayUserRegister" resultType="com.swime.domain.DashBoardModalDataVO">
+    <select id="todayUserRegister" resultType="Team1.Eggeul.domain.DashBoardModalDataVO">
         <![CDATA[
         select id string1, reg_date date1
         from tuser
@@ -38,7 +38,7 @@
         ]]>
     </select>
 
-    <select id="todayGroupRegister" resultType="com.swime.domain.DashBoardModalDataVO">
+    <select id="todayGroupRegister" resultType="Team1.Eggeul.domain.DashBoardModalDataVO">
         select description string1, reg_date date1
         from tgrp
         where reg_date BETWEEN
@@ -56,7 +56,7 @@
         ]]>
     </select>
 
-    <select id="todayStudyRegister" resultType="com.swime.domain.DashBoardModalDataVO">
+    <select id="todayStudyRegister" resultType="Team1.Eggeul.domain.DashBoardModalDataVO">
         select name string1, reg_date date1
         from tstd
         where reg_date BETWEEN
@@ -114,14 +114,14 @@
         where visit_date = trunc(current_date, 'hh24')
     </select>
 
-    <select id="getDashBoardLang" resultType="com.swime.domain.DashBoardLangVO">
+    <select id="getDashBoardLang" resultType="Team1.Eggeul.domain.DashBoardLangVO">
         select name, COUNT(name) count
         from tgrp_tag
         group by name
         order by count desc
     </select>
 
-    <select id="getDashBoardLocale" resultType="com.swime.domain.DashBoardLocaleVO">
+    <select id="getDashBoardLocale" resultType="Team1.Eggeul.domain.DashBoardLocaleVO">
         select sido, sigungu, count(sigungu) count
         from tgrp
         group by sigungu, sido

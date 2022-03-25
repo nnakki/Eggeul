@@ -1,10 +1,12 @@
 package Team1.Eggeul.util;
 
-import com.swime.domain.MailVO;
+import Team1.Eggeul.domain.MailVO;
 import lombok.extern.log4j.Log4j;
 
-import javax.mail.*;
-import javax.mail.internet.AddressException;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.GroupWishMapper">
+<mapper namespace="Team1.Eggeul.mapper.GroupWishMapper">
 
 
 
@@ -14,7 +14,7 @@
         VALUES (#{sn}, #{grpSn}, #{userId})
     </insert>
 
-    <select id="read" resultType="com.swime.domain.GroupWishVO">
+    <select id="read" resultType="Team1.Eggeul.domain.GroupWishVO">
         select sn, grp_sn, user_id
         from TGRP_WISH
         where user_id = #{userId}
@@ -27,19 +27,19 @@
         and GRP_SN = #{grpSn}
     </delete>
 
-    <select id="readByid" resultType="com.swime.domain.GroupWishVO">
+    <select id="readByid" resultType="Team1.Eggeul.domain.GroupWishVO">
         select *
         from TGRP_WISH
         where user_id = #{id}
     </select>
 
-    <select id="readByGroupSn" resultType="com.swime.domain.GroupWishVO">
+    <select id="readByGroupSn" resultType="Team1.Eggeul.domain.GroupWishVO">
         select *
         from TGRP_WISH
         where GRP_SN = #{grpSn}
     </select>
 
-    <select id="getList" resultType="com.swime.domain.GroupWishVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.GroupWishVO">
         select *
         from TGRP_WISH
         where user_id = #{id}

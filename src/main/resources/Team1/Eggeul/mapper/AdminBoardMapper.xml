@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.AdminBoardMapper">
+<mapper namespace="Team1.Eggeul.mapper.AdminBoardMapper">
 
     <select id="adminGetCountBySn" resultType="int">
         select count(*) from tbrd b, tuser u
@@ -34,7 +34,7 @@
 
 
     <!--게시판 번호순 정렬-->
-    <select id="adminGetListWithPagingBySn" parameterType="com.swime.domain.BoardVO" resultType="com.swime.domain.BoardVO">
+    <select id="adminGetListWithPagingBySn" parameterType="Team1.Eggeul.domain.BoardVO" resultType="Team1.Eggeul.domain.BoardVO">
         <![CDATA[
 
         select *
@@ -145,7 +145,7 @@
     </select>
 
     <!--번호순 정렬-->
-    <select id="adminReplyGetListWithPagingBySn" parameterType="com.swime.domain.ReplyVO" resultType="com.swime.domain.ReplyVO">
+    <select id="adminReplyGetListWithPagingBySn" parameterType="Team1.Eggeul.domain.ReplyVO" resultType="Team1.Eggeul.domain.ReplyVO">
     <![CDATA[
         select *
         from

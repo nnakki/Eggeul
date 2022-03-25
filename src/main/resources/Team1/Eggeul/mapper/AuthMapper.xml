@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.AuthMapper">
-    <select id="getList" resultType="com.swime.domain.AuthVO">
+<mapper namespace="Team1.Eggeul.mapper.AuthMapper">
+    <select id="getList" resultType="Team1.Eggeul.domain.AuthVO">
         select id, auth
         from TUSER_ROLE
         where id = #{id}
@@ -24,7 +24,7 @@
         where id = #{id} and auth = #{auth}
     </delete>
 
-    <select id="select" resultType="com.swime.domain.AuthVO">
+    <select id="select" resultType="Team1.Eggeul.domain.AuthVO">
         select id, auth
         from TUSER_ROLE
         where id = #{id} and auth = #{auth}

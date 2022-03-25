@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.NoticeMapper">
+<mapper namespace="Team1.Eggeul.mapper.NoticeMapper">
 
     <insert id="insert">
         insert into tnotice (sn, sender, receiver, kind, url, status, content, send_date)
         values(seq_tnotice.nextval, #{sender}, #{receiver}, #{kind}, #{url}, 'MSST01', #{content}, current_date)
     </insert>
 
-    <select id="getList" resultType="com.swime.domain.NoticeVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.NoticeVO">
         select sn, sender, receiver, kind, url, content, send_date, status
         from tnotice
         where receiver = #{userId} and status = 'MSST01'

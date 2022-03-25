@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.GroupAttendMapper">
+<mapper namespace="Team1.Eggeul.mapper.GroupAttendMapper">
 
     <insert id="insertSelectKey">
         <selectKey keyProperty="sn" order="BEFORE" resultType="long">
@@ -12,7 +12,7 @@
         values(#{sn}, #{grpSn}, #{userId}, #{grpRole}, #{status})
     </insert>
 
-    <select id="getList" resultType="com.swime.domain.GroupAttendVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.GroupAttendVO">
         select l.sn, l.grp_sn, l.user_id, u.name, u.picture, l.grp_role, l.status, to_char(l.reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date, to_char(l.upd_date, 'yyyy-mm-dd hh24:mi:ss') as upd_date, l.upd_user_id
         from tgrp_list l, tuser u
         where l.user_id = u.id
@@ -21,7 +21,7 @@
         order by l.grp_role asc, l.sn asc
     </select>
 
-    <select id="getListWithBan" resultType="com.swime.domain.GroupAttendVO">
+    <select id="getListWithBan" resultType="Team1.Eggeul.domain.GroupAttendVO">
         select l.sn, l.grp_sn, l.user_id, u.name, u.picture, l.grp_role, l.status, to_char(l.reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date, to_char(l.upd_date, 'yyyy-mm-dd hh24:mi:ss') as upd_date, l.upd_user_id
         from tgrp_list l, tuser u
         where l.user_id = u.id
@@ -46,7 +46,7 @@
         and status = 'GRUS01'
     </select>
 
-    <select id="read" resultType="com.swime.domain.GroupAttendVO">
+    <select id="read" resultType="Team1.Eggeul.domain.GroupAttendVO">
         select sn, grp_sn, user_id, grp_role, status
         from tgrp_list
         where sn = #{sn}
@@ -57,7 +57,7 @@
         where sn=#{sn}
     </delete>
 
-    <select id="readByGrpSnUserId" resultType="com.swime.domain.GroupAttendVO">
+    <select id="readByGrpSnUserId" resultType="Team1.Eggeul.domain.GroupAttendVO">
         select sn, grp_sn, user_id, grp_role, status
         from tgrp_list
         where grp_sn = #{grpSn}

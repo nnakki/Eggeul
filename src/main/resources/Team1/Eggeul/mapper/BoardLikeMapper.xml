@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.BoardLikeMapper">
+<mapper namespace="Team1.Eggeul.mapper.BoardLikeMapper">
 
     <!--좋아요 등록-->
     <insert id="insert">
@@ -20,7 +20,7 @@
     </delete>
 
     <!---->
-    <select id="get" resultType="com.swime.domain.BoardLikeVO">
+    <select id="get" resultType="Team1.Eggeul.domain.BoardLikeVO">
         select *
         from tbrd_like
         where brd_sn = #{brdSn} and user_id = #{userId}

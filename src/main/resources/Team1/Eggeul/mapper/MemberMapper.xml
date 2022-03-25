@@ -2,15 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.MemberMapper">
-    <select id="read" resultType="com.swime.domain.MemberVO">
+<mapper namespace="Team1.Eggeul.mapper.MemberMapper">
+    <select id="read" resultType="Team1.Eggeul.domain.MemberVO">
         select id, password, name, picture, birth, reg_path, to_char(last_login_date, 'yyyy-mm-dd hh24:mi:ss') as last_login_date,
                to_char(email_auth, 'yyyy-mm-dd hh24:mi:ss') as email_auth, status, to_char(reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date
         from TUSER
         where id = #{id}
     </select>
 
-    <resultMap id="memberMap" type="com.swime.domain.MemberVO">
+    <resultMap id="memberMap" type="Team1.Eggeul.domain.MemberVO">
         <id property="id" column="id"/>
         <result property="id" column="id"/>
         <result property="password" column="password"/>
@@ -25,7 +25,7 @@
         <collection property="authList" resultMap="authMap"></collection>
     </resultMap>
 
-    <resultMap id="authMap" type="com.swime.domain.AuthVO">
+    <resultMap id="authMap" type="Team1.Eggeul.domain.AuthVO">
         <result property="id" column="id"/>
         <result property="auth" column="auth"/>
     </resultMap>
@@ -78,7 +78,7 @@
         where id = #{id}
     </delete>
 
-    <select id="getlist" resultType="com.swime.domain.MemberVO">
+    <select id="getlist" resultType="Team1.Eggeul.domain.MemberVO">
         select id, password, name, picture, birth, reg_path, to_char(last_login_date, 'yyyy-mm-dd hh24:mi:ss') as last_login_date,
                to_char(email_auth, 'yyyy-mm-dd hh24:mi:ss') as email_auth, status, to_char(reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date
         from TUSER
@@ -92,7 +92,7 @@
         VALUES(#{sn}, #{email, jdbcType=VARCHAR}, #{updMtr}, #{befVal, jdbcType=VARCHAR}, #{aftVal, jdbcType=VARCHAR}, #{reason, jdbcType=VARCHAR}, #{description, jdbcType=VARCHAR}, #{updUserId})
     </insert>
 
-    <select id="getHistory" resultType="com.swime.domain.MemberHistoryVO">
+    <select id="getHistory" resultType="Team1.Eggeul.domain.MemberHistoryVO">
         select *
         from TUSER_UPD_HIST
         where email = #{email}

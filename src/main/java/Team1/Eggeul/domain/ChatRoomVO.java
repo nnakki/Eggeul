@@ -2,13 +2,9 @@ package Team1.Eggeul.domain;
 
 import lombok.Data;
 import lombok.extern.log4j.Log4j;
-import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 
-import javax.xml.soap.Text;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Data

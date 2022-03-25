@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.GroupTagMapper">
+<mapper namespace="Team1.Eggeul.mapper.GroupTagMapper">
 
     <insert id="insert">
         insert into tgrp_tag(grp_sn, name)
         values(#{grpSn}, #{name})
     </insert>
 
-    <select id="getList" resultType="com.swime.domain.GroupTagVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.GroupTagVO">
         select grp_sn, name
         from tgrp_tag
         where grp_sn = #{grpSn}

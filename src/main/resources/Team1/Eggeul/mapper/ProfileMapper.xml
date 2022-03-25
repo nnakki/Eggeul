@@ -2,23 +2,23 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.ProfileMapper">
+<mapper namespace="Team1.Eggeul.mapper.ProfileMapper">
 
 <!-- 그룹 -->
-    <select id="read" resultType="com.swime.domain.GroupVO">
+    <select id="read" resultType="Team1.Eggeul.domain.GroupVO">
         SELECT sn, category, name, user_id, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date, upd_date
         from tgrp
         where user_id = #{id} and sn = #{sn}
     </select>
 
-    <select id="ownerList" resultType="com.swime.domain.GroupVO">
+    <select id="ownerList" resultType="Team1.Eggeul.domain.GroupVO">
         SELECT sn, category, name, user_id, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date, upd_date
         from tgrp
         where user_id = #{id} and status != 'GRST03'
         order by sn desc
     </select>
 
-    <select id="joinList" resultType="com.swime.domain.GroupVO">
+    <select id="joinList" resultType="Team1.Eggeul.domain.GroupVO">
         select t.sn, t.category, t.name, t.picture, t.description, t.attend_count, t.rating, t.rating_count, t.sido, t.sigungu, t.status,
                t.reg_user_id, t.reg_date, t.reg_user_id
         from Tgrp_list l LEFT OUTER JOIN tgrp t ON l.grp_sn = t.sn AND l.user_id = #{id} AND t.status = 'GRST01' AND l.status = 'GRUS01'
@@ -26,7 +26,7 @@
         order by t.sn desc
     </select>
 
-    <select id="wishList" resultType="com.swime.domain.GroupVO">
+    <select id="wishList" resultType="Team1.Eggeul.domain.GroupVO">
         select t.sn, t.category, t.name, t.picture, t.description, t.attend_count, t.rating, t.rating_count, t.sido, t.sigungu, t.status,
                t.reg_user_id, t.reg_date, t.reg_user_id
         from tgrp_wish l LEFT OUTER JOIN tgrp t ON l.grp_sn = t.sn AND t.status = 'GRST01'
@@ -34,7 +34,7 @@
         order by t.sn desc
     </select>
 
-    <select id="joinListWithPaging" resultType="com.swime.domain.GroupVO">
+    <select id="joinListWithPaging" resultType="Team1.Eggeul.domain.GroupVO">
         <![CDATA[
         select sn, category, name, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date, reg_user_id
         from(
@@ -52,7 +52,7 @@
         ]]>
     </select>
 
-    <select id="ownerListWithPaging" resultType="com.swime.domain.GroupVO">
+    <select id="ownerListWithPaging" resultType="Team1.Eggeul.domain.GroupVO">
         <![CDATA[
         select sn, category, name, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date
         from(
@@ -69,7 +69,7 @@
         ]]>
     </select>
 
-    <select id="wishListWithPaging" resultType="com.swime.domain.GroupVO">
+    <select id="wishListWithPaging" resultType="Team1.Eggeul.domain.GroupVO">
         <![CDATA[
         select sn, category, name, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date, reg_user_id
         from(
@@ -107,7 +107,7 @@
     </select>
 
 <!-- 스터디 -->
-    <select id="makeStudyList" resultType="com.swime.domain.StudyVO">
+    <select id="makeStudyList" resultType="Team1.Eggeul.domain.StudyVO">
         <![CDATA[
         select *
         from
@@ -132,7 +132,7 @@
         where s.representation = u.id and s.status in ('STST01', 'STST03') and u.id = #{id}
     </select>
 
-    <select id="beforeStudyList" resultType="com.swime.domain.StudyVO">
+    <select id="beforeStudyList" resultType="Team1.Eggeul.domain.StudyVO">
         <![CDATA[
         select *
         from
@@ -159,7 +159,7 @@
     ]]>
     </select>
 
-    <select id="afterStudyList" resultType="com.swime.domain.StudyVO">
+    <select id="afterStudyList" resultType="Team1.Eggeul.domain.StudyVO">
         <![CDATA[
         select *
         from
@@ -186,7 +186,7 @@
     ]]>
     </select>
 
-    <select id="wishStudyList" resultType="com.swime.domain.StudyVO">
+    <select id="wishStudyList" resultType="Team1.Eggeul.domain.StudyVO">
     <![CDATA[
         select *
         from
@@ -211,7 +211,7 @@
         where w.user_id = #{id} and s.status in ('STST01', 'STST03')
     </select>
 
-    <select id="writeContentsList" resultType="com.swime.domain.BoardVO">
+    <select id="writeContentsList" resultType="Team1.Eggeul.domain.BoardVO">
     <![CDATA[
         select *
         from
@@ -235,7 +235,7 @@
         where b.status != 'BOST02' and b.user_id = #{id}
     </select>
 
-    <select id="writeReplyList" resultType="com.swime.domain.ReplyVO">
+    <select id="writeReplyList" resultType="Team1.Eggeul.domain.ReplyVO">
     <![CDATA[
         select *
         from
@@ -275,7 +275,7 @@
 
 
 
-    <!--    <select id="getListWithPaging" resultType="com.swime.domain.GroupVO">-->
+    <!--    <select id="getListWithPaging" resultType="Team1.Eggeul.domain.GroupVO">-->
 <!--        <![CDATA[-->
 <!--        select sn, category, name, user_id, user_name, picture, description, attend_count, rating, rating_count, sido, sigungu, status, reg_date, reg_user_id, upd_date, upd_user_id-->
 <!--        from (-->

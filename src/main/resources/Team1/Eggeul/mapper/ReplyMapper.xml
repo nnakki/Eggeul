@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.ReplyMapper">
+<mapper namespace="Team1.Eggeul.mapper.ReplyMapper">
     <!--commment_gorup에 시퀀스를 넣는다 댓글 묶기위해-->
     <select id="getSequence" resultType="int">
         select seq_trpl.nextval from dual
@@ -20,7 +20,7 @@
                (#{sn}, #{brdSn}, #{userId}, #{commentGroup}, #{content}, #{status})
     </insert>
     <!--댓글 읽기-->
-    <select id="read" resultType="com.swime.domain.ReplyVO">
+    <select id="read" resultType="Team1.Eggeul.domain.ReplyVO">
         select r.sn,
                r.brd_sn,
                r.user_id,
@@ -50,7 +50,7 @@
         where sn = #{sn}
     </update>
 
-    <select id="getListWithPaging11111" resultType="com.swime.domain.ReplyVO">
+    <select id="getListWithPaging11111" resultType="Team1.Eggeul.domain.ReplyVO">
         <![CDATA[
         select sn,
                brd_sn,
@@ -89,7 +89,7 @@
 
     </select>
     <!--댓글 페이징 처리(페이지 아직 x)-->
-    <select id="getListWithPaging" resultType="com.swime.domain.ReplyVO">
+    <select id="getListWithPaging" resultType="Team1.Eggeul.domain.ReplyVO">
         <![CDATA[
         select sn, brd_sn, comment_group, user_id, name, content, cnt, status, reg_date, upd_date
         from ( select /*+INDEX(trpl idx_reply) */ rownum rn, r.sn, r.brd_sn, r.comment_group, r.user_id, u.name, r.content, r.cnt, r.status, r.reg_date, r.upd_date
@@ -129,7 +129,7 @@
     </select>
 
     <!--번호순 정렬-->
-    <select id="adminGetListWithPagingBySn" resultType="com.swime.domain.ReplyVO">
+    <select id="adminGetListWithPagingBySn" resultType="Team1.Eggeul.domain.ReplyVO">
     <![CDATA[
     select *
         from

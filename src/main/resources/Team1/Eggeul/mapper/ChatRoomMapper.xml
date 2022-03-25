@@ -2,19 +2,19 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.ChatRoomMapper">
+<mapper namespace="Team1.Eggeul.mapper.ChatRoomMapper">
 
-    <select id="getRoomList" resultType="com.swime.domain.ChatRoomVO">
+    <select id="getRoomList" resultType="Team1.Eggeul.domain.ChatRoomVO">
         select * from tchat_room
     </select>
 
-    <select id="getRoomsOfUser" resultType="com.swime.domain.ChatRoomVO">
+    <select id="getRoomsOfUser" resultType="Team1.Eggeul.domain.ChatRoomVO">
         select r.id
         from tchat_attend a, tchat_room r
         where a.attend_id= 'wlgh52725@gmail.com' and a.chat_room_id = r.id
     </select>
 
-    <select id="getRoomListById" resultType="com.swime.domain.ChatMessageVO">
+    <select id="getRoomListById" resultType="Team1.Eggeul.domain.ChatMessageVO">
         select tb.sn, tb.chat_room_id, tb.receiver_id, tb.sender_id, tb.contents, tb.status, tb.send_date, tb.read_date
         from (
                  select row_number() over(partition by m.chat_room_id order by m.send_date desc) as rn, m.*
@@ -35,7 +35,7 @@
         values(seq_tchat_attend.nextval, #{id}, #{userId})
     </insert>
 
-    <select id="getOldChatRoom" resultType="com.swime.domain.ChatAttendVO">
+    <select id="getOldChatRoom" resultType="Team1.Eggeul.domain.ChatAttendVO">
         select *
         from tchat_attend outer
         where attend_id = #{me}
@@ -47,7 +47,7 @@
             )
     </select>
 
-    <select id="getYourId" resultType="com.swime.domain.ChatAttendVO">
+    <select id="getYourId" resultType="Team1.Eggeul.domain.ChatAttendVO">
         select * from tchat_attend
         where chat_room_id = #{chatRoomId} and attend_id != #{userId}
     </select>

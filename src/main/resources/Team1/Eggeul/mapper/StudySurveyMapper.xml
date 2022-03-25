@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.StudySurveyMapper">
+<mapper namespace="Team1.Eggeul.mapper.StudySurveyMapper">
 
-    <select id="getList" resultType="com.swime.domain.StudySurveyVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.StudySurveyVO">
         select sn, std_sn, question_sn, question
         from tstd_survey
         where std_sn = #{stdSn}

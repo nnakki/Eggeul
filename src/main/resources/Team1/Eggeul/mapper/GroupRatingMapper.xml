@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.swime.mapper.GroupRatingMapper">
+<mapper namespace="Team1.Eggeul.mapper.GroupRatingMapper">
 
     <insert id="insert">
         insert into tgrp_rating(sn, grp_sn, std_sn, user_id, rating, review)
@@ -17,20 +17,20 @@
         values(#{sn}, #{grpSn}, #{stdSn}, #{userId}, #{rating}, #{review})
     </insert>
 
-    <select id="read" resultType="com.swime.domain.GroupRatingVO">
+    <select id="read" resultType="Team1.Eggeul.domain.GroupRatingVO">
         select sn, grp_sn, std_sn, user_id, rating, review, to_char(reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date
         from tgrp_rating
         where sn = #{sn}
     </select>
 
-    <select id="getList" resultType="com.swime.domain.GroupRatingVO">
+    <select id="getList" resultType="Team1.Eggeul.domain.GroupRatingVO">
         select r.sn, r.grp_sn, r.std_sn, r.user_id, u.name user_name, r.rating, r.review, to_char(r.reg_date, 'yyyy-mm-dd hh24:mi:ss') as reg_date
         from tgrp_rating r, tuser u
         where grp_sn = #{grpSn}
         and r.user_id = u.id
     </select>
 
-    <select id="getListWithPaging" resultType="com.swime.domain.GroupRatingVO">
+    <select id="getListWithPaging" resultType="Team1.Eggeul.domain.GroupRatingVO">
         <![CDATA[
         select sn, grp_sn, std_sn, user_id, user_name, rating, review, reg_date
         from (  select /*+INDEX_DESC(r pk_tgrp_rating) */
