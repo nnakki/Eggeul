@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@EnableWebMvc
+//@EnableWebMvc
 //@ComponentScan(basePackages= {"com.swime.controller", "com.swime.exception"})
 @Import({ SecurityConfig.class })
 @EnableGlobalMethodSecurity(prePostEnabled = false, securedEnabled = false)

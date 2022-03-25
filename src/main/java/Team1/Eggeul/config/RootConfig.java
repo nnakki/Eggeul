@@ -9,8 +9,11 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -37,11 +40,30 @@ public class RootConfig {
         return sqlSessionFactory.getObject();
     }
 
+    @Bean(name = "dataSource")
+    @Primary
+    @ConfigurationProperties("spring.datasource.hikari")
+    public DataSource dataSource() {
+        return DataSourceBuilder.create()
+                .type(HikariDataSource.class)
+                .build();
+    }
+/*
+    @Bean
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+        sqlSessionFactory.setDataSource(dataSource());
+
+        Resource myBatisConfig = new PathMatchingResourcePatternResolver().getResource("classpath:mybatis-config.xml");
+        sqlSessionFactory.setConfigLocation(myBatisConfig);
+        return sqlSessionFactory.getObject();
+    }
+
 
     @Bean
     public DataSource dataSource() {
-        System.setProperty("oracle.jdbc.fanEnabled","false");
-        System.setProperty("java.security.egd", "file:///dev/urandom");
+//        System.setProperty("oracle.jdbc.fanEnabled","false");
+//        System.setProperty("java.security.egd", "file:///dev/urandom");
 
         if(checkOS().isWindows())
             System.setProperty("oracle.net.tns_admin","C:/Oracle/Wallet_eggeuldb");
@@ -55,7 +77,7 @@ public class RootConfig {
         }
 
         HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
+        //hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
 
 
         if(true) {
@@ -70,16 +92,16 @@ public class RootConfig {
             }
 
         }
- /*       else {
+ *//*       else {
             hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:XE");
             hikariConfig.setUsername("book_ex");
             hikariConfig.setPassword("book_ex");
 //            hikariConfig.setUsername("swime1");
 //            hikariConfig.setPassword("1234");
-        }*/
+        }*//*
 
         return new HikariDataSource(hikariConfig);
-    }
+    }*/
 
 
     @Bean
