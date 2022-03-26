@@ -26,8 +26,8 @@ import java.util.TimeZone;
 @Configuration
 //@ComponentScan(basePackages = {//"com.swime.task",
 //        "com.swime.service", "com.swime.aop", "com.swime.util"})
-//@EnableScheduling
-//@MapperScan(basePackages = {"Team1.Eggeul.mapper"})
+@EnableScheduling
+@MapperScan(basePackages = {"Team1.Eggeul.mapper"})
 public class RootConfig {
 
     //Book
