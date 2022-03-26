@@ -7,8 +7,6 @@ import java.util.List;
 
 public interface GroupMapper {
 
-    public String getTime();
-
     // 모임을 생성한다. - o
     public int insertSelectKey(GroupVO group);
 
