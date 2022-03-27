@@ -42,7 +42,7 @@ public class RootConfig {
     public DataSource dataSource() {
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
-        hikariConfig.setJdbcUrl("jdbc:oracle:thin:@eggeuldb_high?TNS_ADMIN=/Oracle/Wallet_eggeuldb");
+        hikariConfig.setJdbcUrl("jdbc:oracle:thin:@eggeuldb_medium?TNS_ADMIN=/Oracle/Wallet_eggeuldb");
         hikariConfig.setUsername("ADMIN");
         hikariConfig.setPassword("Eggeul123456789");
 
