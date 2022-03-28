@@ -12,7 +12,7 @@
     <select id="getList" resultType="Team1.Eggeul.domain.NoticeVO">
         select sn, send_id, receive_id, kind, send_date, status
         from talarm
-        where receiver = #{userId} and status = 'MSST01'
+        where receive_id = #{userId} and status = 'MSST01'
         order by send_date desc
     </select>
 

@@ -5,18 +5,18 @@
 <mapper namespace="Team1.Eggeul.mapper.GroupTagMapper">
 
     <insert id="insert">
-        insert into tgrp_tag(grp_sn, name)
+        insert into grp_tag(grp_sn, name)
         values(#{grpSn}, #{name})
     </insert>
 
     <select id="getList" resultType="Team1.Eggeul.domain.GroupTagVO">
         select grp_sn, name
-        from tgrp_tag
+        from grp_tag
         where grp_sn = #{grpSn}
     </select>
 
     <delete id="delete">
-        delete from tgrp_tag
+        delete from grp_tag
         where grp_sn = #{grpSn}
     </delete>
 </mapper>

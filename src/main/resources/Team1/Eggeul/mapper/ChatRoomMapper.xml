@@ -9,7 +9,7 @@
     </select>
 
     <select id="getRoomsOfUser" resultType="Team1.Eggeul.domain.ChatRoomVO">
-        select r.id
+        select r.sn
         from tchat_attend a, tchat_room r
         where a.attend_id= 'wlgh52725@gmail.com' and a.chat_room_id = r.id
     </select>
