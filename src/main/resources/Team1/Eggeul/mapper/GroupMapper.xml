@@ -115,7 +115,7 @@
         select count(*)
         from tgrp
         where sn > 0
-        <!-- and status = 'GRST01'-->
+         and status = 'GRST01'
         <trim prefix="AND">
             <if test="category != null and category != ''.toString()">
                     category = #{category}
