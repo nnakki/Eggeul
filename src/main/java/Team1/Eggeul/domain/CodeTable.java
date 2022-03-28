@@ -89,18 +89,30 @@ public enum CodeTable {
     LOGU24("중구"),
     LOGU25("중랑구"),
 
-
+    //모임 내 권한
     GRRO01("모임장"),
     GRRO02("운영진"),
     GRRO03("회원"),
-    GRRO04("영구강퇴")
-    ;
+    GRRO04("영구강퇴"),
+
+    //모임 상태
+    GRST01("정상"),
+    GRST03("삭제"),
+
+    //모임 가입 상태
+    GRUS01("정상상태"),
+    GRUS02("탈퇴"),
+    GRUS03("영구강퇴"),
+
+    //스터디 가입 상태
+    STUS01("참가상태"),
+    STUS02("탈퇴"),
+    STUS03("검토"),
+    STUS04("영구강퇴");
 
     private String value;
 
     CodeTable(String value) {
         this.value = value;
     }
-
-
 }
