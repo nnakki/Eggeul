@@ -147,7 +147,7 @@
             <sec:authorize access="hasAuthority('ADMIN')">
                 <a href="/admin/adminIndex">어드민 페이지</a>
             </sec:authorize>
-            <a href="#" onclick="document.getElementById('logout').submit();">로그아웃</a>
+            <a href="/user/logout">로그아웃</a>
         </sec:authorize>
     </div>
 </div>

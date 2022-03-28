@@ -24,6 +24,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -53,6 +54,17 @@ public class UserController {
         return service.get(id) != null ?
                 new ResponseEntity<>(true, HttpStatus.OK) :
                 new ResponseEntity<>(false, HttpStatus.OK);
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        log.info("logout 메소드 진입");
+
+        HttpSession session = request.getSession();
+
+        session.invalidate();
+
+        return "redirect:/";
     }
 
     @GetMapping("/login")
