@@ -17,7 +17,7 @@
     <div class="container" style="display: flex; flex-direction: column; align-items: center; margin-top: 3em">
     <img src="../../../resources/img/logo.png" style="width: 10rem; margin-bottom: 1rem">
 
-    <h3 style="margin:0; ">인증이 완료되었습니다 :D </h3>
+    <h3 style="margin:0; ">인증이 완료되었습니다!</h3>
 
     </div>
 </body>
