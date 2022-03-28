@@ -61,7 +61,6 @@
             <select class="form-control" id="sido" name="sido">
                 <option value="select">-------------</option>
                 <option value="LODO01">서울특별시</option>
-                <option value="LODO02">경기도</option>
             </select>
             </div>
             <div class="col">
@@ -93,39 +92,6 @@
                     <option value="LOGU23" hidden="hidden">종로구</option>
                     <option value="LOGU24" hidden="hidden">중구</option>
                     <option value="LOGU25" hidden="hidden">중랑구</option>
-                    <option value="LOSI01" hidden="hidden">고양시</option>
-                    <option value="LOSI02" hidden="hidden">과천시</option>
-                    <option value="LOSI03" hidden="hidden">광명시</option>
-                    <option value="LOSI04" hidden="hidden">광주시</option>
-                    <option value="LOSI05" hidden="hidden">구리시</option>
-                    <option value="LOSI06" hidden="hidden">군포시</option>
-                    <option value="LOSI07" hidden="hidden">김포시</option>
-                    <option value="LOSI08" hidden="hidden">남양주시</option>
-                    <option value="LOSI09" hidden="hidden">동두천시</option>
-                    <option value="LOSI10" hidden="hidden">미금시</option>
-                    <option value="LOSI11" hidden="hidden">부천시</option>
-                    <option value="LOSI12" hidden="hidden">성남시</option>
-                    <option value="LOSI13" hidden="hidden">송탄시</option>
-                    <option value="LOSI14" hidden="hidden">수원시</option>
-                    <option value="LOSI15" hidden="hidden">시흥시</option>
-                    <option value="LOSI16" hidden="hidden">안산시</option>
-                    <option value="LOSI17" hidden="hidden">안성시</option>
-                    <option value="LOSI18" hidden="hidden">안양시</option>
-                    <option value="LOSI19" hidden="hidden">양주시시</option>
-                    <option value="LOSI20" hidden="hidden">양주시</option>
-                    <option value="LOSI21" hidden="hidden">여주시</option>
-                    <option value="LOSI22" hidden="hidden">여주시</option>
-                    <option value="LOSI23" hidden="hidden">오산시</option>
-                    <option value="LOSI24" hidden="hidden">용인시</option>
-                    <option value="LOSI25" hidden="hidden">의왕시</option>
-                    <option value="LOSI26" hidden="hidden">의정부</option>
-                    <option value="LOSI27" hidden="hidden">이천시</option>
-                    <option value="LOSI28" hidden="hidden">파주시</option>
-                    <option value="LOSI29" hidden="hidden">평택시</option>
-                    <option value="LOSI30" hidden="hidden">포천시</option>
-                    <option value="LOSI31" hidden="hidden">포천시</option>
-                    <option value="LOSI32" hidden="hidden">하남시</option>
-                    <option value="LOSI33" hidden="hidden">화성시</option>
                 </select>
             </div>
         </div>
@@ -450,7 +416,9 @@
                         options[i].removeAttribute("hidden");
                     }
                 }
-            }else if($('#sido option:selected').val() == "LODO02") {
+            }
+            /*
+            else if($('#sido option:selected').val() == "LODO02") {
                 // 경기도일때
                 for(let i=0; i<options.length; i++) {
                     if(options[i].value.substr(0,4) == "LOSI") {
@@ -458,6 +426,7 @@
                     }
                 }
             }
+            */
         })
     })
 </script>

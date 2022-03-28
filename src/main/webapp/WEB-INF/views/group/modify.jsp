@@ -63,7 +63,6 @@
                 <select class="form-control" id="sido" name="sido">
                     <option value="select">-------------</option>
                     <option value="LODO01">서울특별시</option>
-                    <option value="LODO02">경기도</option>
                 </select>
             </div>
             <div class="col">
@@ -95,40 +94,6 @@
                     <option value="LOGU23">종로구</option>
                     <option value="LOGU24">중구"</option>
                     <option value="LOGU25">중랑구</option>
-                    <option value="select">-------------</option>
-                    <option value="LOSI01">고양시</option>
-                    <option value="LOSI02">과천시</option>
-                    <option value="LOSI03">광명시</option>
-                    <option value="LOSI04">광주시</option>
-                    <option value="LOSI05">구리시</option>
-                    <option value="LOSI06">군포시</option>
-                    <option value="LOSI07">김포시</option>
-                    <option value="LOSI08">남양주시</option>
-                    <option value="LOSI09">동두천시</option>
-                    <option value="LOSI10">미금시</option>
-                    <option value="LOSI11">부천시</option>
-                    <option value="LOSI12">성남시</option>
-                    <option value="LOSI13">송탄시</option>
-                    <option value="LOSI14">수원시</option>
-                    <option value="LOSI15">시흥시</option>
-                    <option value="LOSI16">안산시</option>
-                    <option value="LOSI17">안성시</option>
-                    <option value="LOSI18">안양시</option>
-                    <option value="LOSI19">양주시</option>
-                    <option value="LOSI20">양주시</option>
-                    <option value="LOSI21">여주시</option>
-                    <option value="LOSI22">여주시</option>
-                    <option value="LOSI23">오산시</option>
-                    <option value="LOSI24">용인시</option>
-                    <option value="LOSI25">의왕시</option>
-                    <option value="LOSI26">의정부</option>
-                    <option value="LOSI27">이천시</option>
-                    <option value="LOSI28">파주시</option>
-                    <option value="LOSI29">평택시</option>
-                    <option value="LOSI30">포천시</option>
-                    <option value="LOSI31">포천시</option>
-                    <option value="LOSI32">하남시</option>
-                    <option value="LOSI33">화성시</option>
                 </select>
             </div>
         </div>

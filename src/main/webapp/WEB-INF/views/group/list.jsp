@@ -66,39 +66,6 @@
                     <option value="LOGU23" hidden="hidden">서울시 종로구</option>
                     <option value="LOGU24" hidden="hidden">서울시 중구</option>
                     <option value="LOGU25" hidden="hidden">서울시 중랑구</option>
-                    <option value="LOSI01" hidden="hidden">경기도 고양시</option>
-                    <option value="LOSI02" hidden="hidden">경기도 과천시</option>
-                    <option value="LOSI03" hidden="hidden">경기도 광명시</option>
-                    <option value="LOSI04" hidden="hidden">경기도 광주시</option>
-                    <option value="LOSI05" hidden="hidden">경기도 구리시</option>
-                    <option value="LOSI06" hidden="hidden">경기도 군포시</option>
-                    <option value="LOSI07" hidden="hidden">경기도 김포시</option>
-                    <option value="LOSI08" hidden="hidden">경기도 남양주시</option>
-                    <option value="LOSI09" hidden="hidden">경기도 동두천시</option>
-                    <option value="LOSI10" hidden="hidden">경기도 미금시</option>
-                    <option value="LOSI11" hidden="hidden">경기도 부천시</option>
-                    <option value="LOSI12" hidden="hidden">경기도 성남시</option>
-                    <option value="LOSI13" hidden="hidden">경기도 송탄시</option>
-                    <option value="LOSI14" hidden="hidden">경기도 수원시</option>
-                    <option value="LOSI15" hidden="hidden">경기도 시흥시</option>
-                    <option value="LOSI16" hidden="hidden">경기도 안산시</option>
-                    <option value="LOSI17" hidden="hidden">경기도 안성시</option>
-                    <option value="LOSI18" hidden="hidden">경기도 안양시</option>
-                    <option value="LOSI19" hidden="hidden">경기도 양주시시</option>
-                    <option value="LOSI20" hidden="hidden">경기도 양주시</option>
-                    <option value="LOSI21" hidden="hidden">경기도 여주시</option>
-                    <option value="LOSI22" hidden="hidden">경기도 여주시</option>
-                    <option value="LOSI23" hidden="hidden">경기도 오산시</option>
-                    <option value="LOSI24" hidden="hidden">경기도 용인시</option>
-                    <option value="LOSI25" hidden="hidden">경기도 의왕시</option>
-                    <option value="LOSI26" hidden="hidden">경기도 의정부</option>
-                    <option value="LOSI27" hidden="hidden">경기도 이천시</option>
-                    <option value="LOSI28" hidden="hidden">경기도 파주시</option>
-                    <option value="LOSI29" hidden="hidden">경기도 평택시</option>
-                    <option value="LOSI30" hidden="hidden">경기도 포천시</option>
-                    <option value="LOSI31" hidden="hidden">경기도 포천시</option>
-                    <option value="LOSI32" hidden="hidden">경기도 하남시</option>
-                    <option value="LOSI33" hidden="hidden">경기도 화성시</option>
                 </select>
             </div>
             <div class="form__group">
