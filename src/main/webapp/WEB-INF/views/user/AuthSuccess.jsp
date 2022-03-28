@@ -18,7 +18,6 @@
     <img src="../../../resources/img/logo.png" style="width: 10rem; margin-bottom: 1rem">
 
     <h3 style="margin:0; ">인증이 완료되었습니다 :D </h3>
-        <img src="../../../resources/assets/cutewhale.png" width="200rem">
 
     </div>
 </body>
