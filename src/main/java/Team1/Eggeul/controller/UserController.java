@@ -174,13 +174,14 @@ public class UserController {
     @GetMapping("/auth")
     public String auth(String key, String id){
         // 키를 조회하고
-        if(!service.isKey(id, key)) return null;
+        if(!service.isKey(id, key))
+            return null;
         // 키를 삭제
-        service.deleteKey(id);
+            service.deleteKey(id);
         // 멤버 이력을 수정하고
-//        service.registerHistory(vo);
+ //       service.registerHistory(vo);
         // 멤버 항목중 인증날짜를 수정한다
-        service.updateAuthdate(id);
+            service.updateAuthdate(id);
         return "redirect:/user/AuthSuccess";
     }
 

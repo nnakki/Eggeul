@@ -134,12 +134,8 @@
         </form>
         <%--        <input type="submit" class="w-100 btn btn-lg btn-primary" value="Login"></button>--%>
 
-        <div class="buttonForm" >
-            <a class="loginButton2" href="${gitLogin}">
-                <i class="fab fa-github" style="margin-right: 10px"></i>
-<%--                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">--%>
-                <span class="git">GitHub 아이디로 로그인</span></a>
-        </div>
+
+
 
         <div class="buttonForm" style="margin-bottom: 0px;">
             <div id="sampleLoginBtn" class="loginButton2" style="background-color: rgb(247 73 73)" onMouseOver="this.style.backgroundColor='rgb(255 151 151)'"

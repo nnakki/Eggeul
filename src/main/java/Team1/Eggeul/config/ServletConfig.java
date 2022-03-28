@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 //@EnableWebMvc
-//@ComponentScan(basePackages= {"com.swime.controller", "com.swime.exception"})
+//@ComponentScan(basePackages= {"Team1.Eggeul.controller", "Team1.Eggeul.exception"})
 @Import({ SecurityConfig.class })
 @EnableGlobalMethodSecurity(prePostEnabled = false, securedEnabled = false)
 public class ServletConfig implements WebMvcConfigurer {

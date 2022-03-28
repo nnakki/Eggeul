@@ -13,8 +13,8 @@ import java.util.Properties;
 
 @Log4j
 public class GmailSend {
-    private final String user = "wsr0922@gmail.com"; // 네이버일 경우 네이버 계정, gmail경우 gmail 계정
-    private final String password = "djakujgpexvxtlre";
+    private final String user = "eggeulauth@gmail.com"; // 네이버일 경우 네이버 계정, gmail경우 gmail 계정
+    private final String password = "dlRmfdlswmd";
 
     // SMTP 서버 정보를 설정한다.
     private Properties prop = new Properties();
@@ -35,7 +35,9 @@ public class GmailSend {
         prop.put("mail.smtp.socketFactory.port", "465");
         prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         prop.put("mail.smtp.starttls.enable", "true");
-        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        prop.put("mail.smtp.ssl.trust", "*");
+        //검색하고 추가로 삽입
+        prop.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
 //        prop.setProperty("mail.transport.protocol", "smtp");
 //        prop.setProperty("mail.host", "smtp.gmail.com");
