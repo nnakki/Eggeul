@@ -186,7 +186,7 @@
                     isAlready = result.documentElement.textContent === "true";
                     if(isAlready){
                         $(errorBox).show();
-                        showErrorMsg(errorBox, errorMsg, "이미 있는 아이디입니다");
+                        showErrorMsg(errorBox, errorMsg, "이미 존재하는 아이디입니다");
                     }else{
                         $(errorBox).hide();
                     }

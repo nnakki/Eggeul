@@ -71,7 +71,7 @@ public class GmailSend {
 
         // send the message
         Transport.send(message);
-        log.info("message sent successfully...");
+        log.info("메일이 성공적으로 전송되었습니다!");
 
         return true;
     }
