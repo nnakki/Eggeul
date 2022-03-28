@@ -5,19 +5,19 @@
 <mapper namespace="Team1.Eggeul.mapper.NoticeMapper">
 
     <insert id="insert">
-        insert into tnotice (sn, sender, receiver, kind, url, status, content, send_date)
-        values(seq_tnotice.nextval, #{sender}, #{receiver}, #{kind}, #{url}, 'MSST01', #{content}, current_date)
+        insert into talarm (sn, send_id, receive_id, kind, status, send_date)
+        values(talarm.nextval, #{sender}, #{receiver}, #{kind}, 'MSST01', current_date)
     </insert>
 
     <select id="getList" resultType="Team1.Eggeul.domain.NoticeVO">
-        select sn, sender, receiver, kind, url, content, send_date, status
-        from tnotice
+        select sn, send_id, receive_id, kind, send_date, status
+        from talarm
         where receiver = #{userId} and status = 'MSST01'
         order by send_date desc
     </select>
 
     <insert id="update">
-        update tnotice
+        update talarm
         set status ='MSST02'
         where sn = #{sn}
     </insert>
