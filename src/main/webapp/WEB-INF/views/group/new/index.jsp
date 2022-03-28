@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스위미: 모임 찾기</title>
+    <title>이끌 : 모임 찾기</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
@@ -27,7 +27,7 @@
 <header class="header-block">
     <h1>
         <a href="">
-            <img src="../../../../resources/assets/SwimeLogo-w.png" alt="Swime" class="logo">
+            <img src="../../../../resources/assets/logo-w.png" alt="Eggeul" class="logo">
         </a>
     </h1>
     <nav>
@@ -56,7 +56,7 @@
 <div class="header" id="navbar">
     <h1>
         <a href="">
-            <img src="../../../../resources/assets/SwimeLogo.png" alt="Swime" class="logo">
+            <img src="../../../../resources/assets/logo.png" alt="Eggeul" class="logo">
         </a>
     </h1>
     <nav>
@@ -338,10 +338,10 @@
     <div class="footer-container">
         <div class="footer-left">
             <div class="footer-logo">
-                <img src="../../../../resources/assets/SwimeLogo-w.png" alt="#">
+                <img src="../../../../resources/assets/logo-w.png" alt="#">
             </div>
             <div>
-                <img src="../../../../resources/assets/고래-w.png" style="width: 100px;"></div>
+                <img src="../../../../resources/assets/egg.png" style="width: 100px;"></div>
             <div class="footer-contect">
                 <span><a href="#"><i class="fab fa-youtube"></i></a></span>
                 <span><a href="#"><i class="fab fa-facebook"></i></a></span>
@@ -353,16 +353,17 @@
             <div class="footer-project">
                 <h2>PROJECT TEAM</h2>
                 <ul>
-                    <li>신성권</li>
-                    <li>이민재</li>
-                    <li>정보승</li>
-                    <li>임지호</li>
-                    <li>정형진</li>
+                    <li>김예지</li>
+                    <li>김은지</li>
+                    <li>손유정</li>
+                    <li>안연정</li>
+                    <li>우서라</li>
+                    <li>전유진</li>
                 </ul>
             </div>
             <div class="footer-customer">
                 <h2><a href="#">CUSTOMER CENTER</a></h2>
-                <h3>스위미 고객센터</h3>
+                <h3>이끌 고객센터</h3>
                 <p>평일 10:00-21:00 <br>
                     주말 10:00-20:00</p>
             </div>

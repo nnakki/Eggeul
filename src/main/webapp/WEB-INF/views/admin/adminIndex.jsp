@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Swime admin</title>
+    <title>Eggeul admin</title>
     <style>
         #myModal{
             position:absolute;
@@ -56,7 +56,7 @@
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 
     <a class="navbar-brand" href="/">
-        <img src="../../../resources/img/logo.png" class="swime-logo">
+        <img src="../../../resources/img/logo.png" class="eggeul-logo">
     </a>
 <%--    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>--%>
 
