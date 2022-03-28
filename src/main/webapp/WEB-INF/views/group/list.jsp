@@ -24,17 +24,17 @@
                 <label class="select" for="category">카테고리</label>
                 <select id="category" name="category" data-dropdown1>
                     <option value="">전체</option>
-                    <option value="GRCA01">프론트엔드</option>
-                    <option value="GRCA02">백엔드</option>
-                    <option value="GRCA03">앱 개발</option>
-                    <option value="GRCA04">게임 개발</option>
-                    <option value="GRCA05">프로그래밍 언어</option>
-                    <option value="GRCA06">알고리즘</option>
-                    <option value="GRCA07">데이터 사이언스</option>
-                    <option value="GRCA08">데이터베이스</option>
-                    <option value="GRCA09">컴퓨터 사이언스</option>
-                    <option value="GRCA10">개발 도구</option>
-                    <option value="GRCA11">교양 · 기타</option>
+                    <option value="GRCA01">여행</option>
+                    <option value="GRCA02">반려동물</option>
+                    <option value="GRCA03">외국어</option>
+                    <option value="GRCA04">음악</option>
+                    <option value="GRCA05">전자기기</option>
+                    <option value="GRCA06">맛집</option>
+                    <option value="GRCA07">만화</option>
+                    <option value="GRCA08">게임</option>
+                    <option value="GRCA09">자동차</option>
+                    <option value="GRCA10">요리</option>
+                    <option value="GRCA11">기타</option>
                 </select>
             </div>
             <div class="form__group">
