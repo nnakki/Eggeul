@@ -108,7 +108,11 @@ public enum CodeTable {
     STUS01("참가상태"),
     STUS02("탈퇴"),
     STUS03("검토"),
-    STUS04("영구강퇴");
+    STUS04("영구강퇴"),
+
+    //TopFix
+    BOFI01("일반글"),
+    BOFI02("공지글");
 
     private String value;
 
