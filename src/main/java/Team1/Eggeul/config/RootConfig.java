@@ -35,6 +35,10 @@ public class RootConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource());
+
+        Resource myBatisConfig = new PathMatchingResourcePatternResolver().getResource("classpath:mybatis-config.xml");
+        sqlSessionFactory.setConfigLocation(myBatisConfig);
+
         return (SqlSessionFactory) sqlSessionFactory.getObject();
     }
 
