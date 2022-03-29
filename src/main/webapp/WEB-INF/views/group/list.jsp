@@ -85,7 +85,7 @@
     <div class="order-box">
         <h4>${pageMaker.total}개의 모임</h4>
         <select id="orderSelect">
-            <option value="rating" <c:out value="${pageMaker.cri.order eq 'rating' ? 'selected' : ''}"/>>평점순</option>
+<!--            <option value="rating" <c:out value="${pageMaker.cri.order eq 'rating' ? 'selected' : ''}"/>>평점순</option>   -->
             <option value="reg_date" <c:out value="${pageMaker.cri.order eq 'reg_date' ? 'selected' : ''}"/>>최신순</option>
             <option value="attend_count" <c:out value="${pageMaker.cri.order eq 'attend_count' ? 'selected' : ''}"/>>모임원순</option>
         </select>

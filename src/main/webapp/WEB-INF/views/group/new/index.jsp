@@ -117,7 +117,7 @@
         <h1><span>#</span>개의 모임</h1>
         <div class="flex-flow"></div>
         <select name="order" id="order">
-            <option value="">평점순</option>
+<!--            <option value="">평점순</option> -->
             <option value="">조회순</option>
         </select>
     </article>

@@ -932,7 +932,7 @@
 
 
 
-<!-- 후기 별 찍기 -->
+<!-- 후기 별 찍기
 <script>
     $(document).ready(function() {
         let list = $('.ratingPlace');
@@ -953,7 +953,7 @@
         return tag;
     }
 </script>
-
+-->
 
 
 <!-- 유효성 검사 -->
