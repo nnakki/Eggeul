@@ -5,12 +5,12 @@
 <mapper namespace="Team1.Eggeul.mapper.GroupAttachMapper">
 
    <insert id="insert">
-       insert into tgrp_attach (uuid, uploadpath, filename, filetype, grp_sn)
+       insert into tgrp_atch (uuid, uploadpath, filename, filetype, grp_sn)
        values (#{uuid}, #{uploadPath}, #{fileName}, #{fileType}, #{grpSn})
    </insert>
 
     <delete id="delete">
-        delete from tgrp_attach where uuid = #{uuid}
+        delete from tgrp_atch where uuid = #{uuid}
     </delete>
 
     <select id="findByGrpSn" resultType="Team1.Eggeul.domain.GroupAttachVO">
@@ -18,11 +18,11 @@
     </select>
 
     <delete id="deleteAll">
-        delete tgrp_attach where grp_sn = #{grpSn}
+        delete tgrp_atch where grp_sn = #{grpSn}
     </delete>
 
     <select id="getOldFiles" resultType="Team1.Eggeul.domain.GroupAttachVO">
-        select * from tgrp_attach where uploadpath = to_char(current_date - 1, 'yyyy\mm\dd')
+        select * from tgrp_atch where uploadpath = to_char(current_date - 1, 'yyyy\mm\dd')
     </select>
 
 </mapper>
