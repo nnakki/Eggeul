@@ -14,7 +14,7 @@
     </delete>
 
     <select id="findByGrpSn" resultType="Team1.Eggeul.domain.GroupAttachVO">
-        select * from tgrp_attach where grp_sn = #{grpSn}
+        select * from tgrp_atch where grp_sn = #{grpSn}
     </select>
 
     <delete id="deleteAll">
