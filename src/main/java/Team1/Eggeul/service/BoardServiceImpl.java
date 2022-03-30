@@ -35,6 +35,7 @@ public class BoardServiceImpl implements BoardService{
 
         mapper.insertSelectKey(board);
 
+        log.info("method done");
         //두개의 테이블(tbrd(게시판), tbrd_atch(첨부파일))을 동시에 넣기 때문에 transaction사용
         if (board.getAttachList() != null){
             //파일 등록

@@ -136,26 +136,12 @@
 
     <!--게시판 등록-->
     <insert id="insertSelectKey">
-
-        <selectKey resultType="long" order="BEFORE" keyProperty="sn">
+        <selectKey keyProperty="sn" order="BEFORE" resultType="Long">
             select seq_tbrd.nextval from dual
         </selectKey>
-        insert ALL
-        into
-        tbrd(
-        sn,
-        grp_sn,
-        user_id,
-        title,
-        top_fix
-        )
-        values
-        (#{sn}, #{grpSn}, #{userId}, #{title}, #{topFix})
-        into
-        tbrd_det(brd_sn, content)
-        values
-        (#{sn}, #{content})
-        select * from dual
+        insert
+        into tbrd(sn, grp_sn, user_id, title, top_fix, content)
+        values(#{sn}, #{grpSn}, #{userId}, #{title}, #{topFix}, #{content})
     </insert>
 
     <!--게시판 상세 정보 읽기-->

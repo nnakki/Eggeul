@@ -91,6 +91,7 @@ public class BoardController {
         log.info("register...." + board);
         try{
             service.register(board);
+            log.info("메소드 진입 성공");
             rttr.addFlashAttribute("boardResult", "registerSuccess");
         }catch (Exception e){
             rttr.addFlashAttribute("boardResult", "registerFail");
