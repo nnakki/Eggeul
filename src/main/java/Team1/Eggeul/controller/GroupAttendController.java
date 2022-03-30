@@ -22,7 +22,8 @@ public class GroupAttendController {
     private GroupAttendService service;
     private StudyListService studyService;
 
-    @PostMapping(value= "/new",
+    @RequestMapping(value= "/new",
+            method = {RequestMethod.GET, RequestMethod.POST},
             consumes = "application/json",
             produces = {MediaType.TEXT_PLAIN_VALUE})
     public ResponseEntity<String> create(@RequestBody GroupAttendVO vo) {
