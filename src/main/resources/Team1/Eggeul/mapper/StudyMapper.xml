@@ -31,7 +31,8 @@
         where s.grp_sn = #{grpSn}
           and s.status in ('STST01', 'STST03')
           and s.representation = u.id
-          and (select round (to_number(current_date - (select start_date from tstd where sn = s.sn))) * 24 * 60 as min_diff from dual) <
+          and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) * 24 *
+                      60 as min_diff from dual) <
               0
         order by start_date
         ]]>
@@ -88,7 +89,8 @@
                           where s.grp_sn = #{grpSn}
                             and s.status in ('STST01', 'STST03')
                             and s.representation = u.id
-                            and (select round (to_number(current_date - (select start_date from tstd where sn = s.sn))) * 24 * 60 as min_diff
+                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) *
+                                        24 * 60 as min_diff
                                  from dual) <= 0
                           order by start_date, sn asc
                       )
@@ -149,7 +151,8 @@
                           where s.grp_sn = #{grpSn}
                             and s.status in ('STST01', 'STST03')
                             and s.representation = u.id
-                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) * 24 * 60 as min_diff
+                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) *
+                                        24 * 60 as min_diff
                                  from dual) > 0
                           order by start_date desc, sn asc
                       )
