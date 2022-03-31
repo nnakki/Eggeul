@@ -114,6 +114,15 @@ public enum CodeTable {
     STUS03("검토"),
     STUS04("영구강퇴"),
 
+    //스터디 반복 주기
+    STCY01("매주"),
+    STCY02("격주"),
+    STCY03("매월"),
+
+    //스터디
+    STOF01("온라인"),
+    STOF02("오프라인"),
+
     //TopFix
     BOFI01("일반글"),
     BOFI02("공지글"),
@@ -133,7 +142,8 @@ public enum CodeTable {
 
     //유저
     USST01("정상"),
-    USST03("삭제");
+    USST03("삭제 ");
+
 
     private String value;
 
