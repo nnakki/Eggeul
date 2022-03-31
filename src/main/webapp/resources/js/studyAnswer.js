@@ -28,6 +28,7 @@ let studyAnswerService = (function () {
             type: 'post',
             url: '/study/answer/register',
             data: JSON.stringify(answerList),
+            dataType: 'text',
             contentType: "application/json; charset = utf-8",
             success: function (result, status, xhr) {
                 if (callback) {
@@ -48,6 +49,7 @@ let studyAnswerService = (function () {
             type: 'post',
             url: '/study/answer/remove',
             data: JSON.stringify(param),
+            dataType: 'text',
             contentType: "application/json; charset = utf-8",
             success: function (result, status, xhr) {
                 if (callback) {
@@ -63,8 +65,6 @@ let studyAnswerService = (function () {
     }
 
     return {
-        get: get,
-        register: register,
-        remove: remove
+        get: get, register: register, remove: remove
     };
 })();

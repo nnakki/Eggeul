@@ -47,6 +47,7 @@ public class StudyAnswerController {
 
     }
 
+    @ResponseBody
     /*@PostMapping(value="/register")*/
     @RequestMapping(value="/register", method={RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<String> register(@RequestBody String jsonString) {
@@ -72,7 +73,8 @@ public class StudyAnswerController {
 
     }
 
-   /*@PostMapping(value="/remove")*/
+    @ResponseBody
+    /*@PostMapping(value="/remove")*/
    @RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
    public ResponseEntity<String> remove(@RequestBody StudyParamVO param) {
         
