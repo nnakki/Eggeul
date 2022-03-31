@@ -11,7 +11,7 @@
     <select id="getRoomsOfUser" resultType="Team1.Eggeul.domain.ChatRoomVO">
         select r.sn
         from tchat_attend a, tchat_room r
-        where a.attend_id= 'wlgh52725@gmail.com' and a.chat_room_id = r.sn
+        where a.attend_id= 'wlgh52725@gmail.com' and a.chat_room_sn = r.sn
     </select>
 
     <select id="getRoomListById" resultType="Team1.Eggeul.domain.ChatMessageVO">

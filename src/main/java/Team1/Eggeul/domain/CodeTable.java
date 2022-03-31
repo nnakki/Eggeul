@@ -104,6 +104,10 @@ public enum CodeTable {
     GRUS02("탈퇴"),
     GRUS03("영구강퇴"),
 
+    //스터디 상태
+    STST01("예정"),
+    STST03("종료"),
+
     //스터디 가입 상태
     STUS01("참가상태"),
     STUS02("탈퇴"),
@@ -117,10 +121,19 @@ public enum CodeTable {
     //게시글
     BOST01("정상"),
     BOST02("삭제"),
+    BOST03("신고"),
 
     //댓글
     RPST01("정상"),
-    RPST02("삭제");
+    RPST02("삭제"),
+    RPST03("신고"),
+
+    //regPath
+    REPA01(""),
+
+    //유저
+    USST01("정상"),
+    USST03("삭제");
 
     private String value;
 
