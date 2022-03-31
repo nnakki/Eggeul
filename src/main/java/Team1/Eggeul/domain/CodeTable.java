@@ -104,6 +104,10 @@ public enum CodeTable {
     GRUS02("탈퇴"),
     GRUS03("영구강퇴"),
 
+    //스터디 상태
+    STST01("예정"),
+    STST03("종료"),
+
     //스터디 가입 상태
     STUS01("참가상태"),
     STUS02("탈퇴"),
