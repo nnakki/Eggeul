@@ -121,10 +121,12 @@ public enum CodeTable {
     //게시글
     BOST01("정상"),
     BOST02("삭제"),
+    BOST03("신고"),
 
     //댓글
     RPST01("정상"),
-    RPST02("삭제");
+    RPST02("삭제"),
+    RPST03("신고");
 
     private String value;
 
