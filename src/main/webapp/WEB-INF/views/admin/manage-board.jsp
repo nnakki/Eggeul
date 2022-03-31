@@ -67,8 +67,8 @@
                                 <option value="D">--전체--</option>
                                 <option value="D">--사용X--</option>
                                 <option value="S">--사용X--</option>
-<%--                                <option value="SS">상태순</option>-->
-                            </select>--%>
+<%--        <%--                        <option value="SS">상태순</option>--%>
+                            </select>
                         </th>
 
                         <th>수정일</th>
