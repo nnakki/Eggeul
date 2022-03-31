@@ -31,7 +31,7 @@
         where s.grp_sn = #{grpSn}
           and s.status in ('STST01', 'STST03')
           and s.representation = u.id
-          and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) * 24 *
+          and (select round(to_number(current_date - (select to_date(start_date) from tstd where sn = s.sn))) * 24 *
                       60 as min_diff
                from dual) <
               0
@@ -90,7 +90,7 @@
                           where s.grp_sn = #{grpSn}
                             and s.status in ('STST01', 'STST03')
                             and s.representation = u.id
-                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) *
+                            and (select round(to_number(current_date - (select to_date(start_date) from tstd where sn = s.sn))) *
                                         24 * 60 as min_diff
                                  from dual) <= 0
                           order by start_date, sn asc
@@ -152,7 +152,7 @@
                           where s.grp_sn = #{grpSn}
                             and s.status in ('STST01', 'STST03')
                             and s.representation = u.id
-                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) *
+                            and (select round(to_number(current_date - (select to_date(start_date) from tstd where sn = s.sn))) *
                                         24 * 60 as min_diff
                                  from dual) > 0
                           order by start_date desc, sn asc
@@ -169,7 +169,7 @@
         from tstd s
         where grp_sn = #{grpSn}
           and status in ('STST01', 'STST03')
-          and (select round(to number(current_date - (select start_date from tstd where sn = s.sn))) * 24 * 60 as min_diff from dual) <=
+          and (select round(to_number(current_date - (select to_date(start_date) from tstd where sn = s.sn))) * 24 * 60 as min_diff from dual) <=
               0
         ]]>
     </select>
@@ -180,7 +180,7 @@
         from tstd s
         where grp_sn = #{grpSn}
           and status in ('STST01', 'STST03')
-          and (select round(to number(current_date - (select start_date from tstd where sn = s.sn))) * 24 * 60 as min_diff from dual) >
+          and (select round(to_number(current_date - (select to_date(start_date) from tstd where sn = s.sn))) * 24 * 60 as min_diff from dual) >
               0
         ]]>
     </select>
