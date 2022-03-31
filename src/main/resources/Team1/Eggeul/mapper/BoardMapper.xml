@@ -74,13 +74,13 @@
         select *
         from
             (
-            select rownum rn,sn,grp_sn,user_id,name,grp_role,picture,title,content,
-                   like_cnt,reply_cnt, top_fix,status,reg_date,upd_date
+            select rownum rn, sn, grp_sn, user_id, name, grp_role, picture, title,
+                   like_cnt, reply_cnt, top_fix, status, reg_date, upd_date, content
                 from
                     (
-                    select b.sn,b.grp_sn,b.user_id,u.name,gl.grp_role
-                           ,u.picture,b.title,b.content,
-                           b.like_cnt,b.reply_cnt,b.status,b.reg_date,b.upd_date,b.top_fix
+                    select b.sn, b.grp_sn, b.user_id, u.name, gl.grp_role,
+                           u.picture, b.title, b.like_cnt, b.reply_cnt, b.top_fix, b.status,
+                           b.reg_date, b.upd_date, b.content
                     from
                         tuser u,
                         tbrd b,
