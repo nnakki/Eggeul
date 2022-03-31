@@ -32,11 +32,11 @@
 
             <h2>${study.name}</h2><br>
 
-            <fmt:parseDate value="${startDate}" var = "sd" pattern="yyyy-MM-dd"/>
+            <fmt:parseDate value="${startDate}" var = "sd" pattern="yy-MM-dd"/>
             <fmt:formatDate value="${sd}" pattern="E" var="startDay"/>
 
             <c:if test="${endDate != startDate}">
-                <fmt:parseDate value="${endDate}" var = "ed" pattern="yyyy-MM-dd"/>
+                <fmt:parseDate value="${endDate}" var = "ed" pattern="yy-MM-dd"/>
                 <fmt:formatDate value="${ed}" pattern="E" var="endDay"/>
 
                 <span><i class="fas fa-calendar-alt"></i> 날짜 : ${fn:substring(startDate,0,10)} (${startDay}) ~ ${fn:substring(endDate,0,10)} (${endDay})</span>

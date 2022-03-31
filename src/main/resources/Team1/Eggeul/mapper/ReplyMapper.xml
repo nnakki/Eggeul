@@ -9,16 +9,21 @@
     </select>
     <!--댓글 생성-->
     <insert id="insert">
-        insert into trpl
-            (sn,
-             brd_sn,
-             user_id,
-             comment_group,
-             content,
-             status)
-        values
-               (#{sn}, #{brdSn}, #{userId}, #{commentGroup}, #{content}, #{status})
+        insert
+        into trpl(sn, brd_sn, user_id, comment_group, content, status)
+        values(#{sn}, #{brdSn}, #{userId}, #{commentGroup}, #{content}, #{status})
     </insert>
+
+    <!-- 댓글 생성2 -->
+    <insert id="insertSelectKey">
+        <selectKey keyProperty="sn" order="BEFORE" resultType="int">
+            select seq_trpl.nextval from dual
+        </selectKey>
+        insert
+        into trpl(sn, brd_sn, user_id, comment_group, content, status)
+        values(#{sn}, #{brdSn}, #{userId}, #{commentGroup}, #{content}, #{status})
+    </insert>
+
     <!--댓글 읽기-->
     <select id="read" resultType="Team1.Eggeul.domain.ReplyVO">
         select r.sn,

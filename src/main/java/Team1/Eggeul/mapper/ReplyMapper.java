@@ -15,6 +15,9 @@ public interface ReplyMapper {
     //댓글 생성
     public int insert(ReplyVO reply);
 
+    //댓글 생성2
+    public int insertSelectKey(ReplyVO reply);
+
     //댓글 읽기
     public ReplyVO read(Long sn);
 

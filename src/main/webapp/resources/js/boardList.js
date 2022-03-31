@@ -11,7 +11,7 @@ let boardListService = (function(){
         console.log("BrdGrpSN : " + grpSn);
         console.log("BrdPage : " + page);
 
-        $.getJSON("/board/list/" + grpSn + "/" + page + ".json",
+        $.getJSON("/board/list/" + grpSn + "/" + page,
             function(data){
                 if(callback) {
                     //boardCnt 변수명 이따가 확인하기

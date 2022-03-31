@@ -12,7 +12,7 @@ let studyListService = (function(){
         console.log("grpSn = " + grpSn);
         console.log("page = " + page);
 
-        $.getJSON("/study/list/" + grpSn + "/" + page + ".json",
+        $.getJSON("/study/list/" + grpSn + "/" + page,
             function(data) {
                 console.log(data);
                 if(callback) {
@@ -35,7 +35,7 @@ let studyListService = (function(){
         console.log("grpSn = " + grpSn);
         console.log("page = " + page);
 
-        $.getJSON("/study/pastList/" + grpSn + "/" + page + ".json",
+        $.getJSON("/study/pastList/" + grpSn + "/" + page,
             function(data) {
                 if(callback) {
                     callback(data.count, data.list);
