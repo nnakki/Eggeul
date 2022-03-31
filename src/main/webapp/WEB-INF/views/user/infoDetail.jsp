@@ -26,13 +26,11 @@
                     <div id="namePlace">${MemberVo.name}</div>
                         </div>
                     </div>
-<%--                </div>--%>
                 <!-- /.col-lg-8 -->
 
-<%--            </div>--%>
             <div class="topnav">
+                <!--<a id="groupWithPaging" class="active">모임</a> -->
                 <a id="group" class="active">모임</a>
-<%--                <a id="groupWithPaging">모임 x</a>--%>
                 <a id="study" >스터디</a>
                 <a id="written" >작성한 글</a>
                 <a id="reply" >작성한 댓글</a>
@@ -45,7 +43,7 @@
             <!-- /nav -->
 
             <div id="content">
-                컨테츠 표시구역
+                컨텐츠 표시구역
             </div>
         </c:if>
         <c:if test="${empty MemberVo}">
@@ -85,7 +83,8 @@
 
     function contentAjax(obj) {
         $.ajax({
-            url:"/user/details/" + obj.id,
+
+           url:"/user/details/" + obj.id,
             data : {
                 id : '${MemberVo.id}'
             },

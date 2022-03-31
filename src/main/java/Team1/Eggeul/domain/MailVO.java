@@ -26,7 +26,7 @@ public class MailVO {
                 "                    <table align=\"center\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"760\" style=\"margin:0 auto\">\n" +
                 "                        <tbody>\n" +
                 "                            <tr>\n" +
-                "                                <td colspan=\"3\"><img src=\"" + getServerName + "/resources/img/logo.png\" style=\"width : 100px;\"></td>\n" +
+                "                                <td colspan=\"3\"><img src=\"" + getServerName + ":8080"  + "/resources/img/logo.png\" style=\"width : 100px;\"></td>\n" +
                 "                            </tr>\n" +
                 "                            <tr>\n" +
                 "                                <td colspan=\"3\" height=\"14\"></td>\n" +
