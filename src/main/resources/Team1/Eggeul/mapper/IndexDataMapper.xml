@@ -81,7 +81,7 @@
                         sn,
                         grp_sn,
                         name,
-                        representation,
+                            representation,
                         start_date,
                         end_date,
                         start_time,
@@ -110,7 +110,7 @@
                                    order by wish_count desc
                                ) w
                           where s.sn = w.std_sn
-                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn)) from dual) < 0
+                            and (select round(to_number(current_date - (select start_date from tstd where sn = s.sn))) from dual) < 0
                           order by wish_count desc
                       )
                  where rownum <= #{pageNum} * #{amount}
