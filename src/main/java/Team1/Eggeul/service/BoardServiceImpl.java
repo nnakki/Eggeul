@@ -112,6 +112,8 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public GroupBoardPageDTO getListWithPaging(BoardCriteria cri, long grpSn){
 
+        log.info("get Board cri :" + cri);
+
         //getCountBySn 모임안에 게시글의 개수
         return new GroupBoardPageDTO(
                 mapper.getCountBySn(grpSn),
