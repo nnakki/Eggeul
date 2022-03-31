@@ -183,7 +183,8 @@
               0
         ]]>
     </select>
-
+<!--
+    <insert id="insert" parameterType="Team1.Eggeul.domain.StudyVO">-->
     <insert id="insert">
         insert into tstd (sn, grp_sn, representation, name, start_date, end_date, start_time, end_time, repeat_cycle,
                           repeat_day, information, on_off, on_url, place_id, expense, capacity, status, reg_date,
