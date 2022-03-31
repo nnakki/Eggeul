@@ -216,7 +216,7 @@
                u.id   as                           representation,
                u.name as                           representation_name,
                s.name,
-       /*        to_char(s.start_date, 'YYYY-MM-DD') start_date,
+       /*      to_char(s.start_date, 'YYYY-MM-DD') start_date,
                to_char(s.end_date, 'YYYY-MM-DD')   end_date,*/
                s.start_date,
                s.end_date,
@@ -237,8 +237,7 @@
              tuser u
         where s.representation = u.id
           and s.status in ('STST01', 'STST03')
-          and s.sn = #{sn};
-
+          and s.sn = #{sn}
     </select>
 
     <update id="update">
