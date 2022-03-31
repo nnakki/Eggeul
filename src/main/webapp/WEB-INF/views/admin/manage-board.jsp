@@ -65,19 +65,19 @@
                         <th>작성일
                             <select class="sort" id="sort" name="sort">
                                 <option value="D">--전체--</option>
-                                <option value="D">최신등록순</option>
-                                <option value="S">오래된등록순</option>
-<%--                                <option value="SS">상태순</option>--%>
-                            </select>
+                                <option value="D">--사용X--</option>
+                                <option value="S">--사용X--</option>
+<%--                                <option value="SS">상태순</option>-->
+                            </select>--%>
                         </th>
 
                         <th>수정일</th>
 
                         <th>상태
                             <select class="act" id="act" name="act">
-                            <option value="AD">-정상/삭제-</option>
-                            <option value="A">정상</option>
-                            <option value="D">삭제</option>
+                            <option value="AD">--전체--</option>
+                            <option value="A">--사용X--</option>
+                            <option value="D">--사용X--</option>
                         </select>
                         </th>
                     </tr>
