@@ -126,7 +126,14 @@ public enum CodeTable {
     //댓글
     RPST01("정상"),
     RPST02("삭제"),
-    RPST03("신고");
+    RPST03("신고"),
+
+    //regPath
+    REPA01(""),
+
+    //유저
+    USST01("정상"),
+    USST03("삭제");
 
     private String value;
 
