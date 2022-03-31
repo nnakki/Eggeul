@@ -26,5 +26,12 @@ public class StudyVO {
     private int attendants; // studyService의 get메서드로 받아옴
     private String status;
     private Date regDate;
-    private Date updDate;
+
+    public long getSn() {
+        return sn;
+    }
+
+    public long getGrpSn() {
+        return grpSn;
+    }
 }

@@ -14,4 +14,12 @@ public class StudyListVO {
     private String grpRole; // tgrp_list와 조인
     private String status;
     private Date regDate;
+
+    public long getSn() {
+        return sn;
+    }
+
+    public long getStdSn() {
+        return stdSn;
+    }
 }

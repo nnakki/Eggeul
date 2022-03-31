@@ -8,4 +8,13 @@ public class StudySurveyVO {
     private long stdSn;
     private long questionSn;
     private String question;
+
+    public long getSn() {
+        return sn;
+    }
+
+    public long getStdSn() {
+        return stdSn;
+    }
 }
+
