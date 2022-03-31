@@ -15,7 +15,7 @@
         u.name,
         u.picture,
         b.title,
-        d.content,
+        b.content,
         b.like_cnt,
         b.reply_cnt,
         b.top_fix,
@@ -23,11 +23,9 @@
         b.reg_date,
         b.upd_date
     from
-        tuser u, tbrd b, tbrd_det d
+        tuser u, tbrd b
     where
         b.status != 'BOST02'
-    and
-        b.sn = d.brd_sn
     and
         u.id = b.user_id
     and
@@ -43,7 +41,7 @@
 --                u.name,
 --                u.picture,
 --                b.title,
---                d.content,
+--                b.content,
 --                b.like_cnt,
 --                gl.grp_role,
 --                b.reply_cnt,
@@ -53,7 +51,7 @@
 --                b.upd_date
 --         from
 --              tgrp_list gl, tgrp g,
---              tuser u, tbrd b, tbrd_det d
+--              tuser u, tbrd b
 --         where
 --             b.status != 'BOST02'
 --         and
@@ -83,17 +81,14 @@
                 from
                     (
                     select b.sn,b.grp_sn,b.user_id,u.name,gl.grp_role
-                           ,u.picture,b.title,d.content,
+                           ,u.picture,b.title,b.content,
                            b.like_cnt,b.reply_cnt,b.status,b.reg_date,b.upd_date,b.top_fix
                     from
                         tuser u,
                         tbrd b,
-                        tbrd_det d,
-                         tgrp_list gl
+                        tgrp_list gl
                     where
                         b.status in ('BOST01','BOST03')
-                    and
-                        b.sn = d.brd_sn
                     and
                         u.id = b.user_id
                     and
@@ -114,7 +109,7 @@
 
     <!--게시판 등록 (현재 사용x)-->
     <insert id="insert">
-        insert ALL
+        insert
         into
         tbrd
             (
@@ -123,14 +118,11 @@
             user_id,
             title,
             status,
-            top_fix
+            top_fix,
+            content
             )
         values
-        (seq_tbrd.nextval, #{grpSn}, #{userId}, #{title}, #{status}, #{topFix})
-        into
-        tbrd_det(brd_sn, content)
-        values
-        (seq_tbrd.nextval, #{content})
+        (seq_tbrd.nextval, #{grpSn}, #{userId}, #{title}, #{status}, #{topFix}, #{content})
         select * from dual
     </insert>
 
@@ -154,7 +146,7 @@
                u.picture,
                gl.grp_role,
                b.title,
-               d.content,
+               b.content,
                b.like_cnt,
                b.reply_cnt,
                b.top_fix,
@@ -162,10 +154,8 @@
                b.reg_date,
                b.upd_date
         from
-            tuser u, tbrd b, tbrd_det d, tgrp_list gl
+            tuser u, tbrd b, tgrp_list gl
         where
-            b.sn = d.brd_sn
-        and
             u.id = b.user_id
         and
             b.grp_sn = gl.grp_sn
@@ -196,9 +186,9 @@
 
     <!--게시판 내용을 업데이트-->
     <update id="updateContent">
-        update tbrd_det
+        update tbrd
         set content = #{content}
-        where brd_sn = #{sn}
+        where sn = #{sn}
     </update>
 
     <!--게시판 댓글 수를 증가 감소 업데이트-->
