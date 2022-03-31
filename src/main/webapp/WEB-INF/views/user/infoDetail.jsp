@@ -26,11 +26,13 @@
                     <div id="namePlace">${MemberVo.name}</div>
                         </div>
                     </div>
+<%--                </div>--%>
                 <!-- /.col-lg-8 -->
 
+<%--            </div>--%>
             <div class="topnav">
-                <!--<a id="groupWithPaging" class="active">모임</a> -->
                 <a id="group" class="active">모임</a>
+<%--                <a id="groupWithPaging">모임 x</a>--%>
                 <a id="study" >스터디</a>
                 <a id="written" >작성한 글</a>
                 <a id="reply" >작성한 댓글</a>
@@ -43,7 +45,7 @@
             <!-- /nav -->
 
             <div id="content">
-                컨텐츠 표시구역
+                컨테츠 표시구역
             </div>
         </c:if>
         <c:if test="${empty MemberVo}">
@@ -55,36 +57,25 @@
 </div>
 
 <script>
-
-
     $(document).ready(function (){
-
         if(${!empty MemberVo}){
             let profileImg = $("#imgPlace")[0];
-
             let defaultImg = 'http://placehold.it/900x400';
             let userImg = '/display?fileName=' + "${MemberVo.picture}".replace("s_", '');
-
             profileImg.src = "${MemberVo.picture}" === 'myPicture.jpeg' || "${MemberVo.picture}" === ''
                 ? defaultImg : userImg;
-
             contentAjax($("#group")[0]);
         }
-
     });
-
     $(".topnav > a").click(function() {
         $(".topnav > a").removeClass('active');
         $(this).addClass('active');
         console.log(this.id +" click!!");
-
         contentAjax(this);
     });
-
     function contentAjax(obj) {
         $.ajax({
-
-           url:"/user/details/" + obj.id,
+            url:"/user/details/" + obj.id,
             data : {
                 id : '${MemberVo.id}'
             },
@@ -97,8 +88,3 @@
 
 
 <%@include file="../includes/footer.jsp" %>
-
-
-
-
-

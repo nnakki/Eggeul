@@ -35,61 +35,6 @@
     </div>
     <div class="subBody">
         <div class="row" id="make">
-        <!--은지 여기가 공백이라서 작성중 -->
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <div class="card-body" data-sn="${GroupVo.sn}">
-                        <div class="card-body-top" style="display:flex;">
-                            <div class="uploadResult">
-                            <img class="" alt>
-                            </div>
-                        <div>
-                            <div>
-                            <h2 class="card-title" style="font-size: 20px; margin-botton: 0px;">
-                                      ${fn:length(GroupVo.name) > cardTitleLength
-                                      ? fn:substring(GroupVo.name,0,8) += '...'
-                                     : GroupVo.name}
-                            </h2>
-                            <span class="flex-container">
-                            <c:forEach var="tag" items="${GroupVo.tags}">
-                                <div class="mini-card-tag" style="margin: 4px; padding: 6px;">
-                                         ${tag}
-                                </div>
-                            </c:forEach>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-                          </div>
-                            <div class="card-body-bottom">
-                                <p><i class="fas fa-users"></i> ${GroupVo.attendCount}명</p>
-                                <p class="card-text ratingPlace" id="stars${GroupVo.sn}" data-rating='${GroupVo.rating}' data-ratingcount="${GroupVo.ratingCount}">(스타)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-        </div>
-        <div class="pagination pagination-sm">
-            <c:if test="${pageMaker1.prev}">
-                <li class="paginate_button previous">
-                    <a href="${pageMaker1.startPage - 1}">&laquo;</a>
-                </li>
-            </c:if>
-
-            <c:forEach var="num" begin="${pageMaker1.startPage}" end="${pageMaker1.endPage}">
-                <li class="paginate_button">
-                    <a href="#" data-kind="pageNum1" class="${pageMaker1.cri.pageNum == num ? "active" : ""}">${num}</a>
-                </li>
-            </c:forEach>
-
-            <c:if test="${pageMaker1.next}">
-                <li class="paginate_button next">
-                    <a href="${pageMaker1.endPage + 1}">&raquo;</a>
-                </li>
-            </c:if>
-
 
         <!--은지 여기까지 -->
         </div>
