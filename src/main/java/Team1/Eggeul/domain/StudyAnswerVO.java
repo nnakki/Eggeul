@@ -10,4 +10,16 @@ public class StudyAnswerVO {
     private long questionSn; // 중복컬럼 <- StudySurvey에서 가져와서 넣기
     private String question; // 중복컬럼
     private String answer;
+
+    public long getSn() {
+        return sn;
+    }
+
+    public long getStdSn() {
+        return stdSn;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
 }

@@ -47,7 +47,8 @@ public class StudyAnswerController {
 
     }
 
-    @PostMapping(value="/register")
+    /*@PostMapping(value="/register")*/
+    @RequestMapping(value="/register", method={RequestMethod.GET, RequestMethod.POST})
     public ResponseEntity<String> register(@RequestBody String jsonString) {
 
         log.info("jsonData = " + jsonString);
@@ -71,8 +72,9 @@ public class StudyAnswerController {
 
     }
 
-    @PostMapping(value="/remove")
-    public ResponseEntity<String> remove(@RequestBody StudyParamVO param) {
+   /*@PostMapping(value="/remove")*/
+   @RequestMapping(value="/remove", method={RequestMethod.GET, RequestMethod.POST})
+   public ResponseEntity<String> remove(@RequestBody StudyParamVO param) {
         
         // stdSn, userId 필요
         log.info("study answer remove param = " + param);
