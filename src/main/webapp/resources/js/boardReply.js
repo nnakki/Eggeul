@@ -29,7 +29,7 @@ let replyService = (function() {
         let brdSn = param.brdSn;
         let page = param.page || 1;
         //let test = param.test;
-        $.getJSON("/replies/pages/" + brdSn + "/" + page + ".json",
+        $.getJSON("/replies/pages/" + brdSn + "/" + page,
             function(data){
             if(callback){
                 console.log("data");

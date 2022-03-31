@@ -50,7 +50,11 @@ public class ReplyServiceImpl implements ReplyService{
         //댓글 개수 업데이트 - 댓글이 달리면 +1
         boardMapper.updateReplyCnt(reply.getBrdSn(), 1);
 
-        replyMapper.insert(reply);
+        log.info("댓글 +1 성공");
+
+        replyMapper.insertSelectKey(reply);
+
+        log.info("매퍼 진입 완료");
 
         /*
         2.댓글이 추가 될 때 게시판의 댓글 수가 증가한다.
