@@ -112,7 +112,15 @@ public enum CodeTable {
 
     //TopFix
     BOFI01("일반글"),
-    BOFI02("공지글");
+    BOFI02("공지글"),
+
+    //게시글
+    BOST01("정상"),
+    BOST02("삭제"),
+
+    //댓글
+    RPST01("정상"),
+    RPST02("삭제");
 
     private String value;
 
