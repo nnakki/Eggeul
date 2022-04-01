@@ -135,6 +135,7 @@ public class BoardController {
 
 
     @GetMapping("/modify")
+    @PreAuthorize("principal.username == #userId")
     public void modify(@RequestParam("sn") Long sn, long grpSn, String userId,
                     Model model, @ModelAttribute("cri") BoardCriteria cri,RedirectAttributes rttr) {
 
@@ -158,23 +159,25 @@ public class BoardController {
     }
 
 
-    @PreAuthorize("principal.username == #board.userId")
+    @PreAuthorize("principal.username == #userId")
     @PostMapping("/modify")
-    public String modify(BoardVO board, long grpSn, @ModelAttribute("cri") BoardCriteria cri,
+    public String modify(BoardVO board, Long sn, Long grpSn, @ModelAttribute("cri") BoardCriteria cri,
                          RedirectAttributes rttr) {
 
-
         log.info("modify: " + board);
+        log.info("update: " + sn);
+
         try{
-            if (service.modify(board)) {
-                rttr.addFlashAttribute("result", "success");
+            if (service.modify(board, sn)) {
+                rttr.addFlashAttribute("result", "updateSuccess");
             }else{
-                rttr.addFlashAttribute("result", "fail");
+                rttr.addFlashAttribute("result", "updateFail");
             }
         }catch (Exception e){
             e.getMessage();
         }
 
+        log.info("매퍼 진입 완료");
 
         rttr.addAttribute("pageNum", cri.getPageNum());
         rttr.addAttribute("amount", cri.getAmount());
