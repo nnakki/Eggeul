@@ -56,37 +56,45 @@ public class BoardServiceImpl implements BoardService{
 
     @Transactional
     @Override
-    public boolean modify(BoardVO board) {
+    public boolean modify(BoardVO board, Long sn) {
         log.info("modify: " + board);
-        //게시판 수정
-        int count1 = mapper.update(board);
-        //게시판 내용(content)수정
-        int count2 = mapper.updateContent(board);
 
+        //게시판 수정
+        //int count1 = mapper.update(board);
+        //게시판 내용(content)수정
+        //int count2 = mapper.updateContent(board);
+
+        //게시판 최종 수정
+        mapper.update(board);
+
+        log.info("업데이트 완료");
 
         //파일을 수정 할 때 추가된 파일과 삭제된 파일이 있으므로
         // 전체 파일을 삭제시키고 추가된 부분을 insert
-        boardAttachMapper.deleteAll(board.getSn());
+        //boardAttachMapper.deleteAll(sn);
 
-        boolean modifyResult = mapper.update(board) == 1;
+        //boolean modifyResult = mapper.update(board) == 1;
 
-        log.info("modifyResult >>>>>>>>>> "+modifyResult);
-        log.info(board.getAttachList());
-        log.info(board.getAttachList().size());
+        //log.info("modifyResult >>>>>>>>>> "+modifyResult);
+//        log.info("첨부파일 유무: " + board.getAttachList());
+//        log.info("첨부파일 사이즈: " +board.getAttachList().size());
+//
+//        if(mapper.update(board) == 1 && board.getAttachList() != null &&
+//        board.getAttachList().size() > 0){
+//
+//            board.getAttachList().forEach(attach ->{
+//
+//                attach.setBrdSn(board.getSn());
+//                boardAttachMapper.insert(attach);
+//            });
+//        }
 
-        if(modifyResult && board.getAttachList() != null &&
-        board.getAttachList().size() > 0){
-
-            board.getAttachList().forEach(attach ->{
-
-                attach.setBrdSn(board.getSn());
-                boardAttachMapper.insert(attach);
-            });
-        }
+        //log.info("첨부파일 처리 완료");
 
 //        mapper.update(board) == 1;
 
-        return modifyResult;
+        //return modifyResult;
+        return mapper.update(board) == 1;
     }
 
     //게시판 삭제시 첨부파일도 같이 삭제시켜야함.

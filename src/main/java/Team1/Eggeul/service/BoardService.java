@@ -20,7 +20,7 @@ public interface BoardService {
     public BoardVO get(Long sn);
 
     //게시글 수정
-    public boolean modify(BoardVO board);
+    public boolean modify(BoardVO board, Long sn);
 
     //게시글 삭제
     public boolean remove(Long sn);
