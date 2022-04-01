@@ -169,9 +169,9 @@ public class BoardController {
 
         try{
             if (service.modify(board, sn)) {
-                rttr.addFlashAttribute("result", "updateSuccess");
+                rttr.addFlashAttribute("boardResult", "updateSuccess");
             }else{
-                rttr.addFlashAttribute("result", "updateFail");
+                rttr.addFlashAttribute("boardResult", "updateFail");
             }
         }catch (Exception e){
             e.getMessage();
