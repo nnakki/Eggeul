@@ -26,7 +26,7 @@ public interface BoardMapper {
     public int update(BoardVO board);
 
     //게시판 상세내용 업데이트
-    public int updateContent(BoardVO board);
+    //public int updateContent(BoardVO board);
 
     // 게시판 페이징
     public List<BoardVO> getListWithPaging(@Param("cri") BoardCriteria cri,
