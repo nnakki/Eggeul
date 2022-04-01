@@ -31,7 +31,7 @@
 
 <%--            </div>--%>
             <div class="topnav">
-                <a id="groupWithPaging" class="active">모임</a>
+                <a id="group" class="active">모임</a>
 <%--                <a id="groupWithPaging">모임 x</a>--%>
                 <a id="study" >스터디</a>
                 <a id="written" >작성한 글</a>
@@ -45,7 +45,7 @@
             <!-- /nav -->
 
             <div id="content">
-                컨테츠 표시구역
+                컨텐츠 표시구역
             </div>
         </c:if>
         <c:if test="${empty MemberVo}">

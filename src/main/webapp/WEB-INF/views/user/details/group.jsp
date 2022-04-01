@@ -35,8 +35,9 @@
     </div>
     <div class="subBody">
         <div class="row" id="make">
+            <!--은지 여기부터 -->
 
-        <!--은지 여기까지 -->
+            <!--은지 여기까지 -->
         </div>
         <div id="makepagi"></div>
         <input type="hidden" name="pageNum" id="pageNum1" value="1">
