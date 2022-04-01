@@ -78,7 +78,9 @@
     <a href="#groupInfo" class="active">정보</a>
     <a href="#study">스터디</a>
     <a href="#board">게시판</a>
+<!--
     <a href="#groupRating">후기</a>
+-->
 </div>
 <!-- /nav -->
 
@@ -177,7 +179,7 @@
 
 
 
-        <!-- 후기 -->
+        <!-- 후기 주석
         <hr class="centerHr" id="groupRating">
         <div>
             <h4>후기<sec:authorize access="isAuthenticated()">
@@ -206,12 +208,12 @@
                 </ul>
             </div>
         </div>
-
-        <!-- 후기 페이징 -->
+-->
+        <!-- 후기 페이징
         <div class="paging-footer panel-footer">
 
         </div>
-
+-->
 
 
         <!-- Call to Action Well -->
@@ -229,11 +231,11 @@
     <!-- container -->
 </div>
 
-<!-- 후기 작성/수정 모달 -->
+<!-- 후기 작성/수정 모달 수정
 <div class="modal fade" id="groupModal" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <!-- Modal content-->
+    <div class="modal-dialog">-->
+        <!-- Modal content
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">후기</h4>
@@ -253,9 +255,9 @@
                     <input type="text" class="form-control" name="review" id="review">
                 </div>
                 <div class="form-group" id="stdSnForm">
-                    <label for="stdSn">참여한 스터디</label>
+                    <label for="stdSn">참여한 스터디</label> -->
 <%--                    <input type="number" class="form-control" name="stdSn" id="stdSn">--%>
-                    <select id="stdSn">
+<!--                    <select id="stdSn">
                     </select>
                 </div>
                 <div class="form-group" id="modifyStdSnForm">
@@ -274,8 +276,9 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- /modal -->
+
 
 <!-- 스터디 삭제 확인 모달 -->
 <div class="modal fade" id="studyModal" tabindex="-1" role="dialog" aria-labelledby="studyModalLabel" aria-hidden="true">
