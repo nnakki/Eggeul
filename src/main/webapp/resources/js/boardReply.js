@@ -54,6 +54,8 @@ let replyService = (function() {
             data : JSON.stringify({sn:sn, brdSn:brdSn, userId:userId}),
             contentType : "application/json; charset=utf-8",
             success : function(deleteResult, status, xhr){
+                            alert("댓글이 삭제되었습니다.");
+                            location.reload(true);
                 if(callback){
                     callback(deleteResult);
                 }
