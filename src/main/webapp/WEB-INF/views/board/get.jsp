@@ -140,14 +140,14 @@
                 <label id="replyCnt"><c:out value="${board.replyCnt}"/> </label>
             </div>
 
-            <div id="likeBundle" class="form-group" style="display: inline-block">
-                <i id="likeCnt1" class="fa-heart" style='font-size:20px;color:red'></i>
-            </div>
+<%--            <div id="likeBundle" class="form-group" style="display: inline-block">--%>
+<%--                <i id="likeCnt1" class="fa-heart" style='font-size:20px;color:red'></i>--%>
+<%--            </div>--%>
 
-                <label>좋아요</label>
+<%--                <label>좋아요</label>--%>
 <%--                <label><c:out value="${board.likeCnt}"/> </label>--%>
 <%--                <label>${count}</label>--%>
-                <label id="likeCnt"><c:out value="${board.likeCnt}"/> </label>
+<%--                <label id="likeCnt"><c:out value="${board.likeCnt}"/> </label>--%>
 
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 
@@ -182,7 +182,7 @@
 
                                 </div>
                                 <p></p>
-                                <button class="replySubmit" type="submit"></button>
+                                <!--<button class="replySubmit" type="submit"></button>-->
                             </div>
                         </li> <!--end li -->
                     </ul>
@@ -221,7 +221,6 @@
                                 <textarea id='replyComment' placeholder="댓글을 입력해주세요" rows="1" class="comment_inbox_text" style="overflow: hidden; overflow-wrap: break-word; height: 18px" required></textarea>
                                 <div class="register_box">
                                     <button id='replyRegisterBtn' role="button" class="button btn_register is_active">등록</button>
-                                </div>
                             </c:if>
                             <c:if test="${not exist}">
                                 <textarea id='replyComment' placeholder="모임가입 후 댓글을 입력하실 수 있습니다." rows="1" class="comment_inbox_text" style="overflow: hidden; overflow-wrap: break-word; height: 18px" required></textarea>
@@ -469,7 +468,7 @@
                         console.log("modReplyContent:"+modReply.content);
                         console.log("modReplyBrdSn:"+modReply.sn);
 
-                        //alert('댓글이 수정되었습니다.');
+                        alert('댓글이 수정되었습니다.');
                         modal.modal("hide");
                         showList(1);
                     });
@@ -593,7 +592,7 @@
 
                     </sec:authorize>
                     str += "<p id='replyContent'>"+list[i].content+"</p>";
-                    str += "<button class='replySubmit'>답글 쓰기</button></div></li><hr>"
+                    //str += "<button class='replySubmit'>답글 쓰기</button></div></li><hr>"
 
                 }//end function(list)
                 replyUL.html(str);
