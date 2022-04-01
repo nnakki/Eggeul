@@ -11,6 +11,8 @@ let replyService = (function() {
             data: JSON.stringify(reply),
             contentType: "application/json; charset=utf-8",
             success: function (result, status, xhr) {
+                alert("댓글이 등록되었습니다.");
+                location.reload(true);
                 console.log("boardReplyJs : "+ result);
                 if (callback) {
                     callback(result);
