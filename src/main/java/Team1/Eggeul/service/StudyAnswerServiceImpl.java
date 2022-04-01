@@ -39,6 +39,7 @@ public class StudyAnswerServiceImpl implements StudyAnswerService{
         param.setUserId(answers.get(0).getUserId());
 
         // 1. 해당유저의 참여상태를 확인
+        log.info("메서드 진입 성공");
         int check = checkAttendantForRegister(param);
 
         // 가입상태 : 가입/검토중/영구강퇴는 return
@@ -46,6 +47,7 @@ public class StudyAnswerServiceImpl implements StudyAnswerService{
 
         //2. 답변들을 모두 등록한다.
         for(int i = 0; i < answers.size(); i++) {
+            log.info("답변등록");
             answerMapper.insert(answers.get(i));
         }
 

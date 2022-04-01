@@ -15,6 +15,42 @@ public class StudyAnswerVO {
         return sn;
     }
 
+    public void setSn(long sn) {
+        this.sn = sn;
+    }
+
+    public void setStdSn(long stdSn) {
+        this.stdSn = stdSn;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public long getQuestionSn() {
+        return questionSn;
+    }
+
+    public void setQuestionSn(long questionSn) {
+        this.questionSn = questionSn;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
     public long getStdSn() {
         return stdSn;
     }
