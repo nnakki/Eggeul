@@ -100,16 +100,20 @@ public class ReplyController {
                     value = "/{sn}")
     public ResponseEntity<String> modify(@RequestBody ReplyVO vo, @PathVariable("sn") int sn){
 
+        ResponseEntity<String> result = null;
+
         vo.setSn(sn);
 
         log.info("sn: " + sn);
         try{
             service.modify(vo);
-            return new ResponseEntity<>("ModifySuccess", HttpStatus.OK);
+            result = new ResponseEntity<>("ModifySuccess", HttpStatus.OK);
         }catch (Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            result = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
+
+        return result;
 
 //        return service.modify(vo) == 1
 //                ? new ResponseEntity<>("success", HttpStatus.OK)
