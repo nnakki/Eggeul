@@ -13,8 +13,8 @@
     </select>
 
     <insert id="insert">
-        insert into tstd_answer (sn, std_sn, user_id, question_sn, question, answer)
-        values (seq_std_answer.nextval, #{stdSn}, #{userId}, #{questionSn}, #{question}, #{answer})
+        insert into tstd_answer (sn, user_id, question_sn, question, answer, std_sn)
+        values (seq_std_answer.nextval, #{userId}, #{questionSn}, #{question}, #{answer}, std_sn,)
     </insert>
 
     <delete id="delete">

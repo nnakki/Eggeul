@@ -11,6 +11,8 @@ let replyService = (function() {
             data: JSON.stringify(reply),
             contentType: "application/json; charset=utf-8",
             success: function (result, status, xhr) {
+                alert("댓글이 등록되었습니다.");
+                location.reload(true);
                 console.log("boardReplyJs : "+ result);
                 if (callback) {
                     callback(result);
@@ -52,6 +54,8 @@ let replyService = (function() {
             data : JSON.stringify({sn:sn, brdSn:brdSn, userId:userId}),
             contentType : "application/json; charset=utf-8",
             success : function(deleteResult, status, xhr){
+                            alert("댓글이 삭제되었습니다.");
+                            location.reload(true);
                 if(callback){
                     callback(deleteResult);
                 }
@@ -86,7 +90,7 @@ let replyService = (function() {
     }
     //특정 댓글 조회
     function get(sn, callback, error){
-        $.get("/replies/" + sn + ".json", function(result){
+        $.get("/replies/" + sn, function(result){
             if(callback){
                 callback(result)
             }
@@ -118,7 +122,7 @@ let replyService = (function() {
             let mm = dateObj.getMonth() +1;
             let dd = dateObj.getDate();
 
-            return [yy, '-', (mm > 9 ? '':'0') + mm, '/', (dd > 9? '' : '0') +dd].join('');
+            return [yy, '/', (mm > 9 ? '':'0') + mm, '/', (dd > 9? '' : '0') +dd].join('');
         }
     };
 

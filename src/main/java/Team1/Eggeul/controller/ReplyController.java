@@ -6,6 +6,7 @@ import Team1.Eggeul.service.ReplyService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.Model;
@@ -23,20 +24,24 @@ public class ReplyController {
 
     //생성
     @PreAuthorize("isAuthenticated()")
-    @PostMapping(value = "/new")
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    //@PostMapping(value = "/new", consumes = "application/json", produces = {MediaType.TEXT_PLAIN_VALUE})
     public ResponseEntity<Integer> create(@RequestBody ReplyVO vo){
+        ResponseEntity<Integer> result;
 
         log.info("ReplyVO: " + vo);
         log.info("service getReplyCnt"+service.getReplyCnt(vo.getBrdSn()));
 
         try{
             service.register(vo);
-            return new ResponseEntity<>(service.getReplyCnt(vo.getBrdSn()), HttpStatus.OK);
+            result = new ResponseEntity<>(service.getReplyCnt(vo.getBrdSn()), HttpStatus.OK);
 
         }catch (Exception e){
 
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            result = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+
+        return result;
 
 //        log.info("ReplyVO: " + vo);
 //
@@ -95,16 +100,20 @@ public class ReplyController {
                     value = "/{sn}")
     public ResponseEntity<String> modify(@RequestBody ReplyVO vo, @PathVariable("sn") int sn){
 
+        ResponseEntity<String> result = null;
+
         vo.setSn(sn);
 
         log.info("sn: " + sn);
         try{
             service.modify(vo);
-            return new ResponseEntity<>("ModifySuccess", HttpStatus.OK);
+            result = new ResponseEntity<>("ModifySuccess", HttpStatus.OK);
         }catch (Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            result = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
+
+        return result;
 
 //        return service.modify(vo) == 1
 //                ? new ResponseEntity<>("success", HttpStatus.OK)

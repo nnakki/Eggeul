@@ -142,7 +142,11 @@ public enum CodeTable {
 
     //유저
     USST01("정상"),
-    USST03("삭제 ");
+    USST03("삭제 "),
+
+    //채팅
+    MSST01("읽은 메세지"),
+    MSST02("안읽은 메세지");
 
 
     private String value;

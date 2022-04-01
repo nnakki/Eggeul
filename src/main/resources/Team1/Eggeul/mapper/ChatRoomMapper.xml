@@ -26,7 +26,7 @@
     </select>
 
     <insert id="insertRoom">
-        insert into tchat_room (sn, id)
+        insert into tchat_room (sn, name)
         values (seq_tchat_room.nextval, #{id})
     </insert>
 

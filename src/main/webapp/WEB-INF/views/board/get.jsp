@@ -221,6 +221,7 @@
                                 <textarea id='replyComment' placeholder="댓글을 입력해주세요" rows="1" class="comment_inbox_text" style="overflow: hidden; overflow-wrap: break-word; height: 18px" required></textarea>
                                 <div class="register_box">
                                     <button id='replyRegisterBtn' role="button" class="button btn_register is_active">등록</button>
+                                </div>
                             </c:if>
                             <c:if test="${not exist}">
                                 <textarea id='replyComment' placeholder="모임가입 후 댓글을 입력하실 수 있습니다." rows="1" class="comment_inbox_text" style="overflow: hidden; overflow-wrap: break-word; height: 18px" required></textarea>

@@ -24,7 +24,7 @@
                     </select>
 
                     <select class="bbsOrReply" id="bbsOrReply" name="bbsOrReply">
-                        <option value="board">--게시물/댓글--</option>
+                       <%--<option value="sort">--게시물/댓글--</option>--%>
                         <option value="board">게시물</option>
                         <option value="reply">댓글</option>
                     </select>
