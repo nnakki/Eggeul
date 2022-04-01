@@ -138,7 +138,7 @@
                         str += "<a href='/board/get?sn="+list[i].sn+"&userId=${pinfo.username}&grpSn=${group.sn}'<p id='board-title'>"+list[i].title.substring(0,40)+dat+"</p></a>";
                         str += "<p style='color : gray;'>" + list[i].content.substring(0,40)+dat + "</p></div>";
                         str += "<i class='fas fa-comments'></i> 댓글 " + list[i].replyCnt;
-                        str += " <i class='fas fa-heart'></i> 좋아요 " + list[i].likeCnt;
+                        //str += " <i class='fas fa-heart'></i> 좋아요 " + list[i].likeCnt;
                         str += "</div>";
                         console.log("boardList......."+list[i].content);
                     }
@@ -243,7 +243,7 @@
         checkModal(boardResult);
         //history.replaceState({}, null, null);
 
-        <!--게시판 등록, 삭제 모달   ||history.state-->
+        <!--게시판 등록, 수정, 삭제 모달   ||history.state-->
         function checkModal(boardResult) {
             if(boardResult === '') {
                 console.log(boardResult);
@@ -258,8 +258,16 @@
             if("registerSuccess" === boardResult){
                 $(".boardModal").html("게시글이 정상적으로 등록되었습니다.");
             }else if("registerFail" === boardResult){
-                $(".boardModal").html("게시글이 등록이 실패되었습니다.");
+                $(".boardModal").html("게시글 등록에 실패하였습니다.");
             }
+
+            if("updateSuccess" === boardResult) {
+                $(".boardModal").html("게시글이 정상적으로 수정되었습니다.");
+            }else if("updateFail" === boardResult) {
+                $(".boardModal").html("게시글 수정에 실패하였습니다.");
+            }
+
+
 
             // if("registerFail" === boardResult){
             //     $(".boardModal").html("게시글이 등록이 실패되었습니다.");

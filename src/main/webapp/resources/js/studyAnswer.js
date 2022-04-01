@@ -1,6 +1,6 @@
 console.log("studyAnswerService Module.....");
 
-let studyAnswerService = (function(){
+let studyAnswerService = (function () {
 
     function get(param, callback, error) {
 
@@ -8,7 +8,7 @@ let studyAnswerService = (function(){
         console.log("userId = " + param.userId);
         console.log("stdSn = " + param.stdSn);
 
-        $.get("/study/answer/get/" + param.userId + "/" + param.stdSn , function (result) {
+        $.get("/study/answer/get/" + param.userId + "/" + param.stdSn, function (result) {
             if (callback) {
                 callback(result);
             }
@@ -25,19 +25,18 @@ let studyAnswerService = (function(){
         console.log("register answer");
 
         $.ajax({
-            type:'post',
-            url : '/study/answer/register',
-            data : JSON.stringify(answerList),
-            contentType : "application/json; charset = utf-8",
-            success : function(result, status, xhr) {
+            type: 'post',
+            url: '/study/answer/register',
+            data: JSON.stringify(answerList),
+            dataType: 'text',
+            contentType: "application/json; charset = utf-8",
+            success: function (result, status, xhr) {
                 if (callback) {
                     callback(result);
                 }
             },
-            error : function(xhr, status, er) {
-                if(error) {
-                    error(er);
-                }
+            error: function (request, status, error) {
+                alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
             }
         })
     }
@@ -47,17 +46,18 @@ let studyAnswerService = (function(){
         console.log("remove answer");
 
         $.ajax({
-            type:'post',
-            url : '/study/answer/remove',
-            data : JSON.stringify(param),
-            contentType : "application/json; charset = utf-8",
-            success : function(result, status, xhr) {
+            type: 'post',
+            url: '/study/answer/remove',
+            data: JSON.stringify(param),
+            dataType: 'text',
+            contentType: "application/json; charset = utf-8",
+            success: function (result, status, xhr) {
                 if (callback) {
                     callback(result);
                 }
             },
-            error : function(xhr, status, er) {
-                if(error) {
+            error: function (xhr, status, er) {
+                if (error) {
                     error(er);
                 }
             }
@@ -65,8 +65,6 @@ let studyAnswerService = (function(){
     }
 
     return {
-        get : get,
-        register : register,
-        remove : remove
+        get: get, register: register, remove: remove
     };
 })();

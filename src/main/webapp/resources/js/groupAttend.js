@@ -28,7 +28,7 @@ let groupAttendService = (function() {
 
         let grpSn = param.grpSn;
 
-        $.getJSON("/groupAttend/page/" + grpSn + ".json",
+        $.getJSON("/groupAttend/page/" + grpSn,
             function(data) {
                 if(callback) {
                     callback(data);
@@ -44,7 +44,7 @@ let groupAttendService = (function() {
 
         let grpSn = param.grpSn;
 
-        $.getJSON("/groupAttend/pageWithBan/" + grpSn + ".json",
+        $.getJSON("/groupAttend/pageWithBan/" + grpSn,
             function(data) {
                 if(callback) {
                     callback(data);
@@ -60,7 +60,7 @@ let groupAttendService = (function() {
         let grpSn = param.grpSn;
         let userId = param.userId;
 
-        $.getJSON("/groupAttend/" + grpSn + "/" + userId + ".json",
+        $.getJSON("/groupAttend/" + grpSn + "/" + userId,
             function(data) {
             console.log(data);
             if(callback) {

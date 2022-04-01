@@ -176,18 +176,19 @@
             title = #{title},
             like_cnt = #{likeCnt},
             reply_cnt = #{replyCnt},
-            status = #{status},
             top_fix = #{topFix},
-            upd_date = current_date
+            status = #{status},
+            upd_date = current_date,
+            content = #{content}
         where sn = #{sn}
     </update>
 
     <!--게시판 내용을 업데이트-->
-    <update id="updateContent">
-        update tbrd
-        set content = #{content}
-        where sn = #{sn}
-    </update>
+<!--    <update id="updateContent">-->
+<!--        update tbrd-->
+<!--        set content = #{content}-->
+<!--        where sn = #{sn}-->
+<!--    </update>-->
 
     <!--게시판 댓글 수를 증가 감소 업데이트-->
     <update id="updateReplyCnt">

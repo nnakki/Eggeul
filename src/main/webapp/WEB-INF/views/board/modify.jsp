@@ -125,7 +125,7 @@
         // });
         let formObj = $("#modifyForm");
 
-        $("button").on("click", function(e){
+        $('button[type="submit"]').on("click", function(e){
             e.preventDefault();
 
             let operation = $(this).data('oper');
@@ -185,7 +185,7 @@
 
             }
             formObj.submit();
-            // alert("asda");
+            //alert("성공적으로 수정되었습니다.");
         });
 
         function validation(){
