@@ -138,7 +138,7 @@
                         str += "<a href='/board/get?sn="+list[i].sn+"&userId=${pinfo.username}&grpSn=${group.sn}'<p id='board-title'>"+list[i].title.substring(0,40)+dat+"</p></a>";
                         str += "<p style='color : gray;'>" + list[i].content.substring(0,40)+dat + "</p></div>";
                         str += "<i class='fas fa-comments'></i> 댓글 " + list[i].replyCnt;
-                        str += " <i class='fas fa-heart'></i> 좋아요 " + list[i].likeCnt;
+                        //str += " <i class='fas fa-heart'></i> 좋아요 " + list[i].likeCnt;
                         str += "</div>";
                         console.log("boardList......."+list[i].content);
                     }
