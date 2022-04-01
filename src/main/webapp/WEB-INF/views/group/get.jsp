@@ -55,10 +55,12 @@
                 </c:if>
             </sec:authorize>
 
+<!-- 모임 찜 주석
             <sec:authorize access="isAuthenticated()">
                 <a class="btn btn-outline-primary" href="#" id="heartOff"><i class="far fa-heart"></i></a>
                 <a class="btn btn-primary" href="#" id="heartOn"><i class="far fa-heart"></i></a>
             </sec:authorize>
+-->
 
         </div>
         <!-- /.col-md-4 -->
@@ -1042,7 +1044,7 @@
 
 
 
-<!-- 모임 찜 -->
+<!-- 모임 찜 주석
 <script>
     $(document).ready(function() {
         let grpSn = <c:out value="${group.sn}"/>
@@ -1089,7 +1091,7 @@
         })
     })
 </script>
-
+-->
 
 
 <!-- 모임 참여 -->

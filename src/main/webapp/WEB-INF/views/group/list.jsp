@@ -105,9 +105,11 @@
 
                         <div class="card-title" id="card-title-name"><c:out value="${group.name}"/></div>
 
+<!-- 그룹 별점 주석 처리
                         <div class="card-text-rating">
                         <div class="card-text ratingPlace" id="stars${group.sn}" data-rating='<c:out value="${group.rating}"/>' data-ratingcount="<c:out value="${group.ratingCount}"/>"></div>
                         </div>
+-->
 
                         <div class="uploadResult">
                             <img class="img-fluid rounded mb-4 mb-lg-0" src="${!empty group.picture ? '/display?fileName=' += group.picture :'../resources/img/default_img.jpg'}" alt="">
@@ -256,7 +258,7 @@
     })
 </script>
 
-<!-- 별 찍기 -->
+<!-- 별 찍기 주석
 <script>
     $(document).ready(function() {
         let list = $('.ratingPlace');
@@ -276,6 +278,7 @@
         return tag;
     }
 </script>
+-->
 
 <!-- filter 검색 기능 -->
 <script>
