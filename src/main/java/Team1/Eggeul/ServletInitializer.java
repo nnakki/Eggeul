@@ -1,3 +1,4 @@
+/*
 package Team1.Eggeul;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -11,3 +12,4 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	}
 
 }
+*/

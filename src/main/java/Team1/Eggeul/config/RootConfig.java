@@ -42,18 +42,18 @@ public class RootConfig {
         return (SqlSessionFactory) sqlSessionFactory.getObject();
     }
 
-/*    @Bean
+    @Bean
     public DataSource dataSource() {
         HikariConfig hikariConfig = new HikariConfig();
-//        hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
-//        hikariConfig.setJdbcUrl("jdbc:oracle:thin:@eggeuldb_medium?TNS_ADMIN=/Oracle/Wallet_eggeuldb");
-//        hikariConfig.setUsername("ADMIN");
-//        hikariConfig.setPassword("Eggeul123456789");
+        hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
+        hikariConfig.setJdbcUrl("jdbc:oracle:thin:@eggeuldb_medium?TNS_ADMIN=/Oracle/Wallet_eggeuldb");
+        hikariConfig.setUsername("ADMIN");
+        hikariConfig.setPassword("Eggeul123456789");
 
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 
         return dataSource;
-    }*/
+    }
 /*    @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
@@ -66,14 +66,14 @@ public class RootConfig {
 
  */
 
-    @Bean(name = "dataSource")
+/*    @Bean(name = "dataSource")
     @Primary
     @ConfigurationProperties("spring.datasource")
     public DataSource dataSource() {
         return DataSourceBuilder.create()
                 .type(HikariDataSource.class)
                 .build();
-    }
+    }*/
 /*
     @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {

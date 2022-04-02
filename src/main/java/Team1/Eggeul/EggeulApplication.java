@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 //@EnableGlobalMethodSecurity(securedEnabled = true)
 @SpringBootApplication
 //@MapperScan(basePackages = "Team1")
-public class EggeulApplication extends ServletInitializer {
+public class EggeulApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EggeulApplication.class, args);
