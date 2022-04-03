@@ -9,7 +9,6 @@
 <div class="head-image">
 <div class="head-content" onclick="location.href='/group/list'">
     <p>모임찾기</p>
-    원하는 조건에 맞춰 모임을 찾아보세요.
 </div>
 </div>
 <!-- 상단 이미지 -->

@@ -355,7 +355,7 @@
                 if(pic !== null) {
                     picSrc = "/display?fileName=" + pic;
                 }else{
-                    picSrc = "/resources/img/default_img.jpg";
+                    picSrc = "/resources/img/default_img2.jpg";
                 }
 
                 str += "" +
@@ -378,7 +378,7 @@
                 let startDate = result[i].startDate;
                 let sn = result[i].sn;
 
-                let picSrc = "/resources/img/default_img.jpg";
+                let picSrc = "/resources/img/default_img3.jpg";
 
                 str += "" +
                     "            <div class='index-card' data-type='" + type + "' data-sn='" + sn + "' style='cursor: pointer;'>\n" +
