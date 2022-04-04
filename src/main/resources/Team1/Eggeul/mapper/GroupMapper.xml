@@ -98,7 +98,7 @@
 
     <update id="updateInfo">
         update tgrp_det
-        set info = #{info}
+        set grp_info = #{info}
         where grp_sn = #{sn}
     </update>
 
