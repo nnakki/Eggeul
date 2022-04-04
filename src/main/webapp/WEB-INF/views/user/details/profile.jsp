@@ -43,12 +43,11 @@
             <input type="date" class="form-control" id="birth" name="birth" value="${MemberVo.birth}" readonly>
         </div>
 
-        <c:if test="${userId == MemberVo.id}">
+ <c:if test="${userId == MemberVo.id}">
             <div class="form-group">
                 <label for="picture">사진</label>
-                <input type="radio" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
+                <input type="file" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
 
-                    <img src="../../../../resources/img/profile/1.jpg"><br>
                 <div id="uploadResult">
                     <img id="imageTag" src="${'/display?fileName=' += MemberVo.picture}" value="" >
                     <button id="deleteImg" type='button' class='btn btn-secondary btn-circle'>X</button><br>
