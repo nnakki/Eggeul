@@ -161,6 +161,37 @@
             </select>
         </div>
 
+        <div class="form-group">
+            <label for="picture">그룹 이미지</label>
+                  <br>
+                  <input type="radio" name="picture" value="/resources/assets/Car.png" checked>
+                        <img src="/resources/assets/Car.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Chef.png">
+                        <img src="/resources/assets/Chef.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Dog.png">
+                        <img src="/resources/assets/Dog.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Gaming.png">
+                        <img src="/resources/assets/Gaming.png" style="width: 200px; height:150px"/>
+                  </input>
+                  <br>
+                  <br>
+                  <input type="radio" name="picture" value="/resources/assets/Macbook.png">
+                        <img src="/resources/assets/Macbook.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Music.png">
+                        <img src="/resources/assets/Music.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Restaurant.png">
+                        <img src="/resources/assets/Restaurant.png" style="width: 200px; height:150px"/>
+                  </input>&nbsp;&nbsp;&nbsp;
+                  <input type="radio" name="picture" value="/resources/assets/Traveling.png">
+                        <img src="/resources/assets/Traveling.png" style="width: 200px; height:150px"/>
+                  </input>
+        </div>
+
 
 
         <sec:csrfInput/>

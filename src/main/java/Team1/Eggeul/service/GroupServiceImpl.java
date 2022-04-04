@@ -151,4 +151,11 @@ public class GroupServiceImpl implements GroupService{
         return attach.getUploadPath() + "/" + attach.getUuid() + "_" + attach.getFileName();
     }
 
+    @Override
+    public String getPicture(GroupVO group, Long grpSn) {
+        log.info("grpSn" + grpSn);
+
+        return groupMapper.getPicture(group);
+    }
+
 }
