@@ -15,7 +15,7 @@
     <div class="row align-items-center my-5">
 
         <div class="uploadResult">
-                <img src="<c:out value="${group.picture}" />" width="500" height="350"/>
+
         </div>
 
         <!-- /.col-lg-8 -->
@@ -898,16 +898,11 @@
 
             let grpSn = '<c:out value="${group.sn}"/>';
 
-            $.getJSON("/group/getAttach", {grpSn: grpSn}, function(arr) {
+            $.get("/group/getAttach", {grpSn: grpSn}, function(arr) {
 
-                $(arr).each(function(i, attach) {
-                    if(attach.fileType) {
-                        let fileCallPath = encodeURIComponent(attach.uploadPath+"/"+attach.uuid+"_"+attach.fileName);
-                       str = "<img src='/display?fileName="+fileCallPath+"'>";
-                    } else {
-                       str = "<img src='/resources/img/attach.png'>";
-                    }
-                })
+            let picture = '<c:out value="${group.picture}"/>';
+
+            str = "<img src='" + picture + "'/>";
 
                 $(".uploadResult").html(str);
             }).fail(function() {
