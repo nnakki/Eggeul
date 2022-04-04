@@ -166,30 +166,38 @@
         <div class="form-group">
             <label for="picture">그룹 이미지</label>
                   <br>
-                  <input type="radio" name="picture" value="/resources/assets/Car.png" checked>
+                  <input type="radio" name="picture" value="/resources/assets/Car.png"
+                  <c:if test="${group.picture eq '/resources/assets/Car.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Car.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Chef.png">
+                  <input type="radio" name="picture" value="/resources/assets/Chef.png"
+                  <c:if test="${group.picture eq '/resources/assets/Chef.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Chef.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Dog.png">
+                  <input type="radio" name="picture" value="/resources/assets/Dog.png"
+                  <c:if test="${group.picture eq '/resources/assets/Dog.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Dog.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Gaming.png">
+                  <input type="radio" name="picture" value="/resources/assets/Gaming.png"
+                  <c:if test="${group.picture eq '/resources/assets/Gaming.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Gaming.png" style="width: 200px; height:150px"/>
                   </input>
                   <br>
                   <br>
-                  <input type="radio" name="picture" value="/resources/assets/Macbook.png">
+                  <input type="radio" name="picture" value="/resources/assets/Macbook.png"
+                  <c:if test="${group.picture eq '/resources/assets/Macbook.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Macbook.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Music.png">
+                  <input type="radio" name="picture" value="/resources/assets/Music.png"
+                  <c:if test="${group.picture eq '/resources/assets/Music.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Music.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Restaurant.png">
+                  <input type="radio" name="picture" value="/resources/assets/Restaurant.png"
+                  <c:if test="${group.picture eq '/resources/assets/Restaurant.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Restaurant.png" style="width: 200px; height:150px"/>
                   </input>&nbsp;&nbsp;&nbsp;
-                  <input type="radio" name="picture" value="/resources/assets/Traveling.png">
+                  <input type="radio" name="picture" value="/resources/assets/Traveling.png"
+                  <c:if test="${group.picture eq '/resources/assets/Traveling.png'}"> checked="checked" </c:if>>
                         <img src="/resources/assets/Traveling.png" style="width: 200px; height:150px"/>
                   </input>
         </div>
@@ -588,6 +596,7 @@
         setSelectBox(tag, tagValue);
     })
 </script>
+
 <!-- 유효성검사 -->
 <script>
     function validation() {
@@ -682,9 +691,6 @@
         })
     })
 </script>
-
-
-
 
 
 <%@include file="../includes/footer.jsp" %>
