@@ -96,7 +96,7 @@
         </div>
         </div>
 
-<!--대표사진 주석
+<%-- 대표사진 주석
         <p>대표사진</p>
         <div class="form-group">
             <div class="uploadDiv">
@@ -111,7 +111,7 @@
             </div>
             </div>
         </div>
--->
+--%>
 
 
         <div class="form-group">
