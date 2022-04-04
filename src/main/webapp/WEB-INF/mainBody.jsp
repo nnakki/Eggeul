@@ -353,7 +353,7 @@
                 let picSrc;
 
                 if(pic !== null) {
-                    picSrc = "/display?fileName=" + pic;
+                    picSrc = pic;
                 }else{
                     picSrc = "/resources/img/default_img2.jpg";
                 }

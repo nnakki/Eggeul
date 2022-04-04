@@ -111,7 +111,7 @@
 -->
 
                         <div class="uploadResult">
-                            <img class="img-fluid rounded mb-4 mb-lg-0" src="${!empty group.picture ? '/display?fileName=' += group.picture :'../resources/img/default_img.jpg'}" alt="">
+                            <img class="img-fluid rounded mb-4 mb-lg-0" src="${!empty group.picture ? group.picture :'../resources/img/default_img.jpg'}" alt="">
                         </div>
 
                         <div class="caption">

@@ -15,7 +15,7 @@
     <div class="row align-items-center my-5">
 
         <div class="uploadResult">
-
+            <img src="<c:out value="${group.picture}" />" width="500" height="350"/>
         </div>
 
         <!-- /.col-lg-8 -->
