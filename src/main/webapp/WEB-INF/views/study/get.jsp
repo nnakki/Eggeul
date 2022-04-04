@@ -262,13 +262,14 @@
                     // console.log("window.location.protocol = " + window.location.protocol);
                     // console.log("domain = " + window.location.host);
 
+<%--
                     if("${pinfo.username}" !== "" && result[i].userId !== "${pinfo.username}") {
                         str += '<div style="float:right">';
                         str += '<a href="http://' + window.location.host + '/chat/register?userId=' + result[i].userId + '">';
                         str += '<img src="../../../resources/img/chat.png" class="listChatBtn">';
                         str += '</a>';
                         str += '</div>';
-                    }
+                    } --%>
 
                     str += '</li>';
 
