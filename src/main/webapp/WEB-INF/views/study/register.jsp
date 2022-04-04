@@ -133,12 +133,15 @@
 
         <div class="form-group" id="formPlace" style="margin-bottom: 0px">
             <label for="placeId"><strong>일정 장소 추가</strong></label>
-<%--            <input type="button" value="장소 검색" onclick="showMap()"/>--%>
-            <input type="text" class="form-control" id="placeName" hidden="true" readonly/>
-            <input type="text" class="form-control" id="placeId" name="placeId" hidden="true" required readonly/>
+              <input type="text" class="form-control" id="placeId" placeholder="우편번호" readonly onclick="findAddr()"><br>
+              <input type="text" class="form-control" id="placeName" placeholder="주소" readonly> <br>
         </div>
 
-        <div style="display: none">
+<%--            <input type="button" value="장소 검색" onclick="showMap()"/>
+            <input type="text" class="form-control" id="placeName" hidden="true" readonly/>
+            <input type="text" class="form-control" id="placeId" name="placeId" hidden="true" required readonly/>
+
+     <div style="display: none">
             <input
                     id="pac-input"
                     class="controls"
@@ -146,7 +149,7 @@
                     placeholder="장소를 입력해주세요"
             />
         </div>
-        <div id="map"></div>
+        <div id="map"></div> --%>
 
         <div class="form-group" style="margin-top: 16px;">
             <label for="expense"><strong>지참금</strong></label>
@@ -257,23 +260,33 @@
 
 </script>
 
-<!-- 카카오맵 -->
-<div id="map" style="width:500px; height:400px;"></div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=09f748b69b6f503468e18b63ce578723"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
-<script type="text/javascript" src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- 장소 등록 -->
 <script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
+       function findAddr(){
+            	new daum.Postcode({
+                    oncomplete: function(data) {
 
-		var map = new kakao.maps.Map(container, options);
+                    	console.log(data);
 
-
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+                        // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+                        // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                        var roadAddr = data.roadAddress; // 도로명 주소 변수
+                        var jibunAddr = data.jibunAddress; // 지번 주소 변수
+                        // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                        document.getElementById('placeId').value = data.zonecode;
+                        if(roadAddr !== ''){
+                            document.getElementById("placeName").value = roadAddr;
+                        }
+                        else if(jibunAddr !== ''){
+                            document.getElementById("placeName").value = jibunAddr;
+                        }
+                    }
+                }).open();
+            }
 </script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 <%--
 <!-- 구글맵 -->
 <script>
