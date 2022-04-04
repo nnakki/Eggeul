@@ -108,7 +108,7 @@
         <hr class="centerHr" id="groupInfo">
         <div id="info" >
             <h4>모임정보</h4>
-            <pre><c:out value="${group.info}"/></pre>
+            <pre><c:out value="${group.grpInfo}"/></pre>
         </div>
         <br>
 

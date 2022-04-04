@@ -92,14 +92,14 @@
                     <option value="LOGU21">용산구</option>
                     <option value="LOGU22">은평구</option>
                     <option value="LOGU23">종로구</option>
-                    <option value="LOGU24">중구"</option>
+                    <option value="LOGU24">중구</option>
                     <option value="LOGU25">중랑구</option>
                 </select>
             </div>
         </div>
         </div>
 
-
+<%--
         <p>대표사진</p>
         <div class="form-group">
             <div class="uploadDiv">
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </div>
-
+--%>
 
 
         <div class="form-group">
