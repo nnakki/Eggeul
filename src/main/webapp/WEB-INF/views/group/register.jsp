@@ -49,8 +49,8 @@
         </div>
 
         <div class="form-group">
-            <label for="info">모임정보</label>
-            <textarea class="form-control" rows="20" id="info" name="info" required></textarea>
+            <label for="grpInfo">모임정보</label>
+            <textarea class="form-control" rows="20" id="grpInfo" name="grpInfo" required></textarea>
         </div>
 
         <div class="form-group">
@@ -193,10 +193,10 @@
             return false;
         }
 
-        if(getByte($('#info').val()) == "") {
+        if(getByte($('#grpInfo').val()) == "") {
             alert("모임정보를 입력해주세요");
             return false;
-        } else if(getByte($('#info').val()) > 4000) {
+        } else if(getByte($('#grpInfo').val()) > 4000) {
             alert("모임 정보가 너무 깁니다");
             return false;
         }
