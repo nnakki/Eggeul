@@ -257,6 +257,10 @@
 
 </script>
 
+<!-- 카카오맵 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=09f748b69b6f503468e18b63ce578723"></script>
+
+<%--
 <!-- 구글맵 -->
 <script>
 
@@ -323,7 +327,7 @@
         });
     }
 </script>
-
+--%>
 
 <!-- 월 10만건 이상 유료 -->
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
