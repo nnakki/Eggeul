@@ -65,11 +65,11 @@
 
 
 <div class="container">
-    <h3 style="margin-top: 30px;">스터디 수정</h3>
+    <h3 style="margin-top: 30px;">일정 수정</h3>
     <hr/>
     <form role="form" id="modifyForm" action="/study/modify" method="post">
         <div class="form-group" hidden="true">
-            <label for="sn">스터디번호</label>
+            <label for="sn">일정번호</label>
             <input type="text" class="form-control" id="sn" name="sn" value="${study.sn}" readonly="readonly">
         </div>
         <div class="form-group" hidden="true">
@@ -81,7 +81,7 @@
             <input type="text" class="form-control" id="representation" name="representation" value="${study.representation}" readonly="readonly">
         </div>
         <div class="form-group">
-            <label for="name"><strong>스터디명</strong></label>
+            <label for="name"><strong>일정명</strong></label>
             <input type="text" class="form-control" id="name" name="name" value="${study.name}" required>
         </div>
         <div class="form-group" style="width: 33%; float:left">
@@ -97,7 +97,7 @@
             <input type="time" class="form-control" id="endTime" name="endTime" value="${study.endTime}" required>
         </div>
         <div class="form-group">
-            <input type="checkbox" id="repeat" onclick="repeatFunction()">정기 스터디
+            <input type="checkbox" id="repeat" onclick="repeatFunction()">정기 일정
         </div>
         <div class="form-group" id="formEndDate" hidden="true" style="width: 33%; float:left">
             <label for="endDate"><strong>종료일자</strong></label>
@@ -130,14 +130,14 @@
         </div>
         <input type="hidden" class="form-control" id="onOff" name="onOff" value="${study.onOff}">
         <div class="form-group">
-            <input type="checkbox" id="onOffCheck" onclick="checkOn()">온라인스터디
+            <input type="checkbox" id="onOffCheck" onclick="checkOn()">온라인일정
         </div>
         <div class="form-group" id="formUrl" hidden="true">
-            <label for="onUrl"><strong>온라인 스터디 링크 추가</strong></label>
+            <label for="onUrl"><strong>온라인 일정 링크 추가</strong></label>
             <input type="text" class="form-control" id="onUrl" name="onUrl" value="${study.onUrl}">
         </div>
         <div class="form-group" id="formPlace" style="margin-bottom: 0px">
-            <label for="placeId"><strong>스터디 장소 추가</strong></label>
+            <label for="placeId"><strong>일정 장소 추가</strong></label>
             <input type="text" class="form-control" id="placeName" hidden="true" readonly/>
             <input type="text" class="form-control" id="placeId" name="placeId" value="${study.placeId}" hidden="true" readonly/>
         </div>
@@ -185,7 +185,7 @@
             <input type="text" class="form-control" id="question3" name="question3" value="${question3.question}">
             <br>
             <span style="color:gray; font-size: small">- 가입 질문은 3개까지 가능합니다.</span><br>
-            <span style="color:gray; font-size: small">- 멤버의 개인정보(성명, 연락처, 주소, 학교, 직장명, 출생지 등)를 확인할 수 있는 질문은 타인의 사생활을 침해할 수 있으며, 스터디 운영 목적과 무관하게 임의로 수집 및 이용한 개인정보는 법률적 문제가 발생할 수 있으므로 스터디 가입 질문은 최소한의 내용으로 작성해주시기 바랍니다.</span>
+            <span style="color:gray; font-size: small">- 멤버의 개인정보(성명, 연락처, 주소, 학교, 직장명, 출생지 등)를 확인할 수 있는 질문은 타인의 사생활을 침해할 수 있으며, 일정 운영 목적과 무관하게 임의로 수집 및 이용한 개인정보는 법률적 문제가 발생할 수 있으므로 일정 가입 질문은 최소한의 내용으로 작성해주시기 바랍니다.</span>
         </div>
 --%>
 
@@ -235,14 +235,14 @@
 <script>
     $(document).ready(function() {
 
-        // 정기스터디 보여주기
-        // 시작일자보다 종료일자가 크면 정기스터디
+        // 정기일정 보여주기
+        // 시작일자보다 종료일자가 크면 정기일정
         let startDateVal = new Date($('#startDate').val());
         let endDateVal = new Date($('#endDate').val());
 
         if(startDateVal < endDateVal){
 
-            // 정기스터디 체크, 종료일자, 반복주기 보여주기
+            // 정기일정 체크, 종료일자, 반복주기 보여주기
             $('#repeat').prop("checked", true);
             $('#formEndDate').removeAttr("hidden");
             $('#formRepeatCycle').removeAttr("hidden");
@@ -296,7 +296,7 @@
         console.log("${study.onOff}");
 
         if("STOF01" === "${study.onOff}") {
-            //온라인 스터디에 체크
+            //온라인 일정에 체크
             $('#onOffCheck').attr("checked", "checked");
 
             // formUrl 보여주기
@@ -310,7 +310,7 @@
             $('#placeName').attr("hidden", true);
         }
         if("STOF02" === "${study.onOff}") {
-            //온라인 스터디에 체크 없애기
+            //온라인 일정에 체크 없애기
             $('#onOffCheck').removeAttr("checked");
 
             // formPlace 보여주기

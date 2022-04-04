@@ -121,7 +121,7 @@
 
 <div class="card-container" style="margin-top: -100px;">
     <article>
-        <h1 class="mainContainerTitle">인기있는 스터디</h1>
+        <h1 class="mainContainerTitle">인기있는 일정</h1>
         <div class="flex-flow"></div>
 <%--        <h2>--%>
 <%--            <a href="#">전체보기 &#62;</a>--%>

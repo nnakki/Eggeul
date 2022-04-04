@@ -17,7 +17,7 @@
 </style>
 
 <div class="container">
-    <h4 style="margin-top: 20px;"><strong>스터디 멤버</strong></h4>
+    <h4 style="margin-top: 20px;"><strong>일정 참여 멤버</strong></h4>
 
 
     <!-- nav -->
@@ -59,7 +59,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="answerModalLabel">스터디 설문 답변</h4>
+                <h4 class="modal-title" id="answerModalLabel">일정 설문 답변</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body"><span style="color: gray; font-size: small">회원의 참석을 승인하거나, 거절할 수 있습니다.</span></div>
@@ -141,7 +141,7 @@
 <script>
     $(document).ready(function() {
 
-        // 스터디 참여인원과 모집인원 불러오기
+        // 일정 참여인원과 모집인원 불러오기
         getCapacity();
 
         // 참여멤버 불러오기
@@ -150,7 +150,7 @@
         // 대기 멤버 불러오기
         getWaitingList();
 
-        // 스터디장만 영구강퇴 멤버 볼 수 있음
+        // 일정장만 영구강퇴 멤버 볼 수 있음
         if("${pinfo.username}" !== "" && "${pinfo.username}" === "${representation}") {
 
             //영구강퇴 탭 보여주기
@@ -164,7 +164,7 @@
 </script>
 
 <script>
-    // 스터디 참여인원과 모집인원 불러오는 함수
+    // 일정 참여인원과 모집인원 불러오는 함수
     function getCapacity() {
         studyService.get(${stdSn}, function(result){
             console.log(result.attendants + ' / ' + result.capacity);
@@ -207,15 +207,15 @@
 
                 str += '<strong> ' + result[i].userName + '</strong>';
 
-                if("${representation}" === result[i].userId) str += '<span style="color:gray;"> 스터디장</span>';
+                if("${representation}" === result[i].userId) str += '<span style="color:gray;"> 이끌이</span>';
 
-                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 모임장</span>';
+                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 이끌이</span>';
                 if(result[i].grpRole === 'GRRO02') str += '<span style="color:gray;"> 운영진</span>';
                 if(result[i].grpRole === 'GRRO03') str += '<span style="color:gray;"> 일반회원</span>';
 
                 str += '</div>';
 
-                // 로그인한 사용자가 스터디장이고, 본인이 아닌 사람들만 강퇴 가능
+                // 로그인한 사용자가 일정장이고, 본인이 아닌 사람들만 강퇴 가능
                 if("${pinfo.username}" !== "" && "${representation}" === "${pinfo.username}" && "${representation}" !== result[i].userId) {
                     str += '<div class="attendBtn">';
                     str += '<a id ="cancel" class="' + result[i].userId + '" href="">강퇴</a>'
@@ -259,13 +259,13 @@
                 }
                 str += '<strong> ' + result[i].userName + '</strong>';
 
-                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 모임장</span>';
+                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 이끌이</span>';
                 if(result[i].grpRole === 'GRRO02') str += '<span style="color:gray;"> 운영진</span>';
                 if(result[i].grpRole === 'GRRO03') str += '<span style="color:gray;"> 일반회원</span>';
 
                 str += '</div>';
 
-                // 로그인한 사용자가 스터디장일때만 답변 보기 가능
+                // 로그인한 사용자가 일정장일때만 답변 보기 가능
                 if("${pinfo.username}" !== "" && "${representation}" === "${pinfo.username}" && "${representation}" !== result[i].userId) {
                     str += '<div class="attendBtn">';
                     str += '<a id ="getAnswer" class="' + result[i].userId + '" href="" style="color: blue;">답변보기</a>';
@@ -306,15 +306,15 @@
                 }
                 str += '<strong> ' + result[i].userName + '</strong>';
 
-                if("${representation}" === result[i].userId) str += '<span style="color:gray;"> 스터디장</span>';
+                if("${representation}" === result[i].userId) str += '<span style="color:gray;"> 이끌이</span>';
 
-                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 모임장</span>';
+                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 이끌이</span>';
                 if(result[i].grpRole === 'GRRO02') str += '<span style="color:gray;"> 운영진</span>';
                 if(result[i].grpRole === 'GRRO03') str += '<span style="color:gray;"> 일반회원</span>';
 
                 str += '</div>';
 
-                // 로그인한 사용자가 스터디장이고, 본인이 아닌 사람들만 강퇴 가능
+                // 로그인한 사용자가 일정장이고, 본인이 아닌 사람들만 강퇴 가능
                 if("${pinfo.username}" !== "" && "${representation}" === "${pinfo.username}" && "${representation}" !== result[i].userId) {
                     str += '<div class="attendBtn">';
                     str += '<a id = "cancelBan" class="' + result[i].userId + '" href="">영구강퇴 해제</a>'
@@ -348,7 +348,7 @@
                     if(result === 'success') {
                         alert('해당 회원을 성공적으로 강퇴시켰습니다.');
 
-                        // 스터디 참여인원과 모집인원 불러오기
+                        // 일정 참여인원과 모집인원 불러오기
                         getCapacity();
 
                         // 참여 멤버 reload
@@ -360,13 +360,13 @@
                 })
             }
         } else if(method === 'ban') {
-            if (confirm("해당 회원을 정말로 영구탈퇴시키겠습니까? (해당 회원은 다시 스터디에 참석할 수 없습니다.)")) {
+            if (confirm("해당 회원을 정말로 영구탈퇴시키겠습니까? (해당 회원은 다시 일정에 참석할 수 없습니다.)")) {
                 studyAttendService.ban({stdSn : ${stdSn}, userId : userId}, function(result) {
 
                     if(result === 'success') {
                         alert('해당 회원을 성공적으로 강퇴시켰습니다.');
 
-                        // 스터디 참여인원과 모집인원 불러오기
+                        // 일정 참여인원과 모집인원 불러오기
                         getCapacity();
 
                         // 참여 멤버 reload
@@ -441,7 +441,7 @@
     // 승인 버튼 눌렸을 때
     $('#permitBtn').on("click", function() {
 
-        if(confirm('선택한 신청자의 스터디 참석을 승인하시겠습니까?')) {
+        if(confirm('선택한 신청자의 일정 참석을 승인하시겠습니까?')) {
             $('#answerModal').modal("hide");
 
             let userId = $('#permitBtn').attr('data-userId');
@@ -450,11 +450,11 @@
             studyAnswerService.remove({stdSn : ${stdSn}, userId : userId}, function (answer) {
 
                 if(answer === 'success') {
-                    // 성공하면 신청자의 스터디 참석을 진행
+                    // 성공하면 신청자의 일정 참석을 진행
                     studyAttendService.attend({stdSn : ${stdSn}, userId : userId}, function(attend) {
                         if(attend === 'success') {
 
-                            // 스터디 이름을 가져온다.
+                            // 일정 이름을 가져온다.
                             studyService.get(${stdSn}, function(result){
 
                                 if(result != null) {
@@ -465,12 +465,12 @@
                                     // 참석했다는 알림을 db에 저장하고 실시간 알림 전송
                                     noticeService.register(
                                         {sender : "${pinfo.username}", receiver : userId,
-                                            kind : "스터디", url : context + "/get?sn=${stdSn}", content : "스터디 " + result.name + "에 참석되셨습니다."}, function(notice) {
+                                            kind : "일정", url : context + "/get?sn=${stdSn}", content : "일정 " + result.name + "에 참석되셨습니다."}, function(notice) {
                                             if(notice === 'success') {
 
                                                 alert('참석 승인 처리가 완료되었습니다.');
 
-                                                // 스터디 참여인원과 모집인원 불러오기
+                                                // 일정 참여인원과 모집인원 불러오기
                                                 getCapacity();
 
                                                 // 참여 멤버 reload
@@ -502,7 +502,7 @@
     // 거절 버튼 눌렸을 때
     $('#rejectBtn').on("click", function() {
 
-        if(confirm('선택한 신청자의 스터디 참석을 거절하시겠습니까?')) {
+        if(confirm('선택한 신청자의 일정 참석을 거절하시겠습니까?')) {
             $('#answerModal').modal("hide");
 
             let userId = $('#rejectBtn').attr('data-userId');
@@ -513,7 +513,7 @@
                 if(result === "success") {
                     alert('참석 거절 처리가 완료되었습니다.');
 
-                    // 스터디 참여인원과 모집인원 불러오기
+                    // 일정 참여인원과 모집인원 불러오기
                     getCapacity();
 
                     // 대기 멤버 reload

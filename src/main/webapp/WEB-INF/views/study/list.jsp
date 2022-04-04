@@ -15,8 +15,8 @@
                     <h2 class="card-title">${study.name}</h2>
                     <p class="card-text">${fn:substring(startDate,0,10)} ~ ${fn:substring(endDate,0,10)}</p>
                     <p class="card-text">${fn:substring(startTime,0,5)} ~ ${fn:substring(endTime,0,5)}</p>
-                    <c:if test="${study.onOff eq 'STOF01'}"><p class="card-text">온라인 스터디</p></c:if>
-                    <c:if test="${study.onOff eq 'STOF02'}"><p class="card-text">오프라인 스터디</p></c:if>
+                    <c:if test="${study.onOff eq 'STOF01'}"><p class="card-text">온라인 일정</p></c:if>
+                    <c:if test="${study.onOff eq 'STOF02'}"><p class="card-text">오프라인 일정</p></c:if>
                     <p class="card-text">${study.expense}</p>
                     <c:if test="${study.attendants >= study.capacity}"><p class="card-text">모집 마감</p></c:if>
                     <c:if test="${study.attendants < study.capacity}"><p class="card-text">${study.attendants} / ${study.capacity}</p></c:if>
@@ -43,7 +43,7 @@
         </c:if>
     </div>
 
-    <!-- 스터디 삭제 확인 모달 -->
+    <!-- 일정 삭제 확인 모달 -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -70,7 +70,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        <!-- 스터디 삭제 후 모달 창-->
+        <!-- 일정 삭제 후 모달 창-->
         let result = '<c:out value="${result}"/>';
 
         checkModal(result);
@@ -84,7 +84,7 @@
             }
 
             if("success" === result) {
-                $(".modal-body").html("스터디가 정상적으로 삭제되었습니다.");
+                $(".modal-body").html("일정이 정상적으로 삭제되었습니다.");
             }
 
             $("#myModal").modal("show");
