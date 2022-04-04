@@ -176,7 +176,7 @@
         <input type="hidden" name="pageNum" value="<c:out value="${cri.pageNum}"/>">
         <input type="hidden" name="amount" value="<c:out value="${cri.amount}"/>">
 
-        <h2>멤버 관리</h2>
+        <h2>멤버 리스트</h2>
         <hr/>
         <!-- 멤버 리스트 -->
         <div id="groupAttend">
@@ -186,7 +186,7 @@
                         <div class="attendCard">
                             <img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar"><b>정보승</b>	<span style="color:gray">회원</span>
                         </div>
-                        <div class="attendBtn" style="text-decoration: underline; color: red;"><a href="#" id="">모임장양도</a><a href="#" class="changeManager" data-sn="1203">운영진임명</a><a href="#" class="ban">추방</a></div>
+<%--                        <div class="attendBtn" style="text-decoration: underline; color: red;"><a href="#" id="">모임장양도</a><a href="#" class="changeManager" data-sn="1203">운영진임명</a><a href="#" class="ban">추방</a></div>   --%>
                     </div>
                 </li>
             </ul>
