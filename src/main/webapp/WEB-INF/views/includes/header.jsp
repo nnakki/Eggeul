@@ -135,11 +135,11 @@
             </div>
             <a><img id="notice" src="../../../resources/img/notice.png" style="width:18px; height: 18px;"></a> --%>
 
-
+            <%--
             <a href="/chat/list">
                 <img id="chatBtn" src="../../../resources/img/chat.png" style="width:18px; height: 18px;">
                 <div class="red"></div>
-            </a>
+            </a> --%>
         </sec:authorize>
         <sec:authorize access="isAnonymous()">
             <a href="/user/register">회원가입</a>

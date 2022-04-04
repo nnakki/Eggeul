@@ -1183,7 +1183,7 @@
 
                     // 로그인되어있으며, 해당사용자가 아니면 채팅버튼 띄우기
 
-
+                    <%--
                     if("${pinfo.username}" !== "" && list[i].userId !== "${pinfo.username}") {
                         str += '<div style="float:right">';
                         str += '<a href="http://' + window.location.host + '/chat/register?userId=' + list[i].userId + '">';
@@ -1191,7 +1191,7 @@
                         str += '</a>';
                         str += '</div>';
                     }
-                    str += "</div></div></li>";
+                    str += "</div></div></li>"; --%>
 
                 }
 
