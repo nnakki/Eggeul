@@ -354,8 +354,8 @@
         });
     }
 </script>
---%>
 
 <!-- 월 10만건 이상 유료 -->
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap&libraries=places&v=weekly" async></script>
+--%>
