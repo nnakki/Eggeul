@@ -64,7 +64,9 @@ public class RootConfig {
         return sqlSessionFactory.getObject();
     }
 
-    @Bean(name = "dataSource")
+ */
+
+/*    @Bean(name = "dataSource")
     @Primary
     @ConfigurationProperties("spring.datasource")
     public DataSource dataSource() {

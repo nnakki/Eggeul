@@ -7,7 +7,6 @@
 <div class="head-image">
     <div class="head-content" onclick="location.href='/group/register'">
         <p>모임만들기</p>
-        회원들과 함께 모임을 이끌어 보세요.
     </div>
 </div>
 <!-- 상단 이미지 -->
@@ -50,7 +49,7 @@
         </div>
 
         <div class="form-group">
-            <label for="info">모임정보 - 모임에 대해 자세히 적어주세요(운영계획, 공부할 책제목 등)</label>
+            <label for="info">모임정보</label>
             <textarea class="form-control" rows="20" id="info" name="info" required></textarea>
         </div>
 
