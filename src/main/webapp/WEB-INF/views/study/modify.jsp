@@ -168,6 +168,7 @@
         </div>
 
         <!-- 설문 등록 -->
+<%--
         <div class="form-group">
             <input type="checkbox" id="surveyCheck"> 가입 질문 사용하기
         </div>
@@ -186,6 +187,7 @@
             <span style="color:gray; font-size: small">- 가입 질문은 3개까지 가능합니다.</span><br>
             <span style="color:gray; font-size: small">- 멤버의 개인정보(성명, 연락처, 주소, 학교, 직장명, 출생지 등)를 확인할 수 있는 질문은 타인의 사생활을 침해할 수 있으며, 스터디 운영 목적과 무관하게 임의로 수집 및 이용한 개인정보는 법률적 문제가 발생할 수 있으므로 스터디 가입 질문은 최소한의 내용으로 작성해주시기 바랍니다.</span>
         </div>
+--%>
 
         <hr/>
 
