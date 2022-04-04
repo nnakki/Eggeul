@@ -36,7 +36,7 @@
 <%--                <a id="study" >스터디</a>--%>
 <%--                <a id="written" >작성한 글</a>--%>
 <%--                <a id="reply" >작성한 댓글</a>--%>
-                <a id="profile" class="active"></a>
+                <a id="profile" class="active">개인정보수정</a>
             </div>
             </div>
             <!-- /.row -->
