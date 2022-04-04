@@ -130,11 +130,11 @@
             <label for="onUrl"><strong>온라인 일정 링크 추가</strong></label>
             <input type="text" class="form-control" id="onUrl" name="onUrl" value="http://">
         </div>
-
-        <div class="form-group" id="formPlace" style="margin-bottom: 0px">
-            <label for="placeId"><strong>일정 장소 추가</strong></label>
-              <input type="text" class="form-control" id="placeId" placeholder="우편번호" readonly onclick="findAddr()"><br>
-              <input type="text" class="form-control" id="placeName" placeholder="주소" readonly> <br>
+        <div id="map">
+            <div class="form-group" id="formPlace" style="margin-bottom: 0px">
+                <label for="placeId"><strong>일정 장소 추가</strong></label>
+                <input type="text" class="form-control" id="placeId" name="placeId" placeholder="주소" readonly onclick="findAddr()"> <br>
+            </div>
         </div>
 
 <%--            <input type="button" value="장소 검색" onclick="showMap()"/>
@@ -274,12 +274,11 @@
                         var roadAddr = data.roadAddress; // 도로명 주소 변수
                         var jibunAddr = data.jibunAddress; // 지번 주소 변수
                         // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                        document.getElementById('placeId').value = data.zonecode;
                         if(roadAddr !== ''){
-                            document.getElementById("placeName").value = roadAddr;
+                            document.getElementById("placeId").value = roadAddr;
                         }
                         else if(jibunAddr !== ''){
-                            document.getElementById("placeName").value = jibunAddr;
+                            document.getElementById("placeId").value = jibunAddr;
                         }
                     }
                 }).open();
