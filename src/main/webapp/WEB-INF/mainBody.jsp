@@ -361,8 +361,8 @@
                 str += "" +
                     "            <div class='index-card' data-type='" + type + "' data-sn='" + sn + "' style='cursor: pointer;'>\n" +
                     "                <div class=\"cardCon\">\n" +
-                    "                    <img src=\"" + picSrc + "\" style='height: 50%;'>\n" +
-                    "                    <div class=\"card-content\" style='height: 50%; overflow: hidden;'>\n" +
+                    "                    <img src=\"" + picSrc + "\" style='height: 80%;'>\n" +
+                    "                    <div class=\"card-content\" style='height: 80%; overflow: hidden;'>\n" +
                     "                        <span>" + sido + " " + sigungu + "</span>\n" +
                     "                        <h3>" + name + "</h3>\n" +
                     "                        <p>" + description + "</p>\n" +

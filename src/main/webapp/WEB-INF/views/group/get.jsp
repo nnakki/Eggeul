@@ -285,7 +285,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="studyModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="studyModalLabel">모임</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="studyModalBody modal-body">정상적으로 처리되었습니다.</div>
@@ -330,7 +330,7 @@
             }
 
             if("success" === result) {
-                $(".studyModal").html("일정가 정상적으로 삭제되었습니다.");
+                $(".studyModal").html("일정이 정상적으로 삭제되었습니다.");
             }
             if("fail" === result) {
                 $(".studyModal").html("일정를 삭제하실 수 없습니다.");
@@ -566,7 +566,7 @@
             }
 
             if("success" === result) {
-                $(".studyModalBody").html("일정가 정상적으로 삭제되었습니다.");
+                $(".studyModalBody").html("일정이 정상적으로 삭제되었습니다.");
             }
             if("error" === result) {
                 $(".studyModalBody").html("일정 삭제를 실패하였습니다.");
