@@ -10,7 +10,7 @@
 
 <div class="subContainer">
     <div class="h3cover" >
-        <%--    <h3 class="h3title">생성한 스터디</h3>--%>
+
         <h4 class="h3title">프로필</h4>
     </div>
     <div class="subBody">
@@ -46,8 +46,9 @@
         <c:if test="${userId == MemberVo.id}">
             <div class="form-group">
                 <label for="picture">사진</label>
-                <input type="file" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
+                <input type="radio" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
 
+                    <img src="../../../../resources/img/profile/1.jpg"><br>
                 <div id="uploadResult">
                     <img id="imageTag" src="${'/display?fileName=' += MemberVo.picture}" value="" >
                     <button id="deleteImg" type='button' class='btn btn-secondary btn-circle'>X</button><br>
