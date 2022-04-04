@@ -38,14 +38,14 @@
             <label for="name">이름</label>
             <input type="text" class="form-control" id="name" name="name" value="${MemberVo.name}" readonly>
         </div>
-        <div class="form-group">
-            <label for="birth">생일</label>
-            <input type="date" class="form-control" id="birth" name="birth" value="${MemberVo.birth}" readonly>
-        </div>
+<%--        <div class="form-group">--%>
+<%--            <label for="birth">생일</label>--%>
+<%--            <input type="date" class="form-control" id="birth" name="birth" value="${MemberVo.birth}" readonly>--%>
+<%--        </div>--%>
 
  <c:if test="${userId == MemberVo.id}">
             <div class="form-group">
-                <label for="picture">사진</label>
+                <label for="picture">프로필 사진</label>
                 <input type="file" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
 
                 <div id="uploadResult">
