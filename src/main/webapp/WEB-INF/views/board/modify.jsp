@@ -40,15 +40,15 @@
 <%--            <input type="file" class="form-control" id="picture" name="picture">--%>
 <%--        </div>--%>
 
-        <div class="form-group uploadDiv">
-            <label for="uploadFile">첨부파일</label>
-            <input multiple="multiple" type="file" class="form-control" id="uploadFile" name="uploadFile" >
+<%--        <div class="form-group uploadDiv">--%>
+<%--            <label for="uploadFile">첨부파일</label>--%>
+<%--            <input multiple="multiple" type="file" class="form-control" id="uploadFile" name="uploadFile" >--%>
 
-            <ul class="uploadResult">
+<%--            <ul class="uploadResult">--%>
 
-            </ul>
+<%--            </ul>--%>
 
-        </div>
+<%--        </div>--%>
 
 
         <div class="form-check">

@@ -46,23 +46,23 @@
 <%--            <input type="file" class="form-control" id="picture" name="picture">--%>
 <%--        </div>--%>
 
-        <div class="form-group uploadDiv">
-            <label for="uploadFile">첨부파일</label>
-            <input multiple="multiple" type="file" class="form-control" id="uploadFile" name="uploadFile" >
+<%--       <div class="form-group uploadDiv">--%>
+<%--            <label for="uploadFile">첨부파일</label>--%>
+<%--            <input multiple="multiple" type="file" class="form-control" id="uploadFile" name="uploadFile" >--%>
 
-            <div class="uploadResult">
-                <ul>
+<%--            <div class="uploadResult">--%>
+<%--                <ul>--%>
 
-                </ul>
-            </div>
+<%--                </ul>--%>
+<%--            </div>--%>
 
-            <div class="uploadResult2">
-                <ul>
+<%--            <div class="uploadResult2">--%>
+<%--                <ul>--%>
 
-                </ul>
-            </div>
+<%--                </ul>--%>
+<%--            </div>--%>
 
-        </div>
+<%--        </div>--%>
 
 
 <%--        <div class="form-group">--%>
