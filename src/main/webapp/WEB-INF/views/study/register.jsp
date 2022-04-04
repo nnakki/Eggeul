@@ -260,6 +260,9 @@
 <!-- 카카오맵 -->
 <div id="map" style="width:500px; height:400px;"></div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=09f748b69b6f503468e18b63ce578723"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript" src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 		var container = document.getElementById('map');
 		var options = {
@@ -268,6 +271,8 @@
 		};
 
 		var map = new kakao.maps.Map(container, options);
+
+
 </script>
 <%--
 <!-- 구글맵 -->
