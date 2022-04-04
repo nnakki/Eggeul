@@ -117,11 +117,11 @@ public class GroupController {
 
     @GetMapping(value = "/getAttach")
     @ResponseBody
-    public String getAttach(GroupVO group, @RequestParam("sn") Long sn, Long grpSn) {
+    public ResponseEntity<String> getAttach(GroupVO group, @RequestParam("sn") Long sn, Long grpSn) {
 
         log.info("getAttachList" + grpSn);
 
-        return groupService.getPicture(group, sn);
+        return new ResponseEntity<String>(groupService.getPicture(group, sn), HttpStatus.OK);
     }
 
 /*    @GetMapping(value = "/getAttach", produces = MediaType.APPLICATION_JSON_VALUE)
