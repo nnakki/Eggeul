@@ -39,11 +39,11 @@
                 <fmt:parseDate value="${endDate}" var = "ed" pattern="yy-MM-dd"/>
                 <fmt:formatDate value="${ed}" pattern="E" var="endDay"/>
 
-                <span><i class="fas fa-calendar-alt"></i> 날짜 : ${fn:substring(startDate,0,10)} (${startDay}) ~ ${fn:substring(endDate,0,10)} (${endDay})</span>
+                <span><i class="fas fa-calendar-alt"></i> 날짜 : ${fn:substring(startDate,2,10)} (${startDay}) ~ ${fn:substring(endDate,2,10)} (${endDay})</span>
             </c:if>
 
             <c:if test="${endDate == startDate}">
-                <span><i class="fas fa-calendar-alt"></i> 날짜 : ${fn:substring(startDate,0,10)} (${startDay})</span>
+                <span><i class="fas fa-calendar-alt"></i> 날짜 : ${fn:substring(startDate,2,10)} (${startDay})</span>
             </c:if>
             <br>
 

@@ -217,8 +217,8 @@
                u.id   as                           representation,
                u.name as                           representation_name,
                s.name,
-               to_date(s.start_date, 'YYYY-MM-DD'),
-               to_date(s.end_date, 'YYYY-MM-DD'),
+               to_date(s.start_date, 'YYYY-MM-DD') start_date,
+               to_date(s.end_date, 'YYYY-MM-DD') end_date,
             /*    s.start_date,
                   s.end_date,*/
                s.start_time,
