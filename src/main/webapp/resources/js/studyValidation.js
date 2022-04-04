@@ -190,7 +190,7 @@ function validation() {
         }
     }
 
-    // 가입질문 사용하는 경우
+/*    // 가입질문 사용하는 경우
     if($('#surveyCheck')[0].checked) {
 
         if($('#question1').val() === '' && $('#question2').val() === '' && $('#question3').val() === '') {
@@ -200,7 +200,7 @@ function validation() {
             alert('가입 질문은 50자 이내여야합니다.');
             return false;
         }
-    }
+    }*/
 
     return true;
 }
