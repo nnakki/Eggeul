@@ -60,7 +60,7 @@
     $(document).ready(function (){
         if(${!empty MemberVo}){
             let profileImg = $("#imgPlace")[0];
-            let defaultImg = 'http://placehold.it/900x400';
+            let defaultImg = "../../../../resources/img/2 (2).png";
             let userImg = '/display?fileName=' + "${MemberVo.picture}".replace("s_", '');
             profileImg.src = "${MemberVo.picture}" === 'myPicture.jpeg' || "${MemberVo.picture}" === ''
                 ? defaultImg : userImg;
