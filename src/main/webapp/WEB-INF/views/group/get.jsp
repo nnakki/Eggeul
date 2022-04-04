@@ -902,12 +902,16 @@
 
                 $(arr).each(function(i, attach) {
 
-                    if(attach.fileType) {
-                        let fileCallPath = encodeURIComponent(attach.uploadPath+"/"+attach.uuid+"_"+attach.fileName);
-                        str = "<img src='/display?fileName="+fileCallPath+"'>";
-                    } else {
-                        str = "<img src='/resources/img/attach.png'>";
-                    }
+                    let picture = '<c:out value="${group.picture}';
+
+                    str = "<img src='"+ picture + "'>";
+
+                    //if(attach.fileType) {
+                    //    let fileCallPath = encodeURIComponent(attach.uploadPath+"/"+attach.uuid+"_"+attach.fileName);
+                    //    str = "<img src='/display?fileName="+fileCallPath+"'>";
+                    //} else {
+                    //    str = "<img src='/resources/img/attach.png'>";
+                    //}
                 })
 
                 $(".uploadResult").html(str);

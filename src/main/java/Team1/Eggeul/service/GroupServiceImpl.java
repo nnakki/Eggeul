@@ -152,8 +152,8 @@ public class GroupServiceImpl implements GroupService{
     }
 
     @Override
-    public String getPicture(GroupVO group, Long grpSn) {
-        log.info("grpSn" + grpSn);
+    public String getPicture(GroupVO group, Long sn) {
+        log.info("sn: " + sn);
 
         return groupMapper.getPicture(group);
     }

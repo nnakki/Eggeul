@@ -27,4 +27,6 @@ public interface GroupService {
 
     GroupAttachVO getAttach(Long grpSn);
 
+    public String getPicture(GroupVO group, Long sn);
+
 }

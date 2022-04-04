@@ -27,4 +27,7 @@ public interface GroupMapper {
 
     // 모든 모임개수를 구한다. - o
     public int getTotalCount(GroupCriteria cri);
+
+    //모임 사진을 가져온다.
+    public String getPicture(GroupVO group);
 }

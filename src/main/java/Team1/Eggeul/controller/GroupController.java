@@ -115,14 +115,23 @@ public class GroupController {
         return "redirect:/group/list";
     }
 
-    @GetMapping(value = "/getAttach", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/getAttach")
+    @ResponseBody
+    public String getAttach(GroupVO group, @RequestParam("sn") Long sn, Long grpSn) {
+
+        log.info("getAttachList" + grpSn);
+
+        return groupService.getPicture(group, sn);
+    }
+
+/*    @GetMapping(value = "/getAttach", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<GroupAttachVO> getAttach(Long grpSn) {
 
         log.info("getAttachList" + grpSn);
 
         return new ResponseEntity<>(groupService.getAttach(grpSn), HttpStatus.OK);
-    }
+    }*/
 
     private void deleteFile(GroupAttachVO attach) {
 

@@ -10,7 +10,7 @@
         </selectKey>
         insert all
         into tgrp(sn, category, name, user_id, description, picture, sido, sigungu, reg_user_id)
-        values(#{sn}, #{category}, #{name}, #{userId}, #{description}, #{picture, jdbcType=VARCHAR}, #{sido}, #{sigungu}, #{userId})
+        values(#{sn}, #{category}, #{name}, #{userId}, #{description}, #{picture}, #{sido}, #{sigungu}, #{userId})
         into tgrp_det(grp_sn, grp_info)
         values(#{sn}, #{grpInfo})
         select * from dual
@@ -131,6 +131,12 @@
                 name like '%'||#{groupName}||'%'
             </if>
         </trim>
+    </select>
+
+    <select id="getPicture" resultType="String">
+        select picture
+        from tgrp
+        where sn = #{sn}
     </select>
 
 </mapper>
