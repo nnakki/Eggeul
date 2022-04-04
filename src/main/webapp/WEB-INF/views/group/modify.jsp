@@ -273,6 +273,7 @@
                             }
 
                             str += "<b>"+list[i].name+"</b>\t";
+                            /*
                             str += "<span style='color:gray'>"+ (list[i].status !== "GRUS03" ? list[i].grpRole : '영구추방회원') +"</span></div><div class='attendBtn' data-sn='"+list[i].sn+"' style='text-decoration: underline; color: red;'>"
                             if(list[i].status === "GRUS03") {
                                 str += "<a href='#' class='cancelBan'>영구추방해제</a>"
@@ -287,6 +288,7 @@
                                     str += "<a href='#' class='ban'>추방</a>"
                                 }
                             }
+                            */
                             str += "</div></div></li>"
                         }
                         attendUL.html(str);
@@ -297,7 +299,7 @@
 
                 attend.on("click", "li", function(e) {
                     e.preventDefault();
-
+                    /*
                     if(e.target === $(this).find('.changeManager')[0]) {
                         // 운영진 임명 클릭시
                         groupAttendService.changeManager($(this).data('sn'), function(result) {
@@ -341,6 +343,7 @@
                             showList();
                         })
                     }
+                    */
                 });
             })
         </script>
