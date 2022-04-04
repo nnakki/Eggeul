@@ -121,19 +121,19 @@
 <%--                <label>사진</label>--%>
 <%--            </div>--%>
             <!--class = form-group -> uploadResult -->
-            <div class="form-group">
-                <p>이미지</p>
+           <%-- <div class="form-group">--%>
+                <%--<p>이미지</p>--%>
 
-                <ul class="uploadResult">
+                <%--<ul class="uploadResult">--%>
 
-                </ul>
-                <hr>
-                <p>첨부파일</p>
-                <ul class="uploadResult2">
+                <%--</ul>--%>
+                <%--<hr>--%>
+                <%--<p>첨부파일</p>--%>
+                <%--<ul class="uploadResult2">--%>
 
-                </ul>
+                <%--</ul>--%>
 
-            </div>
+            <%--</div>--%>
 
             <div class="form-group" style="display: inline-block">
                 <label>댓글</label>
@@ -588,7 +588,7 @@
                             console.log("ne");
                             console.log("${pinfo.username}");
                             console.log(list[i].userId);
-                            str += "<button id='boardUserRepot' class='boardUserRepot' data-sn='"+list[i].sn+"'>신고</button>"
+                            //str += "<button id='boardUserRepot' class='boardUserRepot' data-sn='"+list[i].sn+"'>신고</button>"
                         }
 
                     </sec:authorize>
