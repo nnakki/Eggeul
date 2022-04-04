@@ -111,19 +111,22 @@
             </label>
             <br>
 
+            <%--
             <div class="autologin">
                 <div>
                 <input type="checkbox" id="check" name="remember-me">
                 <label for="check">자동로그인</label>
                 </div>
-            </div>
-            <div class="registerid">
+            </div> --%>
 
+            <div class="registerid">
                 <a href="/user/register">아직 회원이 아니신가요?</a>
             </div>
+
+
             <div class="forgetpw">
-                <a href="/user/forgotPassword">비밀번호를 잊으셨나요?</a>
-            </div>
+                <a href="/user/forgotPassword"></a>
+            </div> 
 
             <sec:csrfInput/>
             <%--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">--%>

@@ -42,7 +42,7 @@
             <div class="info">
             <p><i class="fas fa-map-marker-alt"></i> &nbsp;<c:out value="${group.sido}"/> <c:out value="${group.sigungu}"/></p>
             <p><i class="fas fa-users"></i> 회원 <c:out value="${group.attendCount}"/>명</p>
-            <p><i class="fas fa-user"></i> &nbsp;모임장 <c:out value="${group.userName}"/></p>
+            <p><i class="fas fa-user"></i> &nbsp;이끌이 <c:out value="${group.userName}"/></p>
             </div>
 
             <sec:authorize access="isAuthenticated()">
@@ -76,7 +76,7 @@
 <!-- nav -->
 <div class="topnav" style="position: sticky;top: 0;transition: background-color 0.5s;">
     <a href="#groupInfo" class="active">정보</a>
-    <a href="#study">스터디</a>
+    <a href="#study">일정</a>
     <a href="#board">게시판</a>
 <!--
     <a href="#groupRating">후기</a>
@@ -97,7 +97,7 @@
                         <div class="header">
                             <img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar">
                             <span>이름</span>
-                            <span>모임장</span>
+                            <span>이끌이</span>
                         </div>
                     </div>
                 </li>
@@ -108,14 +108,14 @@
         <hr class="centerHr" id="groupInfo">
         <div id="info" >
             <h4>모임정보</h4>
-            <pre><c:out value="${group.info}"/></pre>
+            <pre><c:out value="${group.grpInfo}"/></pre>
         </div>
         <br>
 
 
 
 
-        <!-- 스터디 만들기 버튼-->
+        <!-- 일정 만들기 버튼-->
         <hr class="centerHr" id="study">
         <div>
             <h4>
@@ -125,13 +125,13 @@
 <%--                <c:if test="${not done}">--%>
 <%--                    <c:if test="${attendant.userId == pinfo.username}">--%>
 <%--                        <a href='/study/register?pageNum=${cri.pageNum}&amount=${cri.amount}&grpSn=${group.sn}'--%>
-<%--                           class='btn btn-primary' id="studyBtn">스터디 만들기</a>--%>
+<%--                           class='btn btn-primary' id="studyBtn">일정 만들기</a>--%>
 <%--                        <c:set var="done" value="true"/>--%>
 <%--                    </c:if>--%>
 <%--                </c:if>--%>
 <%--            </c:forEach>--%>
                 <a href='/study/register?pageNum=${cri.pageNum}&amount=${cri.amount}&grpSn=${group.sn}'
-                   class='btn btn-primary' id="studyBtn">스터디 만들기</a>
+                   class='btn btn-primary' id="studyBtn">일정 만들기</a>
             </h4>
         </div>
 
@@ -142,7 +142,7 @@
 <%--                    <sec:authorize access="isAuthenticated()">--%>
 <%--                        <c:if test="${pinfo.username ne group.userId}">--%>
 <%--                            <a href='/study/register?pageNum=${cri.pageNum}&amount=${cri.amount}&grpSn=${group.sn}'--%>
-<%--                               class='btn btn-primary' id="studyBtn">스터디 만들기</a>--%>
+<%--                               class='btn btn-primary' id="studyBtn">일정 만들기</a>--%>
 <%--                        </c:if>--%>
 <%--                    </sec:authorize>--%>
 <%--                    ${pinfo}</br>--%>
@@ -153,21 +153,21 @@
 
 
 
-        <!-- 예정된 스터디 리스트 -->
-        <h4 style="clear:left;">예정된 스터디</h4>
+        <!-- 예정된 일정 리스트 -->
+        <h4 style="clear:left;">예정된 일정</h4>
         <div class="studyList row">
         </div>
 
-        <!-- 예정된 스터디 페이징 처리 -->
+        <!-- 예정된 일정 페이징 처리 -->
         <div class="studyPageFooter panel-footer">
         </div>
 
-        <!-- 지난 스터디 리스트 -->
-        <h4>지난 스터디</h4>
+        <!-- 지난 일정 리스트 -->
+        <h4>지난 일정</h4>
         <div class="pastStudyList row">
         </div>
 
-        <!-- 지난 스터디 페이징 처리 -->
+        <!-- 지난 일정 페이징 처리 -->
         <div class="pastStudyPageFooter panel-footer">
         </div>
 
@@ -255,13 +255,13 @@
                     <input type="text" class="form-control" name="review" id="review">
                 </div>
                 <div class="form-group" id="stdSnForm">
-                    <label for="stdSn">참여한 스터디</label> -->
+                    <label for="stdSn">참여한 일정</label> -->
 <%--                    <input type="number" class="form-control" name="stdSn" id="stdSn">--%>
 <!--                    <select id="stdSn">
                     </select>
                 </div>
                 <div class="form-group" id="modifyStdSnForm">
-                    <label for="modifyStdSn">참여한 스터디</label>
+                    <label for="modifyStdSn">참여한 일정</label>
                     <input class="form-control" name="modifyStdSn" id="modifyStdSn">
                 </div>
                 <label for="grpSn" hidden>그룹번호</label>
@@ -280,7 +280,7 @@
 <!-- /modal -->
 
 
-<!-- 스터디 삭제 확인 모달 -->
+<!-- 일정 삭제 확인 모달 -->
 <div class="modal fade" id="studyModal" tabindex="-1" role="dialog" aria-labelledby="studyModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -310,11 +310,11 @@
 
 
 
-<!-- 스터디 리스트 -->
+<!-- 일정 리스트 -->
 <script type="text/javascript">
     $(document).ready(function() {
 
-        <!-- 스터디 삭제 후 모달 창-->
+        <!-- 일정 삭제 후 모달 창-->
         let result = '<c:out value="${result}"/>';
 
         console.log("result>>>" + result);
@@ -330,13 +330,13 @@
             }
 
             if("success" === result) {
-                $(".studyModal").html("스터디가 정상적으로 삭제되었습니다.");
+                $(".studyModal").html("일정가 정상적으로 삭제되었습니다.");
             }
             if("fail" === result) {
-                $(".studyModal").html("스터디를 삭제하실 수 없습니다.");
+                $(".studyModal").html("일정를 삭제하실 수 없습니다.");
             }
             if("error" === result) {
-                $(".studyModal").html("스터디 삭제가 실패하였습니다.");
+                $(".studyModal").html("일정 삭제가 실패하였습니다.");
             }
 
             $("#studyModal").modal("show");
@@ -348,10 +348,10 @@
     $(document).ready(function() {
         let grpSnValue = '<c:out value="${group.sn}"/>';
 
-        // 예정스터디 리스트 띄우기
+        // 예정일정 리스트 띄우기
         showStudyList(1);
 
-        // 지난스터디 리스트 띄우기
+        // 지난일정 리스트 띄우기
         showPastStudyList(1);
 
         function showPastStudyList(page) {
@@ -375,8 +375,8 @@
                     str += "<h2 class='card-title'>" + list[i].name + "</h2>";
 
 
-                    if(list[i].onOff === 'STOF01') str += "<p class='card-text'><i class='fas fa-video'></i> 온라인 스터디</p>";
-                    if(list[i].onOff === 'STOF02') str += "<p class='card-text'><i class='fas fa-map-marker-alt'></i> 오프라인 스터디</p>";
+                    if(list[i].onOff === 'STOF01') str += "<p class='card-text'><i class='fas fa-video'></i> 온라인 일정</p>";
+                    if(list[i].onOff === 'STOF02') str += "<p class='card-text'><i class='fas fa-map-marker-alt'></i> 오프라인 일정</p>";
 
                     <c:if test="list[i].expense == null">str += "<p class='card-text'></p>"; </c:if>
                     <c:if test="list[i].expense != null">str += "<p class='card-text'><i class='fas fa-won-sign'></i> " + list[i].expense + "</p>"; </c:if>
@@ -424,8 +424,8 @@
                     str += "<h2 class='card-title'>" + list[i].name + "</h2>";
 
 
-                    if(list[i].onOff === 'STOF01') str += "<p class='card-text'><i class='fas fa-video'></i> 온라인 스터디</p>";
-                    if(list[i].onOff === 'STOF02') str += "<p class='card-text'><i class='fas fa-map-marker-alt'></i> 오프라인 스터디</p>";
+                    if(list[i].onOff === 'STOF01') str += "<p class='card-text'><i class='fas fa-video'></i> 온라인 일정</p>";
+                    if(list[i].onOff === 'STOF02') str += "<p class='card-text'><i class='fas fa-map-marker-alt'></i> 오프라인 일정</p>";
 
                     <c:if test="list[i].expense == null">str += "<p class='card-text'></p>"; </c:if>
                     <c:if test="list[i].expense != null">str += "<p class='card-text'><i class='fas fa-won-sign'></i> " + list[i].expense + "</p>"; </c:if>
@@ -451,7 +451,7 @@
             })
         }
 
-        <!-- 스터디 페이징 처리 -->
+        <!-- 일정 페이징 처리 -->
         let studyPageNum = 1;
         // let studyPageFooter = $('.studyPageFooter');
 
@@ -549,10 +549,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        <!-- 스터디 삭제 후 모달 창-->
+        <!-- 일정 삭제 후 모달 창-->
         let result = '<c:out value="${result}"/>';
 
-        console.log("스터디 삭제 result = " + result);
+        console.log("일정 삭제 result = " + result);
 
         checkModal(result);
 
@@ -566,10 +566,10 @@
             }
 
             if("success" === result) {
-                $(".studyModalBody").html("스터디가 정상적으로 삭제되었습니다.");
+                $(".studyModalBody").html("일정가 정상적으로 삭제되었습니다.");
             }
             if("error" === result) {
-                $(".studyModalBody").html("스터디 삭제를 실패하였습니다.");
+                $(".studyModalBody").html("일정 삭제를 실패하였습니다.");
             }
 
             $("#studyModal").modal("show");
@@ -668,7 +668,7 @@
 
             modalRegisterBtn.show();
 
-            // 사용자가 참여한 지난 스터디중에 현재 후기에 없는 스터디를 가져오기
+            // 사용자가 참여한 지난 일정중에 현재 후기에 없는 일정를 가져오기
             studyService.getNoRatingStudies({grpSn : ${group.sn}, userId : "${pinfo.username}"}, function(result){
 
                 // 옵션 모두 지우기
@@ -676,7 +676,7 @@
 
                 for(let i = 0; i < result.length; i++) {
 
-                    // 스터디 이름을 option에 넣고 그 안에 data로 sn을 넣는다.
+                    // 일정 이름을 option에 넣고 그 안에 data로 sn을 넣는다.
                     $('#stdSn').append('<option value="' + result[i].sn + '">' + result[i].name + '</option>');
                     
                 }
@@ -724,8 +724,8 @@
                 // modalInputStdSn.val(groupRating.stdSn);
 
                 studyService.get(groupRating.stdSn, function(result){
-                    console.log("그룹 후기 수정하는 스터디 name= " + result.name);
-                    console.log("그룹 후기 수정하는 스터디 sn = " + result.sn);
+                    console.log("그룹 후기 수정하는 일정 name= " + result.name);
+                    console.log("그룹 후기 수정하는 일정 sn = " + result.sn);
 
                     $('#stdSnForm').attr("hidden", true);
                     $('#modifyStdSnForm').removeAttr("hidden");
@@ -982,12 +982,12 @@
         }
 
         if($('#stdSnForm')[0].hidden !== true && (isNaN($('#stdSn').val()) || $('#stdSn').val() == "" || $('#stdSn').val() <= 0)) {
-            alert("참여한 스터디가 선택되지않아 후기를 작성할 수 없습니다.");
+            alert("참여한 일정가 선택되지않아 후기를 작성할 수 없습니다.");
             return false;
         }
 
         if($('#stdSnForm')[0].hidden && isNaN($('#modifyStdSn').data('sn')) || $('#modifyStdSn').data('sn') == "" || $('#modifyStdSn').data('sn') <= 0) {
-            alert("참여한 스터디가 선택되지않아 후기를 작성할 수 없습니다.");
+            alert("참여한 일정가 선택되지않아 후기를 작성할 수 없습니다.");
             return false;
         }
 
@@ -1126,7 +1126,7 @@
         // 버튼상태 관리
         let attendBtn = $('#attendBtn');
         let withdrawBtn = $('#withdrawBtn');
-        //스터디 글쓰기 버튼
+        //일정 글쓰기 버튼
         let studyBtn = $('#studyBtn');
         //게시판 글쓰기 버튼
         let boardBnt = $('#boardBtn');
@@ -1183,7 +1183,7 @@
 
                     // 로그인되어있으며, 해당사용자가 아니면 채팅버튼 띄우기
 
-
+                    <%--
                     if("${pinfo.username}" !== "" && list[i].userId !== "${pinfo.username}") {
                         str += '<div style="float:right">';
                         str += '<a href="http://' + window.location.host + '/chat/register?userId=' + list[i].userId + '">';
@@ -1191,7 +1191,7 @@
                         str += '</a>';
                         str += '</div>';
                     }
-                    str += "</div></div></li>";
+                    str += "</div></div></li>"; --%>
 
                 }
 

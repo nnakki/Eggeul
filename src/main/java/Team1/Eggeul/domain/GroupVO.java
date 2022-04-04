@@ -16,7 +16,7 @@ public class GroupVO {
     private String userName;
     private String picture;
     private String description;
-    private String info;
+    private String grpInfo;
     private Long attendCount;
     private Double rating;
     private Long ratingCount;

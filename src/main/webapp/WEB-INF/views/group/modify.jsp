@@ -52,8 +52,8 @@
         </div>
 
         <div class="form-group">
-            <label for="info">모임정보 - 모임에 대해 자세히 적어주세요(운영계획, 공부할 책제목 등)</label>
-            <textarea class="form-control" rows="20" id="info" name="info" required><c:out value="${group.info}"/></textarea>
+            <label for="grpInfo">모임정보 - 모임에 대해 자세히 적어주세요(운영계획, 공부할 책제목 등)</label>
+            <textarea class="form-control" rows="20" id="grpInfo" name="grpInfo" required><c:out value="${group.grpInfo}"/></textarea>
         </div>
 
         <div class="form-group">
@@ -92,14 +92,14 @@
                     <option value="LOGU21">용산구</option>
                     <option value="LOGU22">은평구</option>
                     <option value="LOGU23">종로구</option>
-                    <option value="LOGU24">중구"</option>
+                    <option value="LOGU24">중구</option>
                     <option value="LOGU25">중랑구</option>
                 </select>
             </div>
         </div>
         </div>
 
-
+<%--
         <p>대표사진</p>
         <div class="form-group">
             <div class="uploadDiv">
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </div>
-
+--%>
 
 
         <div class="form-group">
@@ -176,7 +176,7 @@
         <input type="hidden" name="pageNum" value="<c:out value="${cri.pageNum}"/>">
         <input type="hidden" name="amount" value="<c:out value="${cri.amount}"/>">
 
-        <h2>멤버 관리</h2>
+        <h2>멤버 리스트</h2>
         <hr/>
         <!-- 멤버 리스트 -->
         <div id="groupAttend">
@@ -186,7 +186,7 @@
                         <div class="attendCard">
                             <img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar"><b>정보승</b>	<span style="color:gray">회원</span>
                         </div>
-                        <div class="attendBtn" style="text-decoration: underline; color: red;"><a href="#" id="">모임장양도</a><a href="#" class="changeManager" data-sn="1203">운영진임명</a><a href="#" class="ban">추방</a></div>
+<%--                        <div class="attendBtn" style="text-decoration: underline; color: red;"><a href="#" id="">모임장양도</a><a href="#" class="changeManager" data-sn="1203">운영진임명</a><a href="#" class="ban">추방</a></div>   --%>
                     </div>
                 </li>
             </ul>
@@ -582,10 +582,10 @@
             return false;
         }
 
-        if(getByte($('#info').val()) == "") {
+        if(getByte($('#grpInfo').val()) == "") {
             alert("모임정보를 입력해주세요");
             return false;
-        } else if(getByte($('#info').val()) > 4000) {
+        } else if(getByte($('#grpInfo').val()) > 4000) {
             alert("모임 정보가 너무 깁니다");
             return false;
         }

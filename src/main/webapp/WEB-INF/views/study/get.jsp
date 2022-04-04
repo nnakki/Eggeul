@@ -60,13 +60,13 @@
         <!-- /.col-lg-8 -->
         <div class="col-lg-5" style="padding-left: 5rem;
 ">
-            <p><i class="fas fa-user"></i> 스터디장 : ${study.representationName}</p>
+            <p><i class="fas fa-user"></i> 이끌이 : ${study.representationName}</p>
 
             <div id = "capacity">
             </div>
 
-            <c:if test="${study.onOff eq 'STOF01'}"><p><i class="fas fa-video"></i> 온라인 스터디 </p></c:if>
-            <c:if test="${study.onOff eq 'STOF02'}"><p><i class="fas fa-map-marker-alt"></i> 오프라인 스터디 </p></c:if>
+            <c:if test="${study.onOff eq 'STOF01'}"><p><i class="fas fa-video"></i> 온라인 일정 </p></c:if>
+            <c:if test="${study.onOff eq 'STOF02'}"><p><i class="fas fa-map-marker-alt"></i> 오프라인 일정 </p></c:if>
 
             <c:choose>
                 <c:when test="${study.expense == '없음' || study.expense =='추후공지'}"><p><i class="fas fa-won-sign"></i> 지참금 : ${study.expense}</p></c:when>
@@ -89,8 +89,8 @@
     </c:if>
 
     <c:if test="${study.representation eq pinfo.username}">
-        <a class="modify btn btn-secondary" href="">스터디 수정</a>
-        <a class="remove btn btn-danger" href="">스터디 삭제</a>
+        <a class="modify btn btn-secondary" href="">일정 수정</a>
+        <a class="remove btn btn-danger" href="">일정 삭제</a>
         <a class="btn btn-primary" href="/study/members?pageNum=${cri.pageNum}&amount=${cri.amount}&stdSn=${study.sn}&representation=${study.representation}">멤버 관리</a>
         <%--            <a class="btn btn-primary" href="#">참가 신청 마감</a>--%>
         <%--            <a class="btn btn-primary" href="#">참여멤버와 채팅</a>--%>
@@ -107,7 +107,7 @@
     top: 0;
     transition: background-color 0.5s ease 0s;
     ">
-        <a href="#info" class="active">스터디 정보</a>
+        <a href="#info" class="active">일정 정보</a>
         <c:if test="${study.onOff eq 'STOF01'}"><a href="#onOff">온라인 링크</a></c:if>
         <c:if test="${study.onOff eq 'STOF02'}"><a href="#onOff">장소</a></c:if>
     </div>
@@ -126,7 +126,7 @@
         <hr class="centerHr">
 
         <div id="info">
-            <h4> 스터디 정보</h4>
+            <h4> 일정 정보</h4>
             <pre>${study.information}</pre>
         </div>
 
@@ -134,7 +134,7 @@
         <div id="study-place">
             <div id="onOff">
                 <c:if test="${study.onOff eq 'STOF01'}">
-                    <h4>온라인 스터디 링크</h4>
+                    <h4>온라인 일정 링크</h4>
                     <a href="${study.onUrl}">바로가기</a>
                 </c:if>
 
@@ -151,7 +151,7 @@
 
 
 
-<!-- 스터디 생성/수정 확인 모달 -->
+<!-- 일정 생성/수정 확인 모달 -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -180,10 +180,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="surveyModalLabel">스터디 설문 등록</h4>
+                <h4 class="modal-title" id="surveyModalLabel">일정 설문 등록</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
-            <div class="modal-body"><span style="color: gray; font-size: small">스터디 참석을 위한 정보를 입력해주세요.</span></div>
+            <div class="modal-body"><span style="color: gray; font-size: small">일정 참석을 위한 정보를 입력해주세요.</span></div>
                 <div class="questionForm form-group" hidden="true">
                     <strong><label style="padding-left: 16px;">질문 1. </label></strong>
                     <p class="questionLabel" style="padding-left: 16px;"></p>
@@ -251,8 +251,8 @@
 
                     // str += '<img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar">';
                     str += '<strong> ' + result[i].userName + '</strong>';
-                    if ("${study.representation}" === result[i].userId) str += '<span> 스터디장</span>';
-                    if ("GRRO01" === result[i].grpRole) str += '<span> 모임장</span>';
+                    if ("${study.representation}" === result[i].userId) str += '<span>이끌이</span>';
+                    if ("GRRO01" === result[i].grpRole) str += '<span> 이끌이</span>';
                     if ("GRRO02" === result[i].grpRole) str += '<span> 운영진</span>';
                     if ("GRRO03" === result[i].grpRole) str += '<span> 일반회원</span>';
 
@@ -331,7 +331,7 @@
             getStudyAttendBtn();
         }
 
-        <!-- 스터디 생성/수정/찜/찜 삭제 후 모달 창-->
+        <!-- 일정 생성/수정/찜/찜 삭제 후 모달 창-->
         let result = '<c:out value="${result}"/>';
 
         checkModal(result);
@@ -347,10 +347,10 @@
 
             switch (result) {
                 case "register" :
-                    $(".modal-body").html("스터디가 정상적으로 등록되었습니다.");
+                    $(".modal-body").html("일정이 정상적으로 등록되었습니다.");
                     break;
                 case "update" :
-                    $(".modal-body").html("스터디가 정상적으로 수정되었습니다.");
+                    $(".modal-body").html("일정이 정상적으로 수정되었습니다.");
                     break;
             }
 
@@ -368,7 +368,7 @@
             actionForm.submit();
         });
 
-        <!-- 스터디 삭제 버튼 눌렀을 때-->
+        <!-- 일정 삭제 버튼 눌렀을 때-->
         $(".remove").on("click", function(e) {
             e.preventDefault();
 
@@ -383,7 +383,7 @@
 
         });
 
-        <!-- 스터디 수정 버튼 눌렀을 때-->
+        <!-- 일정 수정 버튼 눌렀을 때-->
         $(".modify").on("click", function(e) {
             e.preventDefault();
 
@@ -427,9 +427,9 @@
             console.log("찜버튼 눌린 result = " + result);
 
             if(result === "wish") {
-                alert("스터디를 찜했습니다.");
+                alert("일정을 찜했습니다.");
             }else if(result === "cancelWish"){
-                alert("스터디를 찜을 취소했습니다.");
+                alert("일정 찜을 취소했습니다.");
             }else if(result === "fail") {
                 alert("찜 서비스가 실패했습니다.")
             }
@@ -455,10 +455,10 @@
             //시작일자
             let startDate = new Date("${study.startDate}" + " " + "${study.startTime}");
 
-            console.log("현재날짜 = " + currDate);
-            console.log("시작날짜 = " + startDate);
-            console.log("예정스터디 = " + currDate <= startDate);
-            console.log("지난스터디 = " + currDate > startDate);
+            console.log("현재 날짜 = " + currDate);
+            console.log("시작 날짜 = " + startDate);
+            console.log("예정 일정 = " + currDate <= startDate);
+            console.log("지난 일정 = " + currDate > startDate);
 
             // 그룹에 속해있지 않거나 시작일자가 현재날짜보다 이전일때
             if(result === "group not attend" || currDate > startDate) {
@@ -511,7 +511,7 @@
             // 설문 가져오는 ajax 호출
             studySurveyService.getSurveyList(${study.sn}, function(result) {
 
-                // 해당 스터디에 설문이 있으면
+                // 해당 일정에 설문이 있으면
                 if(result.length > 0) {
                     for(let i = 0; i < result.length; i++) {
 
@@ -532,7 +532,7 @@
 
                         if(result === "success") {
 
-                            alert("스터디에 참석했습니다.");
+                            alert("일정에 참석했습니다.");
 
                             // 참여인원 / 모집인원 불러오기
                             getCapacity();
@@ -544,7 +544,7 @@
                             getAttendList();
 
                         }else if(result === "fail") {
-                            alert("스터디에 참석하지 못했습니다.");
+                            alert("일정에 참석하지 못했습니다.");
                         }
                     })
                 }
@@ -555,12 +555,12 @@
         } else if($('#attendButton').children()[0].id === 'cancel') {
             // cancel이면 탈퇴를 수행하는 ajax 호출
             console.log('탈퇴');
-            if(confirm('해당 스터디를 탈퇴하시겠습니까?')) {
+            if(confirm('해당 일정을 탈퇴하시겠습니까?')) {
                 studyAttendService.cancel({stdSn : ${study.sn}, userId : "${pinfo.username}"}, function(result) {
                     console.log("cancel > result = " + result);
 
                     if(result === "success") {
-                        alert("스터디를 탈퇴했습니다.");
+                        alert("일정을 탈퇴했습니다.");
 
                         // 참여인원 / 모집인원 불러오기
                         getCapacity();
@@ -572,7 +572,7 @@
                         getAttendList();
 
                     }else if(result === "fail") {
-                        alert("스터디를 탈퇴하지 못했습니다.");
+                        alert("일정을 탈퇴하지 못했습니다.");
                     }
                 })
             }
@@ -580,18 +580,18 @@
         // 검토중이 눌리면 명단에서 삭제하는 reject ajax 호출
         } else if ($('#attendButton').children()[0].id === 'waiting') {
 
-            if(confirm('스터디장이 승인하면 스터디에 참석됩니다. 그래도 스터디 참석을 취소하겠습니까?')) {
+            if(confirm('이끌이가 승인하면 일정에 참석됩니다. 그래도 일정 참석을 취소하겠습니까?')) {
                 studyAttendService.reject({stdSn : ${study.sn}, userId : "${pinfo.username}"}, function(result) {
                     console.log("waiting > reject > result = " + result);
 
                     if(result === "success") { // 검토중인 회원을 명단에서 삭제하고 해당 회원의 설문답변을 모두 삭제함
-                        alert("스터디 참석을 취소했습니다.");
+                        alert("일정 참석을 취소했습니다.");
 
                         // 참석버튼 reload
                         getStudyAttendBtn();
 
                     }else if(result === "fail") {
-                        alert("스터디 참석을 취소하지 못했습니다.");
+                        alert("일정 참석을 취소하지 못했습니다.");
                     }
                 })
             }
@@ -661,10 +661,10 @@
                 // console.log("context = " + getContextPath(document.location.href));
                 let context = getContextPath(document.location.href);
 
-                // 스터디장에게 참석했다는 알림을 db에 저장하고 실시간 알림 전송
+                // 일정장에게 참석했다는 알림을 db에 저장하고 실시간 알림 전송
                 noticeService.register(
                     {sender : "${pinfo.username}", receiver : "${study.representation}",
-                        kind : "스터디", url : context + "/get?sn=${study.sn}", content : "스터디 ${study.name}에 새로운 승인 대기멤버가 있습니다."}, function(notice) {
+                        kind : "일정", url : context + "/get?sn=${study.sn}", content : "일정 ${study.name}에 새로운 승인 대기멤버가 있습니다."}, function(notice) {
                         if(notice === 'success') {
 
                             console.log('알림 등록 완료 완료되었습니다.');
@@ -672,7 +672,7 @@
                     })
 
 
-                alert('설문을 등록하였습니다. 스터디장이 승인하면 스터디에 참석됩니다.');
+                alert('설문을 등록하였습니다. 이끌이가 승인하면 일정에 참석됩니다.');
 
                 // attend 버튼 reload
                 getStudyAttendBtn();
