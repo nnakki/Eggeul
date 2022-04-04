@@ -112,28 +112,33 @@
     </nav>
     <div class="flex-flow"></div>
     <ul class="header-login-after">
+
         <li>
             <button type="button" class="button-icon" id="alert">
                 <i class="far fa-bell"></i>
             </button>
             <div class="red"></div>
         </li>
+
         <li>
             <button type="button" id="mypage">
-                <p><span>신성권</span> 고객님 &nbsp&nbsp<i class="fas fa-chevron-down"></i></p>
+                <p><span>부승관</span> 고객님 &nbsp&nbsp<i class="fas fa-chevron-down"></i></p>
             </button>
         </li>
     </ul>
 </header>
 <div class="spacer"></div>
 
+<%--
 <div class="modal">
     <div class="modal-alert">
         <h3>알림</h3>
         <p>받은 알림이 없습니다</p>
     </div>
+    --%>
+
     <div class="modal-mypage">
-        <h3>안녕하세요, <span>신성권</span>님</h3>
+        <h3>안녕하세요, <span>부승관</span>님</h3>
         <span>
         <a href="#">
           마이페이지

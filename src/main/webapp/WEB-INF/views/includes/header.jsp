@@ -127,12 +127,13 @@
         <sec:authorize access="isAuthenticated()">
 <%--            <a href="/serviceCenter/list">고객센터</a>--%>
 
+<%--
             <div id="myDropdown" class="dropdown" style="position: absolute;">
                 <ul id="myDropdownList" class="dropdown-content dropdown-menu">
                     <li><a class="dropdown-item">알림이 없습니다.</a></li>
                 </ul>
             </div>
-            <a><img id="notice" src="../../../resources/img/notice.png" style="width:18px; height: 18px;"></a>
+            <a><img id="notice" src="../../../resources/img/notice.png" style="width:18px; height: 18px;"></a> --%>
 
 
             <a href="/chat/list">
