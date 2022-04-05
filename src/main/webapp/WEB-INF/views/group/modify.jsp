@@ -222,7 +222,7 @@
                 <li data-sn="1203">
                     <div>
                         <div class="attendCard">
-                            <img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar"><b>정보승</b>	<span style="color:gray">회원</span>
+                            <img src="/resources/img/profileegg2.png" alt="Avatar" class="avatar"><b>회원명</b>	<span style="color:gray">회원</span>
                         </div>
 <%--                        <div class="attendBtn" style="text-decoration: underline; color: red;"><a href="#" id="">모임장양도</a><a href="#" class="changeManager" data-sn="1203">운영진임명</a><a href="#" class="ban">추방</a></div>   --%>
                     </div>
@@ -265,12 +265,12 @@
                             // str += "<div><div class='attendCard'><img src='../../../resources/img/img_avatar2.png' alt='Avatar' class='avatar'>";
 
                             console.log("pic=" + list[i].picture);
-                            if(list[i].picture !== null && list[i].picture !== 'myPicture.jpeg') {
+                            //if(list[i].picture !== null && list[i].picture !== 'myPicture.jpeg') {
 
-                                str += '<div><div class="attendCard"><img src="' + '/display?fileName=' + list[i].picture.replace('s_', '') + '" alt="Avatar" class="avatar">';
-                            }else {
-                                str += '<div><div class="attendCard"><img src="https://image.flaticon.com/icons/png/512/3237/3237472.png" alt="Avatar" class="avatar">';
-                            }
+                            //    str += '<div><div class="attendCard"><img src="' + '/display?fileName=' + list[i].picture.replace('s_', '') + '" alt="Avatar" class="avatar">';
+                            //}else {
+                                str += '<div><div class="attendCard"><img src="/resources/img/profileegg2.png" alt="Avatar" class="avatar">';
+                            //}
 
                             str += "<b>"+list[i].name+"</b>\t";
                             /*
