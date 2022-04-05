@@ -46,7 +46,7 @@
  <c:if test="${userId == MemberVo.id}">
             <div class="form-group">
                 <label for="picture">프로필 사진</label>
-                <input type="file" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>
+                <%--<input type="file" class="form-control" id="picture" name="picture" accept="image/*" value="${MemberVo.picture}" readonly>--%>
 
                 <div id="uploadResult">
                     <img id="imageTag" src="${'/display?fileName=' += MemberVo.picture}" value="" >
