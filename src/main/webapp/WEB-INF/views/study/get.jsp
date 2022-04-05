@@ -60,7 +60,7 @@
         <!-- /.col-lg-8 -->
         <div class="col-lg-5" style="padding-left: 5rem;
 ">
-            <p><i class="fas fa-user"></i> 이끌이 : ${study.representationName}</p>
+            <p><i class="fas fa-user"></i> 오늘의 이끌이 : ${study.representationName}</p>
 
             <div id = "capacity">
             </div>
@@ -251,7 +251,7 @@
 
                     // str += '<img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar">';
                     str += '<strong> ' + result[i].userName + '</strong>';
-                    if ("${study.representation}" === result[i].userId) str += '<span> 이끌이</span>';
+                    if ("${study.representation}" === result[i].userId) str += '<span> 오늘의 이끌이</span>';
                     if ("GRRO01" === result[i].grpRole) str += '<span> </span>';
                     if ("GRRO02" === result[i].grpRole) str += '<span> 운영진</span>';
                     if ("GRRO03" === result[i].grpRole) str += '<span> 일반회원</span>';

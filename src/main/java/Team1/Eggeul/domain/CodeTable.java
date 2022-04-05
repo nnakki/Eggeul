@@ -90,7 +90,7 @@ public enum CodeTable {
     LOGU25("중랑구"),
 
     //모임 내 권한
-    GRRO01("모임장"),
+    GRRO01("이끌이"),
     GRRO02("운영진"),
     GRRO03("회원"),
     GRRO04("영구강퇴"),

@@ -109,7 +109,7 @@
                         }
                         //모임role
                         if(list[i].grpRole == 'GRRO01'){
-                            role = "모임장";
+                            role = "이끌이";
                         }else if(list[i].grpRole == 'GRRO02'){
                             role = "운영진";
                         }else{
