@@ -53,7 +53,7 @@
                     <button id="deleteImg" type='button' class='btn btn-secondary btn-circle'>X</button><br>
                 </div>
             </div>
-            <button id="submitBtn" class="btn btn-primary">정보 수정</button>
+            <button id="submitBtn" class="btn btn-primary">편집</button>
             <button id='cancel' class='btn btn-primary'>취소</button>
         </c:if>
 
@@ -361,7 +361,7 @@
         if(condition){
             $(obj).removeClass('btn btn-danger');
             $(obj).addClass('btn btn-primary');
-            $(obj).text('정보 수정');
+            $(obj).text('편집');
             $(cancelBtn).hide();
             $(deleteImg).hide();
             $(fileInput).hide();
