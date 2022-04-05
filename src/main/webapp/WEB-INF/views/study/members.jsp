@@ -23,7 +23,7 @@
     <!-- nav -->
     <div class="topnav tab" style="margin-bottom: 10px;">
         <a href="#member" class="tablinks active navMember" onclick="openTab(event, 'member')">참여 멤버</a>
-        <a href="#waitingMember" class="tablinks navWaitingMember" onclick="openTab(event, 'waitingMember')">승인 대기 멤버</a>
+<!--    <a href="#waitingMember" class="tablinks navWaitingMember" onclick="openTab(event, 'waitingMember')">승인 대기 멤버</a> -->
         <a href="#waitingMember" class="tablinks navBanMember" onclick="openTab(event, 'banMember')" id = "banMemberTab" hidden="true">영구강퇴 멤버</a>
     </div>
     <!-- /nav -->
@@ -209,7 +209,7 @@
 
                 if("${representation}" === result[i].userId) str += '<span style="color:gray;"> 이끌이</span>';
 
-                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> 이끌이</span>';
+                if(result[i].grpRole === 'GRRO01') str += '<span style="color:gray;"> </span>';
                 if(result[i].grpRole === 'GRRO02') str += '<span style="color:gray;"> 운영진</span>';
                 if(result[i].grpRole === 'GRRO03') str += '<span style="color:gray;"> 일반회원</span>';
 
