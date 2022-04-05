@@ -1164,11 +1164,11 @@
 
                     str += "<li data-sn='"+list[i].sn+"'>";
 
-                    if(list[i].picture !== null && list[i].picture !== 'myPicture.jpeg') {
-                        str += '<div><div class="header"><img src="' + '/display?fileName=' + list[i].picture.replace('s_', '') + '" alt="Avatar" class="avatar">';
-                    }else {
-                        str += '<div><div class="header"><img src="https://image.flaticon.com/icons/png/512/3237/3237472.png" alt="Avatar" class="avatar">';
-                    }
+                    //if(list[i].picture !== null && list[i].picture !== 'myPicture.jpeg') {
+                        //str += '<div><div class="header"><img src="' + '/display?fileName=' + list[i].picture.replace('s_', '') + '" alt="Avatar" class="avatar">';
+                    //}else {
+                        str += '<div><div class="header"><img src="/resources/img/profileegg2.png" alt="Avatar" class="avatar">';
+                    //}
 
                     // str += "<div><div class='header'><img src='../../../resources/img/img_avatar2.png' alt='Avatar' class='avatar'>";
 
