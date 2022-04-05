@@ -25,13 +25,13 @@
                 <!--사진 이거 div만 냅기고 for문 돌고 가져와야하나..
                 src='"+ "/display?fileName=" + list[i].picture.replace('s_','')+"'
                 -->
-<%--                <div class="inline" id="img"><img class="profile" src="../../../resources/img/img_avatar2.png" alt="error"></div>--%>
+<%--                <div class="inline" id="img"><img class="profile" src="/resources/img/profileegg2.png" alt="Avatar"></div>--%>
                 <c:if test="${board.picture ne null && board.picture ne 'myPicture.jpeg'}">
-                    <div class="inline" id="img"><img class="profile" src="/display?fileName=${board.picture}" alt="error"></div>
+                    <div class="inline" id="img"><img class="profile" src="/resources/img/profileegg2.png" alt="error"></div>
                 </c:if>
 
                 <c:if test="${board.picture eq null || board.picture eq 'myPicture.jpeg'}">
-                    <div class="inline" id="img"><img class="profile" src="https://image.flaticon.com/icons/png/512/3237/3237472.png" alt="error"></div>
+                    <div class="inline" id="img"><img class="profile" src="/resources/img/profileegg2.png" alt="error"></div>
                 </c:if>
 
 

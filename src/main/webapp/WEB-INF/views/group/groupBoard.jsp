@@ -122,11 +122,11 @@
                         //
                         str += "<div id='boardDivBox'>";
                         // || userPicture.length !== 0
-                        if (userPicture !== null && list[i].picture !== 'myPicture.jpeg'){
-                            str += "<span><img class='avatar' src='"+ "/display?fileName=" + list[i].picture.replace('s_','')+"' alt='error'></span>";
-                        }else{
-                            str += "<span><img class='avatar' src='https://image.flaticon.com/icons/png/512/3237/3237472.png' alt='error'></span>";
-                        }
+                        //if (userPicture !== null && list[i].picture !== 'myPicture.jpeg'){
+                        //    str += "<span><img class='avatar' src='"+ "/display?fileName=" + list[i].picture.replace('s_','')+"' alt='error'></span>";
+                        //}else{
+                            str += "<span><img class='avatar' src='/resources/img/profileegg2.png' alt='Avatar'></span>";
+                        //}
 
                         str += "<span id='boardName'>"+list[i].name+"</span>";
                         str += "<span style='color:gray'> "+role+"</span>";

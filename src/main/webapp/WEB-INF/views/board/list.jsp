@@ -71,7 +71,7 @@
             <div class="board">
                 <div id="notice"><b>[필독]</b></div>
                 <div style="display: none"><c:out value="${board.sn}"/>번</div>
-                <div class="inline"><img class="profile" src="../../../resources/img/img_avatar2.png" alt="error"></div>
+                <div class="inline"><img class="profile" src="/resources/img/profileegg2.png" alt="Avatar"></div>
                 <div class="inline"><c:out value="${board.name}" /></div>
                 <div class="inline" id="role"><c:out value="${board.grpRole}"/></div>
 
