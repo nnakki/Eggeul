@@ -246,7 +246,7 @@
                     if(result[i].picture !== null && result[i].picture !== 'myPicture.jpeg') {
                         str += '<img src="' + '/display?fileName=' + result[i].picture.replace('s_', '') + '" alt="Avatar" class="avatar">';
                     }else {
-                        str += '<img src="https://image.flaticon.com/icons/png/512/3237/3237472.png" alt="Avatar" class="avatar">';
+                        str += '<img src="/resources/img/profileegg2.png" alt="Avatar" class="avatar">';
                     }
 
                     // str += '<img src="../../../resources/img/img_avatar2.png" alt="Avatar" class="avatar">';
