@@ -176,7 +176,7 @@
 </form>
 
 <!-- 설문 등록 모달창 -->
-<div class="surveyModal modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="surveyModalLabel" aria-hidden="true">
+<%--<div class="surveyModal modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="surveyModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -205,7 +205,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--%>
 
 
 <script type="text/javascript" src="/resources/js/studyWish.js"></script>
@@ -512,7 +512,7 @@
             // 설문 가져오는 ajax 호출
             studySurveyService.getSurveyList(${study.sn}, function(result) {
 
-                // 해당 일정에 설문이 있으면
+/*                // 해당 일정에 설문이 있으면
                 if(result.length > 0) {
                     for(let i = 0; i < result.length; i++) {
 
@@ -525,7 +525,7 @@
 
                     // 모달 띄우기
                     $('#surveyModal').modal("show");
-                }else {
+                }else {*/
 
                     // 없으면 바로 참석 진행
                     studyAttendService.attend({stdSn : ${study.sn}, userId : "${pinfo.username}"}, function(result) {
@@ -548,7 +548,7 @@
                             alert("일정에 참석하지 못했습니다.");
                         }
                     })
-                }
+
 
             })
 
@@ -603,6 +603,7 @@
 
 
 <!-- 설문 등록 -->
+<%--
 <script>
     // 설문 등록 버튼 눌리면
     $('#surveyRegisterBtn').on("click", function() {
@@ -684,6 +685,7 @@
 
     })
 </script>
+--%>
 
 
 <%--<!--구글 맵 -->--%>
