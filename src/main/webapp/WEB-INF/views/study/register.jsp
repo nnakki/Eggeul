@@ -130,12 +130,12 @@
             <label for="onUrl"><strong>온라인 일정 링크 추가</strong></label>
             <input type="text" class="form-control" id="onUrl" name="onUrl" value="http://">
         </div>
-        <div id="map">
+        <%--<div id="map">--%>
             <div class="form-group" id="formPlace" style="margin-bottom: 0px">
                 <label for="placeId"><strong>일정 장소 추가</strong></label>
                 <input type="text" class="form-control" id="placeId" name="placeId" placeholder="주소" readonly onclick="findAddr()"> <br>
             </div>
-        </div>
+        <%--</div>--%>
 
 <%--            <input type="button" value="장소 검색" onclick="showMap()"/>
             <input type="text" class="form-control" id="placeName" hidden="true" readonly/>

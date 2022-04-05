@@ -136,12 +136,12 @@
             <label for="onUrl"><strong>온라인 일정 링크 추가</strong></label>
             <input type="text" class="form-control" id="onUrl" name="onUrl" value="${study.onUrl}">
         </div>
-        <div id="map">
+        <%--<div id="map">--%>
             <div class="form-group" id="formPlace" style="margin-bottom: 0px">
                 <label for="placeId"><strong>일정 장소 추가</strong></label>
                 <input type="text" class="form-control" id="placeId" name="placeId" value="${study.placeId}" hidden="true" readonly onclick="findAddr()"/>
             </div>
-        </div>
+        <%--</div>--%>
 
     <%--<div style="display: none">
             <input
