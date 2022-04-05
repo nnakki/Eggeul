@@ -161,8 +161,8 @@ public class UserController {
         log.info("Modify = " + vo);
         service.modify(vo, hvo);
         return service.modify(vo, hvo) ?
-                new ResponseEntity<>("Modify Success", HttpStatus.OK) :
-                new ResponseEntity<>("Modify Fail", HttpStatus.BAD_REQUEST);
+                new ResponseEntity<>("성공적으로 수정되었습니다.", HttpStatus.OK) :
+                new ResponseEntity<>("수정이 실패하였습니다.", HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping("/remove")

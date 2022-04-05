@@ -100,9 +100,11 @@
             errorMsg = $("#errorMsg")[0];
         }
 
+        /*
         $(birthInput).on("change", function () {
             futureDate();
         });
+        */
 
 
 
@@ -117,6 +119,7 @@
             else return true;
         }
 
+        /*
         function futureDate(){
             if(birthInput.valueAsNumber > Date.now()){
                 showErrorMsg(errorBox, errorMsg, "생일을 미래로 설정 할 수 없습니다");
@@ -129,6 +132,7 @@
             return true;
 
         }
+        */
 
 
 
@@ -144,8 +148,7 @@
             e.preventDefault();
             if(modifyMode){
                 if(!checkTwo()) return;
-                if(!futureDate()) return;
-
+                //if(!futureDate()) return;
             }
 
 
@@ -274,15 +277,15 @@
 
                     $(submitBtn).attr("disabled", true);
 
-                    let beforeImg = $('#picture')[0].attributes.value.textContent;
-                    let upImg = $('#picture')[0].filepath;
+                    //let beforeImg = $('#picture')[0].attributes.value.textContent;
+                    //et upImg = $('#picture')[0].filepath;
 
-                    let img =
-                        upImg !== undefined ?
-                            upImg :
-                            beforeImg !== undefined ? beforeImg : '';
-                    profileImg.src = img === '' ? 'http://placehold.it/900x400' : '';
-                    console.dir(img);
+                    //let img =
+                    //    upImg !== undefined ?
+                     //       upImg :
+                     //       beforeImg !== undefined ? beforeImg : '';
+                    //profileImg.src = img === '' ? 'http://placehold.it/900x400' : '';
+                    //console.dir(img);
 
                     $.ajax({
                         url: '/user/modify',
@@ -294,8 +297,8 @@
                             id : $('#userId')[0].value,
                             password : $('#password')[0].value,
                             name : $('#name')[0].value,
-                            birth : $('#birth')[0].value,
-                            picture : img,
+                            //birth : $('#birth')[0].value,
+                            //picture : img,
                             status : '${MemberVo.status}',
                             email : '${MemberVo.id}'
                         },
@@ -303,7 +306,7 @@
                             alert(msg);
                             password.value = '';
                             confirmPassword.value = '';
-                            if(fileInput.value !== '') profileImg.src = "/display?fileName=" + (fileInput.filepath).replace('s_', '');
+                            //if(fileInput.value !== '') profileImg.src = "/display?fileName=" + (fileInput.filepath).replace('s_', '');
                             $(errorBox).hide();
                             resolve(true);
                         },
