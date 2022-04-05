@@ -127,7 +127,7 @@
 
         <div id="info">
             <h4> 일정 정보</h4>
-            <pre>${study.information}</pre>
+            <pre style="font-family: 'Noto Sans KR'">${study.information}</pre>
         </div>
 
         <hr class="centerHr">
@@ -140,7 +140,7 @@
 
                 <c:if test="${study.onOff eq 'STOF02'}">
                     <h4>장소</h4>
-                    <div id="map"></div>
+                    <pre style="font-family: 'Noto Sans KR'; font-weight: bold;">${study.placeId}</pre>
                 </c:if>
             </div>
         </div>
@@ -685,68 +685,6 @@
     })
 </script>
 
-
-<!--구글 맵 -->
-<script>
-    window.onload = function() {
-        if("${study.placeId}" !== "") { // placeId가 null이 아니면 지도 출력
-            initMap();
-        }
-    }
-</script>
-
-<script>
-    function initMap() {
-
-        const request = {
-            placeId: "${study.placeId}",
-            fields: ["name", "formatted_address", "place_id", "geometry", "url"],
-        };
-
-        // 말풍선
-        const infowindow = new google.maps.InfoWindow();
-        const service = new google.maps.places.PlacesService(map);
-
-        service.getDetails(request, (place, status) => { // 세부정보 가져오기
-            if (
-                status === google.maps.places.PlacesServiceStatus.OK &&
-                place &&
-                place.geometry &&
-                place.geometry.location
-            ) {
-
-                // 지도
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    center: place.geometry.location,
-                    zoom: 15,
-                });
-
-                const marker = new google.maps.Marker({ // 마커 위치 설정
-                    map,
-                    position: place.geometry.location,
-                });
-
-                marker.setVisible(true);
-
-                infowindow.setContent(
-                    "<div><strong style='font-weight: bold;'>" + place.name + "</strong><br>" +
-                        "<strong style='font-weight: bold;'>주소: </strong><span>" + place.formatted_address + "</span><br>" +
-                        "<strong style='font-weight: bold;'>URL: </strong><a href='" + place.url + "'>구글맵 바로가기</a><br>" +
-                    "</div>"
-                )
-
-                infowindow.open(map, marker);
-            }
-        });
-    }
-</script>
-
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&v=weekly"
-    async
-></script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <!-- topnav javascript -->
 <script>
